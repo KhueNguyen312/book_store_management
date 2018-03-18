@@ -85,25 +85,25 @@
             </Button>
             <dxlc:TileLayoutControl StretchContent="True" Grid.Column="1" Grid.Row="1" >
                 <dxlc:TileLayoutControl.Background>
-                    <ImageBrush ImageSource="Images/background1.jpg"/>
+                    <ImageBrush ImageSource="Images/background1.jpeg"/>
                 </dxlc:TileLayoutControl.Background>
-                <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FFDCCE00">
-                    <Image Source="Images/BookMng2.png" Stretch="Fill"/>
+                <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FF2776ED">
+                    <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Small" Header="Quản Lý Nhân Viên " Background="#FF5C00DC">
+                <dxlc:Tile Size="Small" Header="Quản Lý Nhân Viên " Background="#FF633EBD">
                     <Image Source="Images/EmployeeIcon.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Kinh Doanh" HorizontalHeaderAlignment="Stretch" Background="#FFCB00DC">
+                <dxlc:Tile Size="Large" Header="Kinh Doanh" HorizontalHeaderAlignment="Stretch" Background="#FFD74E2A">
                     <Image Source="Images/BusinessIcon.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Tìm Kiếm"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF6110D3" >
+                <dxlc:Tile Header="Tìm Kiếm" Size="Small"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF4F2E94" >
                     <Image Source="Images\Search.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Báo cáo" Background="#FF3C7BCB">
-                    <Image Source="Images\Report.png"/>
-                </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Tùy Chỉnh" Height="310.4" Width="150.4" Background="#FFDC004F">
+                <dxlc:Tile Header="Tùy Chỉnh" Size="Small" Background="#FFDA542D">
                     <Image Source="Images\Other.png"/>
+                </dxlc:Tile>
+                <dxlc:Tile Size="Large" Header="Báo cáo" Background="#FF009656">
+                    <Image Source="Images\Report.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile x:Name="InfoTile" Size="ExtraLarge"   ContentSource="{Binding AppInfos}" Width="250" dxlc:FlowLayoutControl.IsFlowBreak="True" ContentChangeInterval="00:00:05" AnimateContentChange="True" >
                     <dxlc:Tile.Background>
@@ -122,7 +122,7 @@
             <Image Grid.Row="0" Grid.Column="1" Source="Images/BookStoreBackground.jpg" Stretch="Fill" Panel.ZIndex="-1" >
             </Image>
         </Grid>
-        
+
         <StatusBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFECDFE4">
             <TextBlock Name="TextBlockStatus" Width="100" Background="#FFECDFE4" />
         </StatusBar>
