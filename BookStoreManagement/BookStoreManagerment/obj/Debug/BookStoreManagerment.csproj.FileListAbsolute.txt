@@ -214,3 +214,7 @@ F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\De
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.Properties.Resources.resources
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.GenerateResource.Cache
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe.licenses
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Resources\MainResource.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.baml
