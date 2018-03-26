@@ -12,19 +12,16 @@ namespace BookStoreManagerment.ViewModel
     public class MainViewModel:BaseViewModel
     {
         public bool Isloaded = false;
-        public ICommand LoadedWindowCommand { get; set; }
 
-        // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
         {
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.ShowDialog();
-            //LoadedWindowCommand = new RelayCommand<object>((p) => { return true; }, (p) => {
+            if (!Isloaded)
+            {
+                //LoginWindow loginWindow = new LoginWindow();
+                //loginWindow.ShowDialog();
                 Isloaded = true;
-            //    LoginWindow loginWindow = new LoginWindow();
-            //    loginWindow.ShowDialog();
-            //}
-            //  );
+            }
+ 
         }
         //All commands
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }

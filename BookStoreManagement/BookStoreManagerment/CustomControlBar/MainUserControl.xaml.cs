@@ -11,19 +11,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BookStoreManagerment
+namespace BookStoreManagerment.CustomControlBar
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for MainUserControl.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class MainUserControl : UserControl
     {
-        public LoginWindow()
+        public ControlBarViewModel Vm { get; set; }
+
+        public MainUserControl()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
+            this.DataContext = Vm = new ControlBarViewModel();
         }
     }
 }

@@ -218,3 +218,9 @@ F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\De
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Resources\MainResource.baml
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.g.cs
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.xml
