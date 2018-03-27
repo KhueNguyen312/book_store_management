@@ -31,31 +31,30 @@ _**Used teachnology**_
 
 _**Features**_
 
-- **Customer managerment**
+-    **Customer managerment**
         - storage customers information
         - apply sale for different types of customer
-- **Products management**
+-    **Products management**
         - custom classification product
         - storage product information
         - barcode management: EAN-13, EAN-8
         - update products price, information
-- **Business management**
+-    **Business management**
         - products quotes
         - online order management
         - consignment management
         - set-up discount 
         - Debt control
-- **Warehouse management**
+-    **Warehouse management**
         - product quantity management
         - import warehouse data from Excel
         - import, export management
         - warehouse control
-- **Importing product management**
+-    **Importing product management**
         - ordering management
         - importing management
         - paying management
         - deposit, debt management
-        
 
 _**About us**_
 
