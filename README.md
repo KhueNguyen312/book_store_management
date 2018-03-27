@@ -19,6 +19,7 @@ _**Project details**_
   |  Visual studio 2017 | UI programing, Connect SQL database to Applilcation   |
   |  Sql 2014 Management Studio | Creating and management database system  |
   |  Github | Source code management  |
+  
 - Project modules:
 
 _**Used teachnology**_
@@ -26,12 +27,35 @@ _**Used teachnology**_
 - WPF UI Framework
 - Database management system: SQL server
 - Programing language: C#
+- Application modeling: MVVM
 
 _**Features**_
 
-- Employee, passenger, product information manage and access
-- Billing & quotes
-- Import and export reporting
+- **Customer managerment**
+        - storage customers information
+        - apply sale for different types of customer
+- **Products management**
+        - custom classification product
+        - storage product information
+        - barcode management: EAN-13, EAN-8
+        - update products price, information
+- **Business management**
+        - products quotes
+        - online order management
+        - consignment management
+        - set-up discount 
+        - Debt control
+- **Warehouse management**
+        - product quantity management
+        - import warehouse data from Excel
+        - import, export management
+        - warehouse control
+- **Importing product management**
+        - ordering management
+        - importing management
+        - paying management
+        - deposit, debt management
+        
 
 _**About us**_
 
@@ -49,12 +73,13 @@ _**About us**_
 
  - - Database management: Sql server
  
- - - UI Design: JavaFX, C# Winform, WPF
+ - - UI Design: ScalaFX, C# Winform, WPF
  
  
 
 
 _**Contact us**_
+>Free to feedback and contact us for more information about this project
 
 [![N|Solid](https://i.imgur.com/JxnaEYA.png)](https://plus.google.com/u/0/106753742870803965333) [![N|Solid](https://i.imgur.com/sO4jd9m.png)](https://www.facebook.com/profile.php?id=100012338863310) [![N|Solid](https://i.imgur.com/jNx7qMf.png)](https://twitter.com/16521309Ang)
 
