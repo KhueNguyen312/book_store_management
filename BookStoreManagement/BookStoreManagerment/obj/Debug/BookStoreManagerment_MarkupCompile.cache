@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\App.xaml
-4603925385
+6923680593
 
-111051865756
+151809834407
 36-968415377
-CustomControlBar\MainUserControl.xaml;LoginWindow.xaml;MainWindow.xaml;Resources\MainResource.xaml;
+BookManagementWindow.xaml;CustomControlBar\MainUserControl.xaml;CustomControlBar\UserControlAlter.xaml;LoginWindow.xaml;MainWindow.xaml;Resources\MainResource.xaml;
 
 False
 

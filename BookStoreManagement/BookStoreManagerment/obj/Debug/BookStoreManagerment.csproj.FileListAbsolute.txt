@@ -224,3 +224,7 @@ F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\De
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.dll
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.xml
 F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.baml

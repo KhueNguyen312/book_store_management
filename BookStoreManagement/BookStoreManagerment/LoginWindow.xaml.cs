@@ -23,7 +23,6 @@ namespace BookStoreManagerment
         public LoginWindow()
         {
             InitializeComponent();
-            this.DataContext = new LoginViewModel();
         }
     }
 }

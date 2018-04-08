@@ -44,7 +44,12 @@ namespace BookStoreManagerment.ViewModel
                 if(w!=null)
                 {
                     if (w.WindowState != WindowState.Maximized)
-                        w.WindowState = WindowState.Maximized;
+                    {
+                        w.Top = 0;
+                        w.Left = 0;
+                        w.Width = SystemParameters.WorkArea.Width;
+                        w.Height = SystemParameters.WorkArea.Height;
+                    }
                     else
                         w.WindowState = WindowState.Normal;
                 }

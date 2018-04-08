@@ -94,17 +94,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BookManagementWindow.xaml.cs">
+      <DependentUpon>BookManagementWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControlBar\MainUserControl.xaml.cs">
       <DependentUpon>MainUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlBar\UserControlAlter.xaml.cs">
+      <DependentUpon>UserControlAlter.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BookManagementWindowViewModel.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\UserControlBarAlterViewModel.cs" />
+    <Page Include="BookManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControlBar\MainUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControlBar\UserControlAlter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\LoginBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BookMng1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DecorationImg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -17,6 +17,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
     Icon="Images\BookStoreIcon.jpg"
+    DataContext="{StaticResource LoginVM}"
     WindowStyle="None"
         Title="Đăng Nhập" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>

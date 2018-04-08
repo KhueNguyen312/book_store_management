@@ -19,7 +19,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}"
     DataContext="{StaticResource MainVM}"
     WindowStyle="None"
-        Title="Book Store Management" Height="600" Width="1024" Icon="Images\BookStoreIcon.jpg" WindowStartupLocation="CenterScreen">
+        Title="Book Store Management" Height="600" Width="1024" Icon="Images\BookStoreIcon.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -97,7 +97,7 @@
                 <dxlc:TileLayoutControl.Background>
                     <ImageBrush ImageSource="Images/background1.jpeg"/>
                 </dxlc:TileLayoutControl.Background>
-                <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FF2776ED">
+                <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
                     <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
                 </dxlc:Tile>
                 <dxlc:Tile Size="Small" Header="Quản Lý Nhân Viên " Background="#FF633EBD">

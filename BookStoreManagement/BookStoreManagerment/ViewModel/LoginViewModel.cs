@@ -26,8 +26,7 @@ namespace BookStoreManagerment.ViewModel
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            if (window != null)
-                window.Close();
+            window.Close();
         }
     }
 }

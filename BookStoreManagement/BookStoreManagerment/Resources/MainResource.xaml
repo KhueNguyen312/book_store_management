@@ -3,4 +3,6 @@
                     xmlns:viewmodel="clr-namespace:BookStoreManagerment.ViewModel"
                     xmlns:local="clr-namespace:BookStoreManagerment.Resources">
     <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+    <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
+    <viewmodel:BookManagementWindowViewModel x:Key="BookMngVM"></viewmodel:BookManagementWindowViewModel>
 </ResourceDictionary>

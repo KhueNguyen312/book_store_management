@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -12,18 +13,25 @@ namespace BookStoreManagerment.ViewModel
     public class MainViewModel:BaseViewModel
     {
         public bool Isloaded = false;
+        public ICommand PressBtnBookMngCommand { get; set; }
 
         public MainViewModel()
         {
             if (!Isloaded)
             {
-                //LoginWindow loginWindow = new LoginWindow();
-                //loginWindow.ShowDialog();
                 Isloaded = true;
             }
- 
+            PressBtnBookMngCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBookMngWindow(p); });
+            
+
         }
         //All commands
+        public void OpenBookMngWindow(Window w)
+        {
+            BookManagementWindow window = new BookManagementWindow();
+            window.ShowDialog();
+        }
+        
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }
     }
 
