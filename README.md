@@ -58,13 +58,6 @@ _**Features**_
 
 _**About us**_
 
-
-[![N|Solid](https://i.imgur.com/lNzNQ14.png)](https://forum.uit.edu.vn/members/94921-16520466)  [![N|Solid](https://i.imgur.com/lV4ib4K.png)](https://forum.uit.edu.vn/member.php?u=95727) [![N|Solid](https://i.imgur.com/gQAHGCT.png)](https://forum.uit.edu.vn/members/95067-16520616)
-
-
---[**Vo Thi Kim Hue**](https://www.facebook.com/profile.php?id=100012338863310)-------[**Dang Quoc Trung**](https://www.facebook.com/profile.php?id=100014067844384)------[**Nguyen Minh Khue**](https://www.facebook.com/syaoran.clone.505)---
-
-**Experience:**
 >**2-years college at University of Information and Technology**
 
 - **Knowledge :**
