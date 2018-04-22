@@ -103,15 +103,62 @@
     <Compile Include="CustomControlBar\UserControlAlter.xaml.cs">
       <DependentUpon>UserControlAlter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AccountMngWindow.xaml.cs">
+      <DependentUpon>AccountMngWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\BookInputViewVM.cs" />
     <Compile Include="ViewModel\BookManagementWindowViewModel.cs" />
+    <Compile Include="ViewModel\BookMngViewVM.cs" />
+    <Compile Include="ViewModel\BusinessWindowVM.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
+    <Compile Include="ViewModel\CustomerDueReportVM.cs" />
+    <Compile Include="ViewModel\CustomerMngViewVM.cs" />
+    <Compile Include="ViewModel\DataBookViewModel.cs" />
+    <Compile Include="ViewModel\InventoryReportVM.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MoneyCollectionViewVM.cs" />
+    <Compile Include="ViewModel\ReportWindowVM.cs" />
+    <Compile Include="ViewModel\SellBookViewVM.cs" />
+    <Compile Include="ViewModel\SettingWindowVM.cs" />
     <Compile Include="ViewModel\UserControlBarAlterViewModel.cs" />
+    <Compile Include="Views\BookInputView.xaml.cs">
+      <DependentUpon>BookInputView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookMngView.xaml.cs">
+      <DependentUpon>BookMngView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessWindow.xaml.cs">
+      <DependentUpon>BusinessWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerDueReportView.xaml.cs">
+      <DependentUpon>CustomerDueReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerMngView.xaml.cs">
+      <DependentUpon>CustomerMngView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBookView.xaml.cs">
+      <DependentUpon>DataBookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InventoryReportView.xaml.cs">
+      <DependentUpon>InventoryReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoneyCollectionView.xaml.cs">
+      <DependentUpon>MoneyCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SellBookView.xaml.cs">
+      <DependentUpon>SellBookView.xaml</DependentUpon>
+    </Compile>
     <Page Include="BookManagementWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControlBar\UserControlAlter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AccountMngWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,7 +191,51 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ReportWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\MainResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookInputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookMngView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusinessWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomerDueReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CustomerMngView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DataBookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InventoryReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MoneyCollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SellBookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

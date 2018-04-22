@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStoreManagerment"
         xmlns:uca="clr-namespace:BookStoreManagerment.CustomControlBar"
+        xmlns:views="clr-namespace:BookStoreManagerment.Views"
+        xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" x:Class="BookStoreManagerment.BookManagementWindow"
         mc:Ignorable="d"
@@ -20,7 +23,21 @@
     WindowStartupLocation="CenterScreen"
         Title="Book Management Window" Height="600" Width="1024" ResizeMode="NoResize" Icon="Images/BookMng2.png"
     WindowStyle="None">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding BookMngCmd}" CommandParameter="{Binding ElementName=BookMngWindow}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Window.Resources>
+        <DataTemplate x:Name="dataBookTemplate" DataType="{x:Type vm:DataBookViewModel}" >
+            <views:DataBookView DataContext="{Binding}"></views:DataBookView>
+        </DataTemplate>
+        <DataTemplate x:Name="bookMngTemplate" DataType="{x:Type vm:BookMngViewVM}" >
+            <views:BookMngView DataContext="{Binding}"></views:BookMngView>
+        </DataTemplate>
+        <DataTemplate x:Name="customerMngTemplate" DataType="{x:Type vm:CustomerMngViewVM}" >
+            <views:CustomerMngView DataContext="{Binding}"></views:CustomerMngView>
+        </DataTemplate>
         <Storyboard x:Key="HideMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
                 <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
@@ -87,10 +104,10 @@
                 <ImageBrush ImageSource="Images/AcountInfoBackground.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
             <Grid>
-                <Button Panel.ZIndex="1" x:Name="ButtonCloseMenu" Visibility="{Binding BtnHideVisibility}" Command="{Binding HideMenuCmd}" CommandParameter="{Binding ElementName=ButtonCloseMenu}" ToolTip="Hide Menu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button Panel.ZIndex="1" x:Name="ButtonOpenMenu" Visibility="{Binding BtnShowVisibility}" Command="{Binding ShowMenuCmd}" CommandParameter="{Binding ElementName=ButtonOpenMenu}" ToolTip="Show Menu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Menu" Width="40" Height="40" Foreground="Black"/>
                 </Button>
-                <Button Panel.ZIndex="1" x:Name="ButtonOpenMenu" Visibility="{Binding BtnShowVisibility}" Command="{Binding ShowMenuCmd}" CommandParameter="{Binding ElementName=ButtonOpenMenu}" ToolTip="Show Menu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button Panel.ZIndex="1" x:Name="ButtonCloseMenu" Visibility="{Binding BtnHideVisibility}" Command="{Binding HideMenuCmd}" CommandParameter="{Binding ElementName=ButtonCloseMenu}" ToolTip="Hide Menu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Menu" Width="40" Height="40" Foreground="Black"/>
                 </Button>
                 <Image x:Name="image"  Source="Images/DecorationImg.jpg" Stretch="Fill" Height="180" Width="250" RenderTransformOrigin="0.5,0.5">
@@ -107,6 +124,11 @@
             </Grid>
             <StackPanel>
                 <ListViewItem Height="60">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding BookMngCmd}" CommandParameter="{Binding ElementName=BookMngWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <StackPanel Height="60" Orientation="Horizontal" Margin="-5">
                         <Button Width="40" Height="40" VerticalAlignment="Center" Margin="5 0 5 5" BorderBrush="#00000000" >
                             <Button.Background>
@@ -117,13 +139,23 @@
                     </StackPanel>
                 </ListViewItem>
 
-                <ListViewItem Height="60">
-                    <StackPanel Height="50" Orientation="Horizontal" Margin="-5 0">
+                <ListViewItem  Height="60">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding DataBookCmd}" CommandParameter="{Binding ElementName=BookMngWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <StackPanel  Height="50" Orientation="Horizontal" Margin="-5 0">
                         <materialDesign:PackIcon Kind="BookOpenPageVariant" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Quản lí dữ liệu sách" FontSize="15" Margin="5" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Height="60">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding CustomerMngCmd}" CommandParameter="{Binding ElementName=BookMngWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <StackPanel Height="50" Orientation="Horizontal" Margin="-5 0">
                         <materialDesign:PackIcon Kind="AccountBox" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Quản lí khách hàng" FontSize="15" Margin="5" VerticalAlignment="Center"/>
@@ -132,5 +164,6 @@
             </StackPanel>
 
         </StackPanel>
+        <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding}"></ContentControl>
     </Grid>
 </Window>

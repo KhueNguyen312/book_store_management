@@ -27,7 +27,7 @@
                     <Button Command="{Binding BackPreviousWindownCommand}" 
                             CommandParameter="{Binding ElementName=ControlBarAlter}"
                         ToolTip="Go Back" ToolBar.OverflowMode="AsNeeded" Opacity="0.5" >
-                        <materialDesign:PackIcon HorizontalAlignment="Center" VerticalAlignment="Center" Kind="ArrowCollapseLeft" />
+                        <materialDesign:PackIcon HorizontalAlignment="Center" Height="15" Width="25" VerticalAlignment="Center" Kind="ArrowCollapseLeft" />
                     </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

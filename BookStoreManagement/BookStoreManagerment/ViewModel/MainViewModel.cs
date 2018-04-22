@@ -14,6 +14,10 @@ namespace BookStoreManagerment.ViewModel
     {
         public bool Isloaded = false;
         public ICommand PressBtnBookMngCommand { get; set; }
+        public ICommand PressBtnAccountCommand { get; set; }
+        public ICommand PressBtnBusinessCommand { get; set; }
+        public ICommand PressBtnSettingCommand { get; set; }
+        public ICommand PressBtnReportCommand { get; set; }
 
         public MainViewModel()
         {
@@ -22,7 +26,10 @@ namespace BookStoreManagerment.ViewModel
                 Isloaded = true;
             }
             PressBtnBookMngCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBookMngWindow(p); });
-            
+            PressBtnAccountCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenAccountWindow(p); });
+            PressBtnBusinessCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBusinesstWindow(p); });
+            PressBtnSettingCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenSettingWindow(p); });
+            PressBtnReportCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenReportWindow(p); });
 
         }
         //All commands
@@ -31,7 +38,26 @@ namespace BookStoreManagerment.ViewModel
             BookManagementWindow window = new BookManagementWindow();
             window.ShowDialog();
         }
-        
+        public void OpenAccountWindow(Window w)
+        {
+            AccountMngWindow window = new AccountMngWindow();
+            window.ShowDialog();
+        }
+        public void OpenBusinesstWindow(Window w)
+        {
+            BusinessWindow window = new BusinessWindow();
+            window.ShowDialog();
+        }
+        public void OpenSettingWindow(Window w)
+        {
+            SettingWindow window = new SettingWindow();
+            window.ShowDialog();
+        }
+        public void OpenReportWindow(Window w)
+        {
+            ReportWindow window = new ReportWindow();
+            window.ShowDialog();
+        }
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }
     }
 

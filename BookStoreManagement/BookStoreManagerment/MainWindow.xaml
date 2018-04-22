@@ -100,19 +100,19 @@
                 <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
                     <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Small" Header="Quản Lý Nhân Viên " Background="#FF633EBD">
+                <dxlc:Tile Size="Small" Header="Quản Lý Tài Khoản" Command="{Binding PressBtnAccountCommand}" CommandParameter="{Binding ElementName=mainWindow}"  Background="#FF633EBD">
                     <Image Source="Images/EmployeeIcon.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Kinh Doanh" HorizontalHeaderAlignment="Stretch" Background="#FFD74E2A">
+                <dxlc:Tile Size="Large" Header="Kinh Doanh" Command="{Binding PressBtnBusinessCommand}" CommandParameter="{Binding ElementName=mainWindow}" HorizontalHeaderAlignment="Stretch" Background="#FFD74E2A">
                     <Image Source="Images/BusinessIcon.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Header="Tìm Kiếm" Size="Small"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF4F2E94" >
                     <Image Source="Images\Search.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Header="Tùy Chỉnh" Size="Small" Background="#FFDA542D">
+                <dxlc:Tile Header="Tùy Chỉnh" Command="{Binding PressBtnSettingCommand}" CommandParameter="{Binding ElementName=mainWindow}" Size="Small" Background="#FFDA542D">
                     <Image Source="Images\Other.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Size="Large" Header="Báo cáo" Background="#FF009656">
+                <dxlc:Tile Size="Large" Header="Báo cáo" Command="{Binding PressBtnReportCommand}" CommandParameter="{Binding ElementName=mainWindow}" Background="#FF009656">
                     <Image Source="Images\Report.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile x:Name="InfoTile" Size="ExtraLarge"   ContentSource="{Binding AppInfos}" Width="250" dxlc:FlowLayoutControl.IsFlowBreak="True" ContentChangeInterval="00:00:05" AnimateContentChange="True" >

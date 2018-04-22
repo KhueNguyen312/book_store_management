@@ -50,7 +50,7 @@
                         <Setter Property="Margin" Value="0 25 5 10"></Setter>
                     </Style>
                 </Grid.Resources>
-                <Button Grid.Row="0" HorizontalAlignment="Center" x:Name="LoginAvatar" Margin="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="80" Height="80">
+                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Grid.Row="0" HorizontalAlignment="Center" x:Name="LoginAvatar" Margin="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="80" Height="80">
                     <Button.Background>
                         <ImageBrush ImageSource="Images/LoginAvatar.png" Stretch="UniformToFill"/>
                     </Button.Background>
@@ -78,7 +78,7 @@
                     <PasswordBox Grid.Column="1" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Mật khẩu" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                 </Grid>
                 <Grid Grid.Row="4">
-                    <Button Margin="20 0 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="20 0 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
                         ToolTip="Đăng nhập"
                         Content="Đăng Nhập" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=loginWindow}">
                     </Button>

@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="BookStoreManagerment.Views.MoneyCollectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BookStoreManagerment.Views"
+             mc:Ignorable="d"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="StackPanel">
+                <Setter Property="Margin" Value="10"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Thu tiền" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+        <StackPanel Grid.Row="1">
+            <ComboBox Grid.Row="0" Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <ComboBoxItem>Naruto</ComboBoxItem>
+                <ComboBoxItem>Fate Grand Order</ComboBoxItem>
+            </ComboBox>
+            <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Tiền thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <DatePicker Margin="0 15 0 0" HorizontalAlignment="Left" x:Name="FutureDatePicker" Width="100"
+                                materialDesign:HintAssist.Hint="Ngày thu tiền">
+                <DatePicker.SelectedDate>
+                    <Binding Path="FutureValidatingDate" UpdateSourceTrigger="PropertyChanged">
+
+                    </Binding>
+                </DatePicker.SelectedDate>
+            </DatePicker>
+            <TextBox  materialDesign:HintAssist.Hint="Mã phiếu thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Content="Thêm phiếu thu">
+            </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Name="dataGridMoneyCollection">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="STT" Binding="{Binding }"/>
+                <DataGridTextColumn Header="Mã phiếu thu" Binding="{Binding}"/>
+                <DataGridTextColumn Header="Tên khách hàng" Binding="{Binding}"/>
+                <DataGridTextColumn Header="Ngày thu" Binding="{Binding}"/>
+                <DataGridTextColumn Header="Tiền thu" Binding="{Binding}"/>
+                <DataGridTextColumn Header="Tên nợ" Binding="{Binding}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
