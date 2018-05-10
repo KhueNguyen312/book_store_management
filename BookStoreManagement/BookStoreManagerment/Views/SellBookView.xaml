@@ -44,13 +44,18 @@
                 <ComboBoxItem>Naruto</ComboBoxItem>
                 <ComboBoxItem>Fate Grand Order</ComboBoxItem>
             </ComboBox>
-            <ComboBox  Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                <ComboBoxItem>Nguyễn Minh Khuê</ComboBoxItem>
-                <ComboBoxItem>Other</ComboBoxItem>
-            </ComboBox>
+            
             <TextBox materialDesign:HintAssist.Hint="Số lượng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox materialDesign:HintAssist.Hint="Đơn giá" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        ToolTip="Thêm sách"
+                        Content="Thêm sách">
+            </Button>
+            <StackPanel  Margin="0 10 0 0" Orientation="Horizontal">
+                <ComboBox  Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                    <ComboBoxItem>Nguyễn Minh Khuê</ComboBoxItem>
+                    <ComboBoxItem>Other</ComboBoxItem>
+                </ComboBox>
                 <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData"  ToolTip="Add a new data"  Padding="0" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
                 </Button>

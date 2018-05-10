@@ -18,13 +18,28 @@ namespace BookStoreManagerment.ViewModel
         public ICommand PressBtnBusinessCommand { get; set; }
         public ICommand PressBtnSettingCommand { get; set; }
         public ICommand PressBtnReportCommand { get; set; }
-
+        public ICommand LoadedWindowCommand { get; set; }
         public MainViewModel()
         {
-            if (!Isloaded)
+            LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
                 Isloaded = true;
-            }
+                p.Hide();
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.ShowDialog();
+                if (loginWindow.DataContext == null)
+                    return;
+                var loginVM = loginWindow.DataContext as LoginViewModel;
+
+                if (loginVM.IsLogin)
+                {
+                    p.Show();
+                }
+                else
+                {
+                    p.Close();
+                }
+            });
             PressBtnBookMngCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBookMngWindow(p); });
             PressBtnAccountCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenAccountWindow(p); });
             PressBtnBusinessCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBusinesstWindow(p); });

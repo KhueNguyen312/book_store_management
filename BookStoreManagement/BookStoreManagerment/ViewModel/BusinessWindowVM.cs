@@ -17,30 +17,30 @@ namespace BookStoreManagerment.ViewModel
         public ICommand BookInputCmd { get; set; }
         public ICommand SellBookCmd { get; set; }
         public ICommand MoneyCollectionCmd { get; set; }
-        private Visibility btnHideVisibility;
+        private Visibility _btnHideVisibility;
         public Visibility BtnHideVisibility
         {
             get
             {
-                return btnHideVisibility;
+                return _btnHideVisibility;
             }
             set
             {
-                btnHideVisibility = value;
+                _btnHideVisibility = value;
 
                 OnPropertyChanged("BtnHideVisibility");
             }
         }
-        private Visibility btnShowVisibility;
+        private Visibility _btnShowVisibility;
         public Visibility BtnShowVisibility
         {
             get
             {
-                return btnShowVisibility;
+                return _btnShowVisibility;
             }
             set
             {
-                btnShowVisibility = value;
+                _btnShowVisibility = value;
 
                 OnPropertyChanged("BtnShowVisibility");
             }

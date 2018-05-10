@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStoreManagerment"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:uc="clr-namespace:BookStoreManagerment.CustomControlBar"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="BookStoreManagerment.MainWindow"
@@ -20,6 +21,11 @@
     DataContext="{StaticResource MainVM}"
     WindowStyle="None"
         Title="Book Store Management" Height="600" Width="1024" Icon="Images\BookStoreIcon.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedWindowCommand}" CommandParameter="{Binding ElementName=mainWindow}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
