@@ -81,14 +81,13 @@
                 <DataGridTextColumn Header="STT" Binding="{Binding }"/>
                 <DataGridTextColumn Header="User Name" Binding="{Binding}"/>
                 <DataGridTextColumn Header="Họ và tên" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding}"/>
                 <DataGridTextColumn Header="Loại tài khoản" Binding="{Binding}"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Margin="20 0 15 0" Grid.Row="3" Grid.Column="1">
-            <TextBox  materialDesign:HintAssist.Hint="User Name" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox  materialDesign:HintAssist.Hint="Họ và tên" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox  materialDesign:HintAssist.Hint="Email" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox  materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox  materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox  materialDesign:HintAssist.Hint="Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <ComboBox Grid.Row="0" Margin="1 13 0 0" materialDesign:HintAssist.Hint="Loại tài khoản" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                 <ComboBoxItem>Administrator</ComboBoxItem>
                 <ComboBoxItem>Normal</ComboBoxItem>

@@ -377,3 +377,8 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\InventoryReportView.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerDueReportView.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\InventoryReportView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_Content.g.cs

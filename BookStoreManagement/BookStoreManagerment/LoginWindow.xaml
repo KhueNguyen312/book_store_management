@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStoreManagerment"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:uc ="clr-namespace:BookStoreManagerment.CustomControlBar"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
          xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="BookStoreManagerment.LoginWindow"
@@ -65,8 +66,14 @@
                     </Grid.ColumnDefinitions>
 
                     <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
-                    <TextBox Grid.Column="1" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="18"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox Name="usernameBox" Grid.Column="1" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="18"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction Command="{Binding UserNameChangedCommand}" CommandParameter="{Binding ElementName=usernameBox}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
                 </Grid>
                 <Grid Grid.Row="3" >
                     <Grid.ColumnDefinitions>
@@ -75,11 +82,19 @@
                     </Grid.ColumnDefinitions>
 
                     <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Kind="key" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
-                    <PasswordBox Grid.Column="1" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Mật khẩu" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                    <PasswordBox Grid.Column="1" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Mật khẩu" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PasswordChanged">
+                                <i:InvokeCommandAction Command="{Binding PasswordChangedCommand}" CommandParameter="{Binding ElementName=PasswordBox}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </PasswordBox>
+                    
                 </Grid>
                 <Grid Grid.Row="4">
                     <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="20 0 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
                         ToolTip="Đăng nhập"
+                        IsDefault="True"
                         Content="Đăng Nhập" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=loginWindow}">
                     </Button>
                 </Grid>

@@ -46,7 +46,11 @@
             </ComboBox>
             <TextBox materialDesign:HintAssist.Hint="Số lượng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox materialDesign:HintAssist.Hint="Giá nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        ToolTip="Thêm sách"
+                        Content="Thêm sách">
+            </Button>
+            <StackPanel HorizontalAlignment="Right" Margin="0 10 0 0" Orientation="Horizontal">
                 <Button  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new data"  Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
                 </Button>
