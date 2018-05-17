@@ -100,5 +100,17 @@
                 </Grid>
             </Grid>
         </materialDesign:Card>
+        <materialDesign:Snackbar
+                      IsActive="{Binding IsActiveSnackBar,Mode=TwoWay}"
+                      x:Name="SnackbarLoginFail" Grid.Row="1" Panel.ZIndex="1"> 
+            <materialDesign:SnackbarMessage Content="Sai tài khoản hoặc mật khẩu. Đăng nhập không thành công"
+                                                ActionContent="OK">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="ActionClick">
+                        <i:InvokeCommandAction Command="{Binding ClickedSnackbarCommand}" CommandParameter="{Binding ElementName=SnackbarLoginFail}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </materialDesign:SnackbarMessage>
+        </materialDesign:Snackbar>
     </Grid>
 </Window>

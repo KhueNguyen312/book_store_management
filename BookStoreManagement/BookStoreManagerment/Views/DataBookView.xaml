@@ -4,9 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="BookStoreManagerment.Views.DataBookView"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
     <Grid>
         <dx:DXTabControl>
             <dx:DXTabItem Header="Nhà xuất bản">
@@ -16,13 +21,17 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Nhà xuất bản" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-                    <DataGrid Grid.Row="1">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn  Header="STT" Binding="{Binding }"/>
-                            <DataGridTextColumn Header="Mã" Binding="{Binding}"/>
-                            <DataGridTextColumn Header="Tên NXB"></DataGridTextColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <ListView Grid.Row="1" ItemsSource="{Binding ListNXB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+        Converter={StaticResource IndexConverter},ConverterParameter=1}"></GridViewColumn>
+                                <GridViewColumn Header="Mã" DisplayMemberBinding="{Binding MANXB}"></GridViewColumn>
+                                <GridViewColumn Header="Tên NXB" DisplayMemberBinding="{Binding TENNXB}"></GridViewColumn>
+                                <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding DIACHI}"></GridViewColumn>
+                            </GridView>
+                          </ListView.View>
+                    </ListView>
                 </Grid>
             </dx:DXTabItem>
             <dx:DXTabItem Header="Thể Loại">
@@ -32,13 +41,16 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Thể loại sách" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-                    <DataGrid Grid.Row="1">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn  Header="STT" Binding="{Binding }"/>
-                            <DataGridTextColumn Header="Mã thể loại" Binding="{Binding}"/>
-                            <DataGridTextColumn Header="Tên thể loại"></DataGridTextColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <ListView Grid.Row="1" ItemsSource="{Binding ListOfBookType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+        Converter={StaticResource IndexConverter},ConverterParameter=1}"></GridViewColumn>
+                                <GridViewColumn Header="Mã loại sách" DisplayMemberBinding="{Binding MALOAISACH}"></GridViewColumn>
+                                <GridViewColumn Header="Tên thể loại" DisplayMemberBinding="{Binding TENLOAISACH}"></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                     </ListView>
                 </Grid>
             </dx:DXTabItem>
         </dx:DXTabControl>

@@ -16,7 +16,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-    DataContext="{StaticResource BookMngVM}"
+    DataContext="{StaticResource AccountMngVM}"
     WindowStartupLocation="CenterScreen"
         Title="Account Management" Height="600" Width="1024" ResizeMode="NoResize" Icon="Images/BookMng2.png" WindowStyle="None">
     <Grid>
@@ -75,7 +75,7 @@
         </materialDesign:ColorZone>
         <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="Quản lí thông tin tài khoản" FontSize="25" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
         <uca:UserControlAlter Tag="{Binding Title, ElementName=accountMng}" Grid.ColumnSpan="3" Grid.Row="0"/>
-        <dxe:ImageEdit Stretch="Fill" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 0 0" Height="200" Width="150"></dxe:ImageEdit>
+        <dxe:ImageEdit Source="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 0 0" Height="200" Width="150"></dxe:ImageEdit>
         <DataGrid Grid.Row="4" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="STT" Binding="{Binding }"/>
@@ -85,7 +85,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Margin="20 0 15 0" Grid.Row="3" Grid.Column="1">
-            <TextBox  materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Text="{Binding AccountName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox  materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox  materialDesign:HintAssist.Hint="Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <ComboBox Grid.Row="0" Margin="1 13 0 0" materialDesign:HintAssist.Hint="Loại tài khoản" Style="{StaticResource MaterialDesignFloatingHintComboBox}">

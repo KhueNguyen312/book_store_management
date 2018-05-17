@@ -75,6 +75,8 @@
     <EntitySetMapping Name="SACHes">
       <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.SACH">
         <MappingFragment StoreEntitySet="SACH">
+          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+          <ScalarProperty Name="GIANHAP" ColumnName="GIANHAP" />
           <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
           <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
           <ScalarProperty Name="SOLUONGHIENTAI" ColumnName="SOLUONGHIENTAI" />

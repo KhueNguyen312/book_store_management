@@ -169,15 +169,18 @@
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AccountMngVM.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\BookInputViewVM.cs" />
     <Compile Include="ViewModel\BookManagementWindowViewModel.cs" />
     <Compile Include="ViewModel\BookMngViewVM.cs" />
     <Compile Include="ViewModel\BusinessWindowVM.cs" />
+    <Compile Include="ViewModel\ByteToImageConverter.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
     <Compile Include="ViewModel\CustomerDueReportVM.cs" />
     <Compile Include="ViewModel\CustomerMngViewVM.cs" />
     <Compile Include="ViewModel\DataBookViewModel.cs" />
+    <Compile Include="ViewModel\IndexConverter.cs" />
     <Compile Include="ViewModel\InventoryReportVM.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

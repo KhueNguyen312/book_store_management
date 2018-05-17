@@ -16,9 +16,12 @@ namespace BookStoreManagerment.ViewModel
         public ICommand LoginCommand { get; set; }
         public ICommand PasswordChangedCommand { get; set; }
         public ICommand UserNameChangedCommand { get; set; }
+        public ICommand ClickedSnackbarCommand { get; set; }
         public bool IsLogin { get; set; }
+        private bool _isActiveSnackBar;
         private string _userName;
         private string _password;
+        public bool IsActiveSnackBar { get { return _isActiveSnackBar; } set { _isActiveSnackBar = value; OnPropertyChanged(); } }
         public string UserName { get { return _userName; } set { _userName = value;OnPropertyChanged(); } }
         public string Password { get { return _password; } set { _password = value; OnPropertyChanged(); } }
 
@@ -31,6 +34,7 @@ namespace BookStoreManagerment.ViewModel
             });
             PasswordChangedCommand = new RelayCommand<PasswordBox>((p) => { return true; }, (p) => { Password = p.Password; });
             UserNameChangedCommand = new RelayCommand<TextBox>((p) => { return true; }, (p) => { UserName = p.Text; });
+            ClickedSnackbarCommand = new RelayCommand<MaterialDesignThemes.Wpf.Snackbar>((p) => { return p == null ? false : true; }, (p) => { p.IsActive = false; });
         }
         
         public void Login(Window window )
@@ -41,12 +45,14 @@ namespace BookStoreManagerment.ViewModel
             if(accountCount > 0)
             {
                 IsLogin = true;
+                IsActiveSnackBar = false;
                 window.Close();
             }
             else
             {
                 IsLogin = false;
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                IsActiveSnackBar = true;
+                
             }
             
         }

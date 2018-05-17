@@ -11,23 +11,30 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class KHACHHANG
+    using ViewModel;
+
+    public partial class KHACHHANG:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACHHANG()
         {
             this.HOADONs = new HashSet<HOADON>();
         }
-    
-        public string MAKH { get; set; }
-        public string TENKH { get; set; }
-        public string DIACHI { get; set; }
-        public string SODIENTHOAI { get; set; }
-        public string EMAIL { get; set; }
-        public decimal TIENNO { get; set; }
+
+        private string _MAKH;
+        public string MAKH { get { return _MAKH; } set { _MAKH = value; OnPropertyChanged(); } }
+        private string _TENKH;
+        public string TENKH { get { return _TENKH; } set { _TENKH = value; OnPropertyChanged(); } }
+        private string _DIACHI;
+        public string DIACHI { get { return _DIACHI; } set { _DIACHI = value; OnPropertyChanged(); } }
+        private string _SODIENTHOAI;
+        public string SODIENTHOAI { get { return _SODIENTHOAI; } set { _SODIENTHOAI = value; OnPropertyChanged(); } }
+        private string _EMAIL;
+        public string EMAIL { get { return _EMAIL; } set { _EMAIL = value; OnPropertyChanged(); } }
+        private decimal _TIENNO;
+        public decimal TIENNO { get { return _TIENNO; } set { _TIENNO = value; OnPropertyChanged(); } }
         public int DIEMTICHLUY { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
     }

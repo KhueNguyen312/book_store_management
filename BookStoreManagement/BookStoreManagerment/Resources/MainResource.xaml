@@ -8,4 +8,5 @@
     <viewmodel:BusinessWindowVM x:Key="BusinessVM"></viewmodel:BusinessWindowVM>
     <viewmodel:SettingWindowVM x:Key="SettingVM"></viewmodel:SettingWindowVM>
     <viewmodel:ReportWindowVM x:Key="ReportVM"></viewmodel:ReportWindowVM>
+    <viewmodel:AccountMngVM x:Key="AccountMngVM"></viewmodel:AccountMngVM>
 </ResourceDictionary>

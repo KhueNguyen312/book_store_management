@@ -11,18 +11,21 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class NHAXUATBAN
+    using ViewModel;
+
+    public partial class NHAXUATBAN:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHAXUATBAN()
         {
             this.SACHes = new HashSet<SACH>();
         }
-    
-        public string MANXB { get; set; }
-        public string TENNXB { get; set; }
-        public string DIACHI { get; set; }
+        private string _MANXB;
+        public string MANXB { get { return _MANXB; } set { _MANXB = value; OnPropertyChanged(); } }
+        private string _TENNXB;
+        public string TENNXB { get { return _TENNXB; } set { _TENNXB = value; OnPropertyChanged(); } }
+        private string _DIACHI;
+        public string DIACHI { get { return _DIACHI; } set { _DIACHI = value; OnPropertyChanged(); } }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }
