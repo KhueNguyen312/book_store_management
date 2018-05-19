@@ -71,7 +71,7 @@ namespace BookStoreManagerment.ViewModel
             });
             BookInputCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
             {
-                p.DataContext = new BookInputViewVM();
+                p.DataContext = new BookImportViewVM();
             });
             SellBookCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
             {

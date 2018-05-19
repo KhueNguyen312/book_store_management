@@ -171,7 +171,7 @@
     </Compile>
     <Compile Include="ViewModel\AccountMngVM.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
-    <Compile Include="ViewModel\BookInputViewVM.cs" />
+    <Compile Include="ViewModel\BookImportViewVM.cs" />
     <Compile Include="ViewModel\BookManagementWindowViewModel.cs" />
     <Compile Include="ViewModel\BookMngViewVM.cs" />
     <Compile Include="ViewModel\BusinessWindowVM.cs" />
@@ -189,8 +189,8 @@
     <Compile Include="ViewModel\SellBookViewVM.cs" />
     <Compile Include="ViewModel\SettingWindowVM.cs" />
     <Compile Include="ViewModel\UserControlBarAlterViewModel.cs" />
-    <Compile Include="Views\BookInputView.xaml.cs">
-      <DependentUpon>BookInputView.xaml</DependentUpon>
+    <Compile Include="Views\BookImportView.xaml.cs">
+      <DependentUpon>BookImportView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BookMngView.xaml.cs">
       <DependentUpon>BookMngView.xaml</DependentUpon>
@@ -260,7 +260,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BookInputView.xaml">
+    <Page Include="Views\BookImportView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

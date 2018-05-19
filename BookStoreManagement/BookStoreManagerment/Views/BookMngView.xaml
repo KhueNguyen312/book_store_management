@@ -15,7 +15,6 @@
              TextOptions.TextRenderingMode="Auto"
              Background="{DynamicResource MaterialDesignPaper}"
              FontFamily="{DynamicResource MaterialDesignFont}"
-             Name="root"
              d:DesignHeight="400" d:DesignWidth="300">
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>

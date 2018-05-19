@@ -29,8 +29,8 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Window.Resources>
-        <DataTemplate x:Name="bookIpTemplate" DataType="{x:Type vm:BookInputViewVM}" >
-            <views:BookInputView DataContext="{Binding}"></views:BookInputView>
+        <DataTemplate x:Name="bookIpTemplate" DataType="{x:Type vm:BookImportViewVM}" >
+            <views:BookImportView DataContext="{Binding}"></views:BookImportView>
         </DataTemplate>
         <DataTemplate x:Name="sellBookTemplate" DataType="{x:Type vm:SellBookViewVM}" >
             <views:SellBookView DataContext="{Binding}"></views:SellBookView>

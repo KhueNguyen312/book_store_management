@@ -14,7 +14,7 @@ namespace BookStoreManagerment.Model
     
     public partial class CTHOADON
     {
-        public string SOHD { get; set; }
+        public int SOHD { get; set; }
         public string MASACH { get; set; }
         public int SOLUONG { get; set; }
         public decimal THANHTIEN { get; set; }

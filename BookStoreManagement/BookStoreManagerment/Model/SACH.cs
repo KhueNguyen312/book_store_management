@@ -21,7 +21,7 @@ namespace BookStoreManagerment.Model
             this.CTHOADONs = new HashSet<CTHOADON>();
             this.CTPHIEUNHAPs = new HashSet<CTPHIEUNHAP>();
         }
-        // use these properties to show their display name instead id
+
         public NHAXUATBAN NXB { get; set; }
         public LOAISACH LoaiSach { get; set; }
 
@@ -53,7 +53,7 @@ namespace BookStoreManagerment.Model
         public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
 
         public string NOIDUNG { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

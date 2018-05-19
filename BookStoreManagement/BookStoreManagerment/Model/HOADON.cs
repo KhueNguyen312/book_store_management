@@ -20,7 +20,7 @@ namespace BookStoreManagerment.Model
             this.CTHOADONs = new HashSet<CTHOADON>();
         }
     
-        public string SOHD { get; set; }
+        public int SOHD { get; set; }
         public string MAKH { get; set; }
         public System.DateTime NGAYHD { get; set; }
         public decimal TONGTIEN { get; set; }

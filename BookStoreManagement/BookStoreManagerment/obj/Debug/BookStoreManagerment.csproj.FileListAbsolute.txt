@@ -363,8 +363,6 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\AccountMngWindow.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.baml
-F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookInputView.g.cs
-F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookInputView.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\MoneyCollectionView.g.cs
@@ -382,3 +380,5 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.xml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.xml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_Content.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.baml

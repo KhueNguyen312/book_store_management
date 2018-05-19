@@ -44,7 +44,7 @@
       <PropertyRef Name="SOHD" />
       <PropertyRef Name="MASACH" />
     </Key>
-    <Property Name="SOHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="SOHD" Type="Int32" Nullable="false" />
     <Property Name="MASACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="SOLUONG" Type="Int32" Nullable="false" />
     <Property Name="THANHTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -56,7 +56,7 @@
       <PropertyRef Name="MAPHIEUNHAP" />
       <PropertyRef Name="MASACH" />
     </Key>
-    <Property Name="MAPHIEUNHAP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" />
     <Property Name="MASACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="SOLUONG" Type="Int32" Nullable="false" />
     <Property Name="DONGIA" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -68,7 +68,7 @@
     <Key>
       <PropertyRef Name="SOHD" />
     </Key>
-    <Property Name="SOHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="SOHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MAKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="NGAYHD" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TONGTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -110,8 +110,8 @@
     <Key>
       <PropertyRef Name="MAPHIEUNHAP" />
     </Key>
-    <Property Name="MAPHIEUNHAP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-    <Property Name="TONGCHI" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" FromRole="PHIEUNHAPSACH" ToRole="CTPHIEUNHAP" />
   </EntityType>
@@ -126,13 +126,13 @@
     <Property Name="MANXB" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="SOLUONGHIENTAI" Type="Int32" Nullable="false" />
     <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="GIANHAP" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="NOIDUNG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CTHOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_SACH" FromRole="SACH" ToRole="CTHOADON" />
     <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_SACH" FromRole="SACH" ToRole="CTPHIEUNHAP" />
     <NavigationProperty Name="LOAISACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" FromRole="SACH" ToRole="LOAISACH" />
     <NavigationProperty Name="NHAXUATBAN" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" FromRole="SACH" ToRole="NHAXUATBAN" />
-    <Property Name="GIANHAP" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="TAIKHOAN">
     <Key>

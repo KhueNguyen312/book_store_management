@@ -10,7 +10,7 @@
             <PropertyRef Name="SOHD" />
             <PropertyRef Name="MASACH" />
           </Key>
-          <Property Name="SOHD" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="SOHD" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
           <Property Name="THANHTIEN" Type="money" Nullable="false" />
@@ -20,17 +20,17 @@
             <PropertyRef Name="MAPHIEUNHAP" />
             <PropertyRef Name="MASACH" />
           </Key>
-          <Property Name="MAPHIEUNHAP" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MAPHIEUNHAP" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
           <Property Name="DONGIA" Type="money" Nullable="false" />
-          <Property Name="THANHTIEN" Type="money" />
+          <Property Name="THANHTIEN" Type="money" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
             <PropertyRef Name="SOHD" />
           </Key>
-          <Property Name="SOHD" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="SOHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MAKH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="NGAYHD" Type="datetime" Nullable="false" />
           <Property Name="TONGTIEN" Type="money" Nullable="false" />
@@ -67,8 +67,8 @@
           <Key>
             <PropertyRef Name="MAPHIEUNHAP" />
           </Key>
-          <Property Name="MAPHIEUNHAP" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="TONGCHI" Type="money" Nullable="false" />
+          <Property Name="MAPHIEUNHAP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TONGCHI" Type="money" StoreGeneratedPattern="Computed" DefaultValue="0" />
           <Property Name="NGAYNHAP" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="SACH">
@@ -97,6 +97,90 @@
           <Property Name="HINHANH" Type="image" />
           <Property Name="LOAITK" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="F_K_CTHD_HD">
+          <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+          <End Role="CTHOADON" Type="Self.CTHOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOADON">
+              <PropertyRef Name="SOHD" />
+            </Principal>
+            <Dependent Role="CTHOADON">
+              <PropertyRef Name="SOHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_CTHD_SACH">
+          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
+          <End Role="CTHOADON" Type="Self.CTHOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MASACH" />
+            </Principal>
+            <Dependent Role="CTHOADON">
+              <PropertyRef Name="MASACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_CTPN_PNS">
+          <End Role="PHIEUNHAPSACH" Type="Self.PHIEUNHAPSACH" Multiplicity="1" />
+          <End Role="CTPHIEUNHAP" Type="Self.CTPHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUNHAPSACH">
+              <PropertyRef Name="MAPHIEUNHAP" />
+            </Principal>
+            <Dependent Role="CTPHIEUNHAP">
+              <PropertyRef Name="MAPHIEUNHAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_CTPN_SACH">
+          <End Role="SACH" Type="Self.SACH" Multiplicity="1" />
+          <End Role="CTPHIEUNHAP" Type="Self.CTPHIEUNHAP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SACH">
+              <PropertyRef Name="MASACH" />
+            </Principal>
+            <Dependent Role="CTPHIEUNHAP">
+              <PropertyRef Name="MASACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_HD_KH">
+          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACHHANG">
+              <PropertyRef Name="MAKH" />
+            </Principal>
+            <Dependent Role="HOADON">
+              <PropertyRef Name="MAKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_SACH_LAOISACH">
+          <End Role="LOAISACH" Type="Self.LOAISACH" Multiplicity="1" />
+          <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAISACH">
+              <PropertyRef Name="MALOAISACH" />
+            </Principal>
+            <Dependent Role="SACH">
+              <PropertyRef Name="MALOAISACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_K_SACH_NXB">
+          <End Role="NHAXUATBAN" Type="Self.NHAXUATBAN" Multiplicity="1" />
+          <End Role="SACH" Type="Self.SACH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHAXUATBAN">
+              <PropertyRef Name="MANXB" />
+            </Principal>
+            <Dependent Role="SACH">
+              <PropertyRef Name="MANXB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="QUAN_LI_NHA_SACHModelStoreContainer">
           <EntitySet Name="CTHOADON" EntityType="Self.CTHOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTPHIEUNHAP" EntityType="Self.CTPHIEUNHAP" Schema="dbo" store:Type="Tables" />
@@ -107,6 +191,34 @@
           <EntitySet Name="PHIEUNHAPSACH" EntityType="Self.PHIEUNHAPSACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="F_K_CTHD_HD" Association="Self.F_K_CTHD_HD">
+            <End Role="HOADON" EntitySet="HOADON" />
+            <End Role="CTHOADON" EntitySet="CTHOADON" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_CTHD_SACH" Association="Self.F_K_CTHD_SACH">
+            <End Role="SACH" EntitySet="SACH" />
+            <End Role="CTHOADON" EntitySet="CTHOADON" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_CTPN_PNS" Association="Self.F_K_CTPN_PNS">
+            <End Role="PHIEUNHAPSACH" EntitySet="PHIEUNHAPSACH" />
+            <End Role="CTPHIEUNHAP" EntitySet="CTPHIEUNHAP" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_CTPN_SACH" Association="Self.F_K_CTPN_SACH">
+            <End Role="SACH" EntitySet="SACH" />
+            <End Role="CTPHIEUNHAP" EntitySet="CTPHIEUNHAP" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_HD_KH" Association="Self.F_K_HD_KH">
+            <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+            <End Role="HOADON" EntitySet="HOADON" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_SACH_LAOISACH" Association="Self.F_K_SACH_LAOISACH">
+            <End Role="LOAISACH" EntitySet="LOAISACH" />
+            <End Role="SACH" EntitySet="SACH" />
+          </AssociationSet>
+          <AssociationSet Name="F_K_SACH_NXB" Association="Self.F_K_SACH_NXB">
+            <End Role="NHAXUATBAN" EntitySet="NHAXUATBAN" />
+            <End Role="SACH" EntitySet="SACH" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -156,7 +268,7 @@
             <PropertyRef Name="SOHD" />
             <PropertyRef Name="MASACH" />
           </Key>
-          <Property Name="SOHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="SOHD" Type="Int32" Nullable="false" />
           <Property Name="MASACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="SOLUONG" Type="Int32" Nullable="false" />
           <Property Name="THANHTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -168,7 +280,7 @@
             <PropertyRef Name="MAPHIEUNHAP" />
             <PropertyRef Name="MASACH" />
           </Key>
-          <Property Name="MAPHIEUNHAP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" />
           <Property Name="MASACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="SOLUONG" Type="Int32" Nullable="false" />
           <Property Name="DONGIA" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -180,7 +292,7 @@
           <Key>
             <PropertyRef Name="SOHD" />
           </Key>
-          <Property Name="SOHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="SOHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MAKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="NGAYHD" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TONGTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -222,8 +334,8 @@
           <Key>
             <PropertyRef Name="MAPHIEUNHAP" />
           </Key>
-          <Property Name="MAPHIEUNHAP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-          <Property Name="TONGCHI" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" FromRole="PHIEUNHAPSACH" ToRole="CTPHIEUNHAP" />
         </EntityType>
@@ -238,13 +350,13 @@
           <Property Name="MANXB" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="SOLUONGHIENTAI" Type="Int32" Nullable="false" />
           <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="GIANHAP" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="NOIDUNG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CTHOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_SACH" FromRole="SACH" ToRole="CTHOADON" />
           <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_SACH" FromRole="SACH" ToRole="CTPHIEUNHAP" />
           <NavigationProperty Name="LOAISACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" FromRole="SACH" ToRole="LOAISACH" />
           <NavigationProperty Name="NHAXUATBAN" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" FromRole="SACH" ToRole="NHAXUATBAN" />
-          <Property Name="GIANHAP" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="TAIKHOAN">
           <Key>
@@ -421,9 +533,9 @@
           <EntitySetMapping Name="SACHes">
             <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.SACH">
               <MappingFragment StoreEntitySet="SACH">
+                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
                 <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
                 <ScalarProperty Name="GIANHAP" ColumnName="GIANHAP" />
-                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
                 <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
                 <ScalarProperty Name="SOLUONGHIENTAI" ColumnName="SOLUONGHIENTAI" />
                 <ScalarProperty Name="MANXB" ColumnName="MANXB" />

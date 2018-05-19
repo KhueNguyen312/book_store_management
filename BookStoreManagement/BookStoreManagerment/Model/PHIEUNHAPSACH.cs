@@ -11,8 +11,9 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class PHIEUNHAPSACH
+    using ViewModel;
+
+    public partial class PHIEUNHAPSACH:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHIEUNHAPSACH()
@@ -20,9 +21,14 @@ namespace BookStoreManagerment.Model
             this.CTPHIEUNHAPs = new HashSet<CTPHIEUNHAP>();
         }
     
-        public string MAPHIEUNHAP { get; set; }
-        public decimal TONGCHI { get; set; }
-        public System.DateTime NGAYNHAP { get; set; }
+        private int _MAPHIEUNHAP;
+        public int MAPHIEUNHAP { get { return _MAPHIEUNHAP; } set { _MAPHIEUNHAP = value; OnPropertyChanged(); } }
+
+        private Nullable<decimal> _TONGCHI;
+        public Nullable<decimal> TONGCHI { get { return _TONGCHI; } set { _TONGCHI = value; OnPropertyChanged(); } }
+
+        private System.DateTime _NGAYNHAP;
+        public System.DateTime NGAYNHAP { get { return _NGAYNHAP; } set { _NGAYNHAP = value; OnPropertyChanged(); } }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTPHIEUNHAP> CTPHIEUNHAPs { get; set; }

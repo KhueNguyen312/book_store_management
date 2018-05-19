@@ -20,13 +20,13 @@ namespace BookStoreManagerment.Model
         {
             this.SACHes = new HashSet<SACH>();
         }
+
         private string _MALOAISACH;
         public string MALOAISACH { get { return _MALOAISACH; } set { _MALOAISACH = value; OnPropertyChanged(); } }
         private string _TENLOAISACH;
         public string TENLOAISACH { get { return _TENLOAISACH; } set { _TENLOAISACH = value; OnPropertyChanged(); } }
         private string _CHUDE;
         public string CHUDE { get { return _CHUDE; } set { _CHUDE = value; OnPropertyChanged(); } }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }
     }

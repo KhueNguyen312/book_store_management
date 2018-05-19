@@ -11,15 +11,22 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class CTPHIEUNHAP
+    using ViewModel;
+
+    public partial class CTPHIEUNHAP:BaseViewModel
     {
-        public string MAPHIEUNHAP { get; set; }
-        public string MASACH { get; set; }
-        public int SOLUONG { get; set; }
-        public decimal DONGIA { get; set; }
-        public Nullable<decimal> THANHTIEN { get; set; }
-    
+
+        private int _MAPHIEUNHAP;
+        public int MAPHIEUNHAP { get { return _MAPHIEUNHAP; } set { _MAPHIEUNHAP = value; OnPropertyChanged(); } }
+        private string _MASACH;
+        public string MASACH { get { return _MASACH; } set { _MASACH = value; OnPropertyChanged(); } }
+        private int _SOLUONG;
+        public int SOLUONG { get { return _SOLUONG; } set { _SOLUONG = value; OnPropertyChanged(); } }
+        private decimal _DONGIA;
+        public decimal DONGIA { get { return _DONGIA; } set { _DONGIA = value; OnPropertyChanged(); } }
+        private Nullable<decimal> _THANHTIEN;
+        public Nullable<decimal> THANHTIEN { get { return _THANHTIEN; } set { _THANHTIEN = value; OnPropertyChanged(); } }
+
         public virtual PHIEUNHAPSACH PHIEUNHAPSACH { get; set; }
         public virtual SACH SACH { get; set; }
     }
