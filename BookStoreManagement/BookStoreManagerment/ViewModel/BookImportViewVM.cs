@@ -21,6 +21,8 @@ namespace BookStoreManagerment.ViewModel
         public ICommand DeleteReceiptNoteDetailCommand { get; set; }
 
         public bool IsAdding { get; set; }
+        public bool isSaved { get; set; }
+
         private bool _isEnabledTextBox;
         public bool IsEnabledTextBox { get { return _isEnabledTextBox; } set { _isEnabledTextBox = value; OnPropertyChanged(); } }
 
@@ -29,6 +31,9 @@ namespace BookStoreManagerment.ViewModel
 
         private bool _isEnabledListView;
         public bool IsEnabledListView { get { return _isEnabledListView; } set { _isEnabledListView = value; OnPropertyChanged(); } }
+
+        private bool _isEnabledListView2;
+        public bool IsEnabledListView2 { get { return _isEnabledListView2; } set { _isEnabledListView2 = value; OnPropertyChanged(); } }
 
         private PHIEUNHAPSACH _selectedItem;
         public PHIEUNHAPSACH SelectedItem
@@ -40,8 +45,10 @@ namespace BookStoreManagerment.ViewModel
                 OnPropertyChanged();
                 if (_selectedItem != null)
                 {
-                    IsEnabledTextBox = true;
-                    IsEnabledCBBox = true;
+                    if (Current != null && SelectedItem == Current)
+                        IsEnabledListView = true;
+                    else
+                        IsEnabledListView = false;
                     ListReceiptNoteDetail = new ObservableCollection<CTPHIEUNHAP>(DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x=>x.MAPHIEUNHAP == SelectedItem.MAPHIEUNHAP));
                 }
             }
@@ -80,6 +87,9 @@ namespace BookStoreManagerment.ViewModel
             }
         }
 
+        private string _buttonName;
+        public string ButtonName { get { return _buttonName; } set { _buttonName = value; OnPropertyChanged(); } }
+
         private string _bookID;
         public string BookID { get { return _bookID; } set { _bookID = value; OnPropertyChanged(); } }
 
@@ -101,15 +111,22 @@ namespace BookStoreManagerment.ViewModel
         private ObservableCollection<SACH> _listBook;
         public ObservableCollection<SACH> ListBook { get { return _listBook; } set { _listBook = value; OnPropertyChanged(); } }
 
+        PHIEUNHAPSACH Current { get; set; }
         public BookImportViewVM()
         {
-            IsEnabledListView = true;
-            AddCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
+            ButtonName = "Thêm sách";
+            IsEnabledListView2 = true;
+            isSaved = true;
+            AddCommand = new RelayCommand<Button>((p) => { return isSaved ? true : false; }, (p) =>
             {
                 IsEnabledTextBox = true;
                 IsEnabledCBBox = true;
+                IsEnabledListView = true;
                 IsAdding = true;
-                var receiptNote = new PHIEUNHAPSACH() {NGAYNHAP = DateTime.Now };
+                isSaved = false;
+                var receiptNote = new PHIEUNHAPSACH() {NGAYNHAP = DateTime.Now,TONGCHI = 0 };
+                Current = receiptNote;
+                SelectedItem = Current;
                 DataProvider.Ins.DB.PHIEUNHAPSACHes.Add(receiptNote);
                 DataProvider.Ins.DB.SaveChanges();
 
@@ -123,40 +140,6 @@ namespace BookStoreManagerment.ViewModel
                     return true;
             }, (p) =>
             {
-                var book = new CTPHIEUNHAP() {MAPHIEUNHAP = SelectedItem.MAPHIEUNHAP, MASACH = SelectedBook.MASACH ,SOLUONG = NumOfBook, DONGIA = ImportPrice };
-                if (DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MASACH == book.MASACH && x.MAPHIEUNHAP == book.MAPHIEUNHAP).Count() > 0)
-                {
-                    MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                else
-                {
-                    DataProvider.Ins.DB.CTPHIEUNHAPs.Add(book);
-                    try
-                    {
-                        DataProvider.Ins.DB.SaveChanges();
-                    }
-                    catch (Exception)
-                    {
-                    }
-                    ListReceiptNoteDetail.Add(book);
-                }
-            });
-            EditCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
-            {
-                IsAdding = false;
-                IsEnabledListView = false;
-                IsEnabledTextBox = true;
-                IsEnabledCBBox = false;
-            });
-            SaveCommand = new RelayCommand<Button>((p) =>
-            {
-                if (!IsEnabledListView)
-                    return true;
-                else
-                    return false;
-            }, (p) =>
-            {
-                IsEnabledListView = true;
                 if (!IsAdding)
                 {
                     var book = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MASACH == SelectedReceiptNoteDetail.MASACH && x.MAPHIEUNHAP == SelectedReceiptNoteDetail.MAPHIEUNHAP).SingleOrDefault();
@@ -169,7 +152,46 @@ namespace BookStoreManagerment.ViewModel
                     book.DONGIA = ImportPrice;
                     DataProvider.Ins.DB.SaveChanges();
                     IsAdding = true;
+                    ButtonName = "Thêm sách";
                 }
+                else
+                {
+                    var book = new CTPHIEUNHAP() { MAPHIEUNHAP = SelectedItem.MAPHIEUNHAP, MASACH = SelectedBook.MASACH, SOLUONG = NumOfBook, DONGIA = ImportPrice };
+                    if (DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MASACH == book.MASACH && x.MAPHIEUNHAP == book.MAPHIEUNHAP).Count() > 0)
+                    {
+                        MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        DataProvider.Ins.DB.CTPHIEUNHAPs.Add(book);
+                        DataProvider.Ins.DB.SaveChanges();
+                        ListReceiptNoteDetail.Add(book);
+                    }
+                }
+                IsEnabledListView = true;
+                IsEnabledCBBox = true;
+            });
+            EditCommand = new RelayCommand<Button>((p) => { return SelectedReceiptNoteDetail == null?false:true; }, (p) =>
+            {
+                IsAdding = false;
+                IsEnabledListView = false;
+                IsEnabledTextBox = true;
+                IsEnabledCBBox = false;
+                ButtonName = "Sửa dữ liệu";
+
+            });
+            SaveCommand = new RelayCommand<Button>((p) =>
+            {
+                if (IsEnabledListView)
+                    return true;
+                else
+                    return false;
+            }, (p) =>
+            {
+                IsEnabledListView = false;
+                Current = null;
+                isSaved = true;
+                
             });
             DeleteReceiptNoteCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {
@@ -187,7 +209,7 @@ namespace BookStoreManagerment.ViewModel
             });
             DeleteReceiptNoteDetailCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {
-                var receiptNoteDetail = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MAPHIEUNHAP == SelectedReceiptNoteDetail.MAPHIEUNHAP).SingleOrDefault();
+                var receiptNoteDetail = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MAPHIEUNHAP == SelectedReceiptNoteDetail.MAPHIEUNHAP && x.MASACH == SelectedReceiptNoteDetail.MASACH).SingleOrDefault();
 
                 DataProvider.Ins.DB.CTPHIEUNHAPs.Remove(receiptNoteDetail);
                 DataProvider.Ins.DB.SaveChanges();

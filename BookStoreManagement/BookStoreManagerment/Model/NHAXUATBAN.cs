@@ -28,6 +28,7 @@ namespace BookStoreManagerment.Model
         private string _DIACHI;
         public string DIACHI { get { return _DIACHI; } set { _DIACHI = value; OnPropertyChanged(); } }
 
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }
     }

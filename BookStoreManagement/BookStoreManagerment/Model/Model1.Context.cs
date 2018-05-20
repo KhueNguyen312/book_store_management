@@ -10,11 +10,14 @@
 namespace BookStoreManagerment.Model
 {
     using System;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity;
+    using System.Data.Entity.Core.Objects;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class QUAN_LI_NHA_SACHEntities : DbContext
     {
+
         public QUAN_LI_NHA_SACHEntities()
             : base("name=QUAN_LI_NHA_SACHEntities")
         {
@@ -22,9 +25,14 @@ namespace BookStoreManagerment.Model
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<PHIEUNHAPSACH>()
+                .Property(b => b.TONGCHI).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
+            modelBuilder.Entity<SACH>()
+                .Property(b => b.SOLUONGHIENTAI).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
         }
-    
+
+
         public virtual DbSet<CTHOADON> CTHOADONs { get; set; }
         public virtual DbSet<CTPHIEUNHAP> CTPHIEUNHAPs { get; set; }
         public virtual DbSet<HOADON> HOADONs { get; set; }

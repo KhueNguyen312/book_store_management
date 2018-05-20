@@ -111,7 +111,7 @@
       <PropertyRef Name="MAPHIEUNHAP" />
     </Key>
     <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" FromRole="PHIEUNHAPSACH" ToRole="CTPHIEUNHAP" />
   </EntityType>

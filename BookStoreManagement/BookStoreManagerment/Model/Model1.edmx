@@ -68,7 +68,7 @@
             <PropertyRef Name="MAPHIEUNHAP" />
           </Key>
           <Property Name="MAPHIEUNHAP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TONGCHI" Type="money" StoreGeneratedPattern="Computed" DefaultValue="0" />
+          <Property Name="TONGCHI" Type="money" StoreGeneratedPattern="Computed" />
           <Property Name="NGAYNHAP" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="SACH">
@@ -80,7 +80,7 @@
           <Property Name="MALOAISACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="TACGIA" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MANXB" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="SOLUONGHIENTAI" Type="int" Nullable="false" />
+          <Property Name="SOLUONGHIENTAI" Type="int" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="HINHANH" Type="image" />
           <Property Name="GIANHAP" Type="money" Nullable="false" />
           <Property Name="GIABAN" Type="money" Nullable="false" />
@@ -335,7 +335,7 @@
             <PropertyRef Name="MAPHIEUNHAP" />
           </Key>
           <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" FromRole="PHIEUNHAPSACH" ToRole="CTPHIEUNHAP" />
         </EntityType>

@@ -54,8 +54,8 @@
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Text="{Binding NumOfBook}"  materialDesign:HintAssist.Hint="Số lượng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Text="{Binding ImportPrice}" materialDesign:HintAssist.Hint="Giá nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <Button Name="btnAddBook" Command="{Binding AddBookCmd}" CommandParameter="{Binding ElementName=btnAddBook}" materialDesign:ShadowAssist.ShadowDepth="Depth3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        ToolTip="Thêm sách"
-                        Content="Thêm sách">
+                        ToolTip="{Binding ButtonName}"
+                        Content="{Binding ButtonName}">
             </Button>
             <StackPanel HorizontalAlignment="Right" Margin="0 10 0 0" Orientation="Horizontal">
                 <Button Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddData}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new data"  Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
@@ -132,7 +132,7 @@
             </ListView.View>
         </ListView>
 
-        <ListView Grid.Row="1" Grid.Column="1" Name="listView1" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListReceiptNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+        <ListView Grid.Row="1" Grid.Column="1" Name="listView1" IsEnabled="{Binding IsEnabledListView2,Mode=TwoWay}" ItemsSource="{Binding ListReceiptNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -187,7 +187,7 @@
                     </GridViewColumn>
                     <GridViewColumn Header="Mã" DisplayMemberBinding="{Binding MAPHIEUNHAP}"></GridViewColumn>
                     <GridViewColumn Header="Ngày nhập" DisplayMemberBinding="{Binding NGAYNHAP}"></GridViewColumn>
-                    <GridViewColumn Header="Tổng chi" DisplayMemberBinding="{Binding TONGCHI}"></GridViewColumn>
+                    <GridViewColumn Header="Tổng chi" DisplayMemberBinding="{Binding TONGCHI,UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
