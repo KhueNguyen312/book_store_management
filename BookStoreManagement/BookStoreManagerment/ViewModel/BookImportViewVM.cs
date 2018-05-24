@@ -188,6 +188,9 @@ namespace BookStoreManagerment.ViewModel
                     return false;
             }, (p) =>
             {
+                DataProvider.Ins.DB.PHIEUNHAPSACHes.Where(x => x.MAPHIEUNHAP == SelectedItem.MAPHIEUNHAP).SingleOrDefault().TONGCHI = UpdateTotalPrice();
+                DataProvider.Ins.DB.SaveChanges();
+                UpdateNumOfBook();
                 IsEnabledListView = false;
                 Current = null;
                 isSaved = true;
@@ -218,6 +221,30 @@ namespace BookStoreManagerment.ViewModel
             });
             ListBook = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
             ListReceiptNote = new ObservableCollection<PHIEUNHAPSACH>(DataProvider.Ins.DB.PHIEUNHAPSACHes);
+        }
+        decimal? UpdateTotalPrice()
+        {
+            decimal? sum = 0;
+            var list = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MAPHIEUNHAP == SelectedItem.MAPHIEUNHAP).ToList();
+            if (list == null)
+                return sum;
+            foreach (var item in list)
+            {
+                sum += item.THANHTIEN;
+            }
+            return sum;
+        }
+        void UpdateNumOfBook()
+        {
+            var list = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MAPHIEUNHAP == SelectedItem.MAPHIEUNHAP).ToList();
+            if (list == null)
+                return;
+            foreach (var item in list)
+            {
+                DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == item.MASACH).SingleOrDefault().SOLUONGHIENTAI += item.SOLUONG;
+                //DataProvider.Ins.DB.SaveChanges();
+            }
+
         }
 
     }

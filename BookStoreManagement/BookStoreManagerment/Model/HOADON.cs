@@ -11,20 +11,25 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class HOADON
+    using ViewModel;
+
+    public partial class HOADON:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HOADON()
         {
             this.CTHOADONs = new HashSet<CTHOADON>();
         }
-    
-        public int SOHD { get; set; }
-        public string MAKH { get; set; }
-        public System.DateTime NGAYHD { get; set; }
-        public decimal TONGTIEN { get; set; }
-    
+
+        private int _SOHD;
+        public int SOHD { get { return _SOHD; } set { _SOHD = value; OnPropertyChanged(); } }
+        private string _MAKH;
+        public string MAKH { get { return _MAKH; } set { _MAKH = value; OnPropertyChanged(); } }
+        private System.DateTime _NGAYHD;
+        public System.DateTime NGAYHD { get { return _NGAYHD; } set { _NGAYHD = value; OnPropertyChanged(); } }
+        private decimal _TONGTIEN;
+        public decimal TONGTIEN { get { return _TONGTIEN; } set { _TONGTIEN = value; OnPropertyChanged(); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }

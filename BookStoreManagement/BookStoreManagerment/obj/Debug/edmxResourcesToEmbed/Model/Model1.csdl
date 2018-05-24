@@ -50,6 +50,7 @@
     <Property Name="THANHTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <NavigationProperty Name="HOADON" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_HD" FromRole="CTHOADON" ToRole="HOADON" />
     <NavigationProperty Name="SACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_SACH" FromRole="CTHOADON" ToRole="SACH" />
+    <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="CTPHIEUNHAP">
     <Key>
@@ -111,7 +112,7 @@
       <PropertyRef Name="MAPHIEUNHAP" />
     </Key>
     <Property Name="MAPHIEUNHAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="TONGCHI" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="NGAYNHAP" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" FromRole="PHIEUNHAPSACH" ToRole="CTPHIEUNHAP" />
   </EntityType>

@@ -9,23 +9,8 @@ using System.Windows.Media.Imaging;
 
 namespace BookStoreManagerment.ViewModel
 {
-    public class AccountMngVM: BaseViewModel
+    public class AccountMngVM: AccountMngWindowVM
     {
-        private BitmapImage _img;
-
-        public BitmapImage Img
-        {
-            get { return _img; }
-            set
-            {
-                MessageBox.Show("Image has been updated.");
-                _img = value;
-                OnPropertyChanged("_img");
-            }
-        }
-        private string _accountName;
-        public string AccountName { get { return _accountName; } set { _accountName = value; OnPropertyChanged(); } }
-
         public AccountMngVM()
         {
 

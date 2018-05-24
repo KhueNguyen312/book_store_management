@@ -169,7 +169,9 @@
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\AccountDetailVM.cs" />
     <Compile Include="ViewModel\AccountMngVM.cs" />
+    <Compile Include="ViewModel\AccountMngWindowVM.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\BookImportViewVM.cs" />
     <Compile Include="ViewModel\BookManagementWindowViewModel.cs" />
@@ -189,6 +191,12 @@
     <Compile Include="ViewModel\SellBookViewVM.cs" />
     <Compile Include="ViewModel\SettingWindowVM.cs" />
     <Compile Include="ViewModel\UserControlBarAlterViewModel.cs" />
+    <Compile Include="Views\AccountDetailView.xaml.cs">
+      <DependentUpon>AccountDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccountMngView.xaml.cs">
+      <DependentUpon>AccountMngView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BookImportView.xaml.cs">
       <DependentUpon>BookImportView.xaml</DependentUpon>
     </Compile>
@@ -257,6 +265,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AccountDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AccountMngView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

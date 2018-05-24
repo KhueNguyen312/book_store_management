@@ -15,7 +15,6 @@ namespace BookStoreManagerment.Model
 
     public partial class CTPHIEUNHAP:BaseViewModel
     {
-        
         private int _MAPHIEUNHAP;
         public int MAPHIEUNHAP { get { return _MAPHIEUNHAP; } set { _MAPHIEUNHAP = value; OnPropertyChanged(); } }
         private string _MASACH;

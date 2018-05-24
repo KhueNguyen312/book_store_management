@@ -4,6 +4,7 @@
     <EntitySetMapping Name="CTHOADONs">
       <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.CTHOADON">
         <MappingFragment StoreEntitySet="CTHOADON">
+          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
           <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
           <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
           <ScalarProperty Name="MASACH" ColumnName="MASACH" />

@@ -11,8 +11,9 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class TAIKHOAN
+    using ViewModel;
+
+    public partial class TAIKHOAN: BaseViewModel
     {
         public int MATK { get; set; }
         public string TENTK { get; set; }

@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class NHAXUATBAN:BaseViewModel
+    public partial class NHAXUATBAN: BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHAXUATBAN()
@@ -27,7 +27,6 @@ namespace BookStoreManagerment.Model
         public string TENNXB { get { return _TENNXB; } set { _TENNXB = value; OnPropertyChanged(); } }
         private string _DIACHI;
         public string DIACHI { get { return _DIACHI; } set { _DIACHI = value; OnPropertyChanged(); } }
-
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SACH> SACHes { get; set; }

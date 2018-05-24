@@ -382,3 +382,7 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_Content.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.baml
