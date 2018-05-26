@@ -103,7 +103,7 @@
                 <dxlc:TileLayoutControl.Background>
                     <ImageBrush ImageSource="Images/background1.jpeg"/>
                 </dxlc:TileLayoutControl.Background>
-                <dxlc:Tile Size="Small" Header="Quản Lý Sách" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
+                <dxlc:Tile Size="Small" Header="Quản Lý Thông Tin" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
                     <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
                 </dxlc:Tile>
                 <dxlc:Tile Size="Small" Header="Quản Lý Tài Khoản" Command="{Binding PressBtnAccountCommand}" CommandParameter="{Binding ElementName=mainWindow}"  Background="#FF633EBD">

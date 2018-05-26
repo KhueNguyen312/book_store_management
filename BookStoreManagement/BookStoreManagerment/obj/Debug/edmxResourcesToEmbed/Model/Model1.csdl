@@ -9,7 +9,6 @@
     <EntitySet Name="NHAXUATBANs" EntityType="QUAN_LI_NHA_SACHModel.NHAXUATBAN" />
     <EntitySet Name="PHIEUNHAPSACHes" EntityType="QUAN_LI_NHA_SACHModel.PHIEUNHAPSACH" />
     <EntitySet Name="SACHes" EntityType="QUAN_LI_NHA_SACHModel.SACH" />
-    <EntitySet Name="TAIKHOANs" EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" />
     <AssociationSet Name="F_K_CTHD_HD" Association="QUAN_LI_NHA_SACHModel.F_K_CTHD_HD">
       <End Role="HOADON" EntitySet="HOADONs" />
       <End Role="CTHOADON" EntitySet="CTHOADONs" />
@@ -38,6 +37,7 @@
       <End Role="NHAXUATBAN" EntitySet="NHAXUATBANs" />
       <End Role="SACH" EntitySet="SACHes" />
     </AssociationSet>
+    <EntitySet Name="TAIKHOANs" EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" />
   </EntityContainer>
   <EntityType Name="CTHOADON">
     <Key>
@@ -135,17 +135,6 @@
     <NavigationProperty Name="LOAISACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" FromRole="SACH" ToRole="LOAISACH" />
     <NavigationProperty Name="NHAXUATBAN" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" FromRole="SACH" ToRole="NHAXUATBAN" />
   </EntityType>
-  <EntityType Name="TAIKHOAN">
-    <Key>
-      <PropertyRef Name="MATK" />
-    </Key>
-    <Property Name="MATK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TENTK" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
-    <Property Name="TENHIENTHI" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="LOAITK" Type="Int32" Nullable="false" />
-  </EntityType>
   <Association Name="F_K_CTHD_HD">
     <End Type="QUAN_LI_NHA_SACHModel.HOADON" Role="HOADON" Multiplicity="1" />
     <End Type="QUAN_LI_NHA_SACHModel.CTHOADON" Role="CTHOADON" Multiplicity="*" />
@@ -230,4 +219,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="TENTK" />
+    </Key>
+    <Property Name="TENTK" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MATKHAU" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="TENHIENTHI" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LOAITK" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>

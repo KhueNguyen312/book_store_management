@@ -4,11 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
+             xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.Resources>
         <Style TargetType="Button">
@@ -63,34 +68,99 @@
         </DockPanel>
     </materialDesign:ColorZone>
         <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="Quản lí thông tin tài khoản" FontSize="25" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-        <dxe:ImageEdit Source="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 0 0" Height="180" Width="150"></dxe:ImageEdit>
-    <DataGrid Grid.Row="4" Grid.ColumnSpan="3">
-        <DataGrid.Columns>
-            <DataGridTextColumn Header="STT" Binding="{Binding }"/>
-            <DataGridTextColumn Header="User Name" Binding="{Binding}"/>
-            <DataGridTextColumn Header="Họ và tên" Binding="{Binding}"/>
-            <DataGridTextColumn Header="Loại tài khoản" Binding="{Binding}"/>
-        </DataGrid.Columns>
-    </DataGrid>
-    <StackPanel Margin="20 0 15 0" Grid.Row="3" Grid.Column="1">
-        <TextBox Text="{Binding AccountName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox  materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <ComboBox Grid.Row="0" Margin="1 13 0 0" materialDesign:HintAssist.Hint="Loại tài khoản" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                <ComboBoxItem>Administrator</ComboBoxItem>
-                <ComboBoxItem>Normal</ComboBoxItem>
+        <dxe:ImageEdit IsEnabled="{Binding IsEnabledTextBox}" Source="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 0 0" Height="180" Width="150"></dxe:ImageEdit>
+        <ListView  Grid.Row="4" Grid.ColumnSpan="3" Name="listViewAcc" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListAccount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedAccount,Mode=TwoWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Border"
+                            Padding="{Binding RelativeSource={RelativeSource Self}, Path=(materialDesign:ListViewAssist.ListViewItemPadding)}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="0,0,0,1"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
+                    <Style.Triggers>
+
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+                            <Setter Property="IsSelected" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignDivider}" />
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                        <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
+                                    </Button>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+                                     Converter={StaticResource IndexConverter},ConverterParameter=1}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Tên tài khoản" DisplayMemberBinding="{Binding TENTK }"></GridViewColumn>
+                    <GridViewColumn Header="Tên hiển thị" DisplayMemberBinding="{Binding TENHIENTHI}"></GridViewColumn>
+                    <GridViewColumn Header="Loại tài khoản" DisplayMemberBinding="{Binding TypeAcc.Display}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Margin="20 0 15 0" Grid.Row="3" Grid.Column="1">
+            <TextBox IsEnabled="{Binding IsEnabledUserNameTextBox}" Text="{Binding AccountName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <ComboBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="0" Margin="1 13 0 0" 
+                      Text="{Binding TypeAccount.Display }"
+                      ItemsSource="{Binding ListTypeAccount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      DisplayMemberPath="Display" SelectedItem="{Binding SelectedCBItem, Mode=TwoWay}"
+                      materialDesign:HintAssist.Hint="Loại tài khoản" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
             </ComboBox>
         </StackPanel>
         <StackPanel Margin="20 0 15 0" Grid.Row="3" Grid.Column="2">
-            <TextBox  materialDesign:HintAssist.Hint="Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox  materialDesign:HintAssist.Hint="Nhập lại Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <PasswordBox Name="PasswordBox" IsEnabled="{Binding IsEnabledTextBox}"  materialDesign:HintAssist.Hint="Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PasswordChanged">
+                        <i:InvokeCommandAction Command="{Binding PasswordChangedCommand,Mode=TwoWay}" CommandParameter="{Binding ElementName=PasswordBox}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </PasswordBox>
+            <PasswordBox Name="PasswordBox2"  IsEnabled="{Binding IsEnabledTextBox}" materialDesign:HintAssist.Hint="Nhập lại Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PasswordChanged">
+                        <i:InvokeCommandAction Command="{Binding Password2ChangedCommand,Mode=TwoWay}" CommandParameter="{Binding ElementName=PasswordBox2}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </PasswordBox>
             <StackPanel Margin="5 25 5 25" Grid.Column="2" Grid.Row="3" Orientation="Horizontal" >
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Panel.ZIndex="1" x:Name="btnAddAccount" ToolTip="Add a new account" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button Command="{Binding AddAccountCmd}" CommandParameter="{Binding ElementName=btnAddAccount}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Panel.ZIndex="1" x:Name="btnAddAccount" ToolTip="Add a new account" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="AccountPlus"  Foreground="Black"/>
                 </Button>
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Panel.ZIndex="1" x:Name="btnEditAccount"  ToolTip="Edit an account"  Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button Command="{Binding EditCommand}" CommandParameter="{Binding ElementName=btnEditAccount}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Panel.ZIndex="1" x:Name="btnEditAccount"  ToolTip="Edit an account"  Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="AccountSettingsVariant" Foreground="Black"/>
                 </Button>
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveAccount" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Save new account" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSaveAccount}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveAccount" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Save new account" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
                 </Button>
 

@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.NHAXUATBAN" Width="1.5" PointX="0.75" PointY="1" />
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.PHIEUNHAPSACH" Width="1.5" PointX="3" PointY="11" />
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.SACH" Width="1.5" PointX="3" PointY="3" />
-        <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" Width="1.5" PointX="5.75" PointY="6.875" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_CTHD_HD" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_CTHD_SACH" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_CTPN_PNS" />
@@ -21,6 +20,7 @@
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_HD_KH" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" />
+        <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" Width="1.5" PointX="6.125" PointY="6.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

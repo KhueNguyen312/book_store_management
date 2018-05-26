@@ -26,7 +26,6 @@ namespace BookStoreManagerment.Model
         private decimal _GIABAN;
         public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
 
-    
         public virtual HOADON HOADON { get; set; }
         public virtual SACH SACH { get; set; }
     }

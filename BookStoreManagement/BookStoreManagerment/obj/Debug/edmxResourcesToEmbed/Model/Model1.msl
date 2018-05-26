@@ -97,7 +97,6 @@
           <ScalarProperty Name="TENHIENTHI" ColumnName="TENHIENTHI" />
           <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
           <ScalarProperty Name="TENTK" ColumnName="TENTK" />
-          <ScalarProperty Name="MATK" ColumnName="MATK" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
