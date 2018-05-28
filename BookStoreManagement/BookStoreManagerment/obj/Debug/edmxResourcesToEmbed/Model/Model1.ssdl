@@ -40,7 +40,7 @@
     <Property Name="DIACHI" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="SODIENTHOAI" Type="char" MaxLength="11" />
     <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
-    <Property Name="TIENNO" Type="money" Nullable="false" />
+    <Property Name="TIENNO" Type="money" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="DIEMTICHLUY" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="LOAISACH">
@@ -67,6 +67,17 @@
     <Property Name="TONGCHI" Type="money" />
     <Property Name="NGAYNHAP" Type="datetime" Nullable="false" />
   </EntityType>
+  <EntityType Name="PHIEUTHUTIEN">
+    <Key>
+      <PropertyRef Name="MAPT" />
+    </Key>
+    <Property Name="MAPT" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="MAKH" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="NGAYTHU" Type="datetime" Nullable="false" />
+    <Property Name="TIENNO" Type="money" />
+    <Property Name="TIENTHU" Type="money" />
+    <Property Name="TIENTHUA" Type="money" StoreGeneratedPattern="Computed" />
+  </EntityType>
   <EntityType Name="SACH">
     <Key>
       <PropertyRef Name="MASACH" />
@@ -76,7 +87,7 @@
     <Property Name="MALOAISACH" Type="char" MaxLength="5" Nullable="false" />
     <Property Name="TACGIA" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MANXB" Type="char" MaxLength="5" Nullable="false" />
-    <Property Name="SOLUONGHIENTAI" Type="int" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SOLUONGHIENTAI" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="HINHANH" Type="image" />
     <Property Name="GIANHAP" Type="money" Nullable="false" />
     <Property Name="GIABAN" Type="money" Nullable="false" />
@@ -176,6 +187,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PTT_KH">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="PHIEUTHUTIEN" Type="Self.PHIEUTHUTIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEUTHUTIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="QUAN_LI_NHA_SACHModelStoreContainer">
     <EntitySet Name="CTHOADON" EntityType="Self.CTHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPHIEUNHAP" EntityType="Self.CTPHIEUNHAP" Schema="dbo" store:Type="Tables" />
@@ -184,6 +207,7 @@
     <EntitySet Name="LOAISACH" EntityType="Self.LOAISACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHAXUATBAN" EntityType="Self.NHAXUATBAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEUNHAPSACH" EntityType="Self.PHIEUNHAPSACH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUTHUTIEN" EntityType="Self.PHIEUTHUTIEN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="F_K_CTHD_HD" Association="Self.F_K_CTHD_HD">
@@ -213,6 +237,10 @@
     <AssociationSet Name="F_K_SACH_NXB" Association="Self.F_K_SACH_NXB">
       <End Role="NHAXUATBAN" EntitySet="NHAXUATBAN" />
       <End Role="SACH" EntitySet="SACH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PTT_KH" Association="Self.FK_PTT_KH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIEN" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

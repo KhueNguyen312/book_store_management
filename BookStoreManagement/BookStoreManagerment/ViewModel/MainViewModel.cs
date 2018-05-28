@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStoreManagerment.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,21 @@ namespace BookStoreManagerment.ViewModel
 {
     public class MainViewModel:BaseViewModel
     {
+
+        private static TAIKHOAN _loginAccount;
+        public static TAIKHOAN LoginAccount { get { return _loginAccount; } set { _loginAccount = value; } }
+
         public bool Isloaded = false;
+        private string _displayName;
+        public string DisplayName { get { return _displayName; } set { _displayName = value; OnPropertyChanged(); } }
+        private string _typeAccountDisplay;
+        public string TypeAccountDisplay { get { return _typeAccountDisplay; } set { _typeAccountDisplay = value; OnPropertyChanged(); } }
+        private byte[] _image;
+        public byte[] Image { get { return _image; } set { _image = value; OnPropertyChanged(); } }
+        private BitmapImage _img;
+        public BitmapImage Img { get { return _img; } set { _img = value; OnPropertyChanged(); } }
+        private TypeAccount _typeAccount;
+        public TypeAccount TypeAccount { get { return _typeAccount; } set { _typeAccount = value; OnPropertyChanged(); } }
         public ICommand PressBtnBookMngCommand { get; set; }
         public ICommand PressBtnAccountCommand { get; set; }
         public ICommand PressBtnBusinessCommand { get; set; }
@@ -33,6 +48,11 @@ namespace BookStoreManagerment.ViewModel
 
                 if (loginVM.IsLogin)
                 {
+                    DisplayName = LoginAccount.TENHIENTHI;
+                    TypeAccount = new TypeAccount(LoginAccount.LOAITK);
+                    TypeAccountDisplay = TypeAccount.Display;
+                    Image = LoginAccount.HINHANH;
+                    Img = ByteToImageConverter.Ins.LoadImage(Image);
                     p.Show();
                 }
                 else

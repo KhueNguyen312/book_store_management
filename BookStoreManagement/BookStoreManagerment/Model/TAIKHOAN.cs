@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class TAIKHOAN:BaseViewModel
+    public partial class TAIKHOAN: BaseViewModel
     {
         public TypeAccount TypeAcc { get; set; }
         private string _TENTK;
@@ -29,7 +29,6 @@ namespace BookStoreManagerment.Model
         public byte[] HINHANH { get { return _HINHANH; } set { _HINHANH = value; OnPropertyChanged(); } }
 
         private int _LOAITK;
-        public int LOAITK { get { return _LOAITK; } set { _LOAITK = value; OnPropertyChanged();TypeAcc = new TypeAccount(_LOAITK); } }
-
+        public int LOAITK { get { return _LOAITK; } set { _LOAITK = value; OnPropertyChanged(); TypeAcc = new TypeAccount(_LOAITK); } }
     }
 }

@@ -100,5 +100,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUTHUTIENs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN">
+        <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
+          <ScalarProperty Name="TIENTHUA" ColumnName="TIENTHUA" />
+          <ScalarProperty Name="TIENTHU" ColumnName="TIENTHU" />
+          <ScalarProperty Name="TIENNO" ColumnName="TIENNO" />
+          <ScalarProperty Name="NGAYTHU" ColumnName="NGAYTHU" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="MAPT" ColumnName="MAPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

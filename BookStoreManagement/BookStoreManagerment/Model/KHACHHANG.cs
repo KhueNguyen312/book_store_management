@@ -13,12 +13,13 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class KHACHHANG:BaseViewModel
+    public partial class KHACHHANG: BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACHHANG()
         {
             this.HOADONs = new HashSet<HOADON>();
+            this.PHIEUTHUTIENs = new HashSet<PHIEUTHUTIEN>();
         }
 
         private string _MAKH;
@@ -37,5 +38,7 @@ namespace BookStoreManagerment.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
     }
 }

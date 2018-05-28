@@ -44,6 +44,7 @@ namespace BookStoreManagerment.ViewModel
             var accountCount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).Count();
             if(accountCount > 0)
             {
+                MainViewModel.LoginAccount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).SingleOrDefault();
                 IsLogin = true;
                 IsActiveSnackBar = false;
                 window.Close();

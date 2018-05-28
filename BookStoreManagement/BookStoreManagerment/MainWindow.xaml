@@ -50,17 +50,17 @@
                 <StackPanel.Background>
                     <ImageBrush/>
                 </StackPanel.Background>
-                <Button HorizontalAlignment="Left" x:Name="BtnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="70" Height="70">
+                <Button HorizontalAlignment="Left" x:Name="BtnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"   Padding="0" Width="70" Height="70">
                     <Button.Background>
-                        <ImageBrush ImageSource="Images/DefaultMaleAvatar.png" Stretch="UniformToFill"/>
+                        <ImageBrush ImageSource="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill"/>
                     </Button.Background>
                 </Button>
-                <TextBlock Text="Syaoran Clone"  FontSize="20" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  FontSize="20" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
 
             </StackPanel>
             <ListView>
                 <ListViewItem x:Name="positionListViewItem" Height="60">
-                    <TextBlock x:Name="positionTxtBlock"  Text="Administrator" FontSize="25" Margin="10" VerticalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+                    <TextBlock x:Name="positionTxtBlock"  Text="{Binding TypeAccountDisplay,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="25" Margin="10" VerticalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
                 </ListViewItem>
                 <ListViewItem Height="60">
                     <StackPanel Height="50" Orientation="Horizontal" Margin="10 0">

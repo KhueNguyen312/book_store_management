@@ -38,6 +38,11 @@
       <End Role="SACH" EntitySet="SACHes" />
     </AssociationSet>
     <EntitySet Name="TAIKHOANs" EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" />
+    <EntitySet Name="PHIEUTHUTIENs" EntityType="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN" />
+    <AssociationSet Name="FK_PTT_KH" Association="QUAN_LI_NHA_SACHModel.FK_PTT_KH">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIENs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CTHOADON">
     <Key>
@@ -88,6 +93,7 @@
     <Property Name="TIENNO" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="DIEMTICHLUY" Type="Int32" Nullable="false" />
     <NavigationProperty Name="HOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_HD_KH" FromRole="KHACHHANG" ToRole="HOADON" />
+    <NavigationProperty Name="PHIEUTHUTIENs" Relationship="QUAN_LI_NHA_SACHModel.FK_PTT_KH" FromRole="KHACHHANG" ToRole="PHIEUTHUTIEN" />
   </EntityType>
   <EntityType Name="LOAISACH">
     <Key>
@@ -125,7 +131,7 @@
     <Property Name="MALOAISACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TACGIA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MANXB" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
-    <Property Name="SOLUONGHIENTAI" Type="Int32" Nullable="false" />
+    <Property Name="SOLUONGHIENTAI" Type="Int32" />
     <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="GIANHAP" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="GIABAN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
@@ -229,4 +235,28 @@
     <Property Name="HINHANH" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="LOAITK" Type="Int32" Nullable="false" />
   </EntityType>
+  <EntityType Name="PHIEUTHUTIEN">
+    <Key>
+      <PropertyRef Name="MAPT" />
+    </Key>
+    <Property Name="MAPT" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MAKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="NGAYTHU" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TIENNO" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TIENTHU" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TIENTHUA" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="KHACHHANG" Relationship="QUAN_LI_NHA_SACHModel.FK_PTT_KH" FromRole="PHIEUTHUTIEN" ToRole="KHACHHANG" />
+  </EntityType>
+  <Association Name="FK_PTT_KH">
+    <End Type="QUAN_LI_NHA_SACHModel.KHACHHANG" Role="KHACHHANG" Multiplicity="1" />
+    <End Type="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN" Role="PHIEUTHUTIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="PHIEUTHUTIEN">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

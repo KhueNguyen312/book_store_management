@@ -21,6 +21,8 @@
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" />
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.TAIKHOAN" Width="1.5" PointX="6.125" PointY="6.875" />
+        <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN" Width="1.5" PointX="3" PointY="14" />
+        <AssociationConnector Association="QUAN_LI_NHA_SACHModel.FK_PTT_KH" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

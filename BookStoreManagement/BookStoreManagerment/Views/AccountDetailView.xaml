@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="500">
+             d:DesignHeight="500" d:DesignWidth="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -29,12 +29,14 @@
             <TextBlock Text="Tên tài khoản: " FontSize="18" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
             <TextBlock Text="Tên hiển thị: " FontSize="18" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
             <TextBlock Text="Mật khẩu: " FontSize="18" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
+            <TextBlock Text="Mật khẩu Mới: " FontSize="18" Margin="10 15 10 10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
             <TextBlock Text="Nhập lại mật khẩu: " FontSize="18" Margin="10 15 10 10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
         </StackPanel>
         <StackPanel Margin="10 -10 25 5" Grid.Column="2" Grid.Row="1">
             <TextBox Text="{Binding AccountName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox  materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên hiển thị" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox  materialDesign:HintAssist.Hint="Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox  materialDesign:HintAssist.Hint="Mật khẩu mới" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox  materialDesign:HintAssist.Hint="Nhập lại Mật khẩu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </StackPanel>
         <Button Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" Name="btnUpdateInfo" Command="{Binding }" CommandParameter="{Binding ElementName=btnUpdateInfo}" materialDesign:ShadowAssist.ShadowDepth="Depth3"  Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"

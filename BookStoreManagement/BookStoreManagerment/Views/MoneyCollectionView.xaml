@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
              mc:Ignorable="d"
+             xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -15,6 +16,9 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.Resources>
             <Style TargetType="StackPanel">
@@ -32,36 +36,88 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Thu tiền" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
         <StackPanel Grid.Row="1">
-            <ComboBox Grid.Row="0" Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                <ComboBoxItem>Naruto</ComboBoxItem>
-                <ComboBoxItem>Fate Grand Order</ComboBoxItem>
+            <ComboBox Grid.Row="0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                           IsEnabled="{Binding IsEnabledCustomerCBBox}"
+                           ItemsSource="{Binding ListCustomer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                           Text="{Binding CustomerName}"
+                           DisplayMemberPath="TENKH" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}">
             </ComboBox>
-            <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Tiền thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Text="{Binding Collection,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" materialDesign:HintAssist.Hint="Tiền thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Text="{Binding Debt,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" Grid.Row="0" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2">
-            <DatePicker Margin="0 15 0 0" HorizontalAlignment="Left" x:Name="FutureDatePicker" Width="100"
-                                materialDesign:HintAssist.Hint="Ngày thu tiền">
-                <DatePicker.SelectedDate>
-                    <Binding Path="FutureValidatingDate" UpdateSourceTrigger="PropertyChanged">
-
-                    </Binding>
-                </DatePicker.SelectedDate>
-            </DatePicker>
-            <TextBox  materialDesign:HintAssist.Hint="Mã phiếu thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" VerticalAlignment="Center" HorizontalAlignment="Center"
+            <DatePicker
+                IsEnabled="False"
+                SelectedDate="{Binding Date,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                Width="100" Margin="0 15 0 0" HorizontalAlignment="Left"
+                materialDesign:HintAssist.Hint="Ngày thu"
+                Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+            <TextBox Text="{Binding ID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  materialDesign:HintAssist.Hint="Mã phiếu thu" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <Button Name="btnAddReceiptNote" Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddReceiptNote}" Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" VerticalAlignment="Center" HorizontalAlignment="Center"
                         Content="Thêm phiếu thu">
             </Button>
         </StackPanel>
-        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Name="dataGridMoneyCollection">
-            <DataGrid.Columns>
-                <DataGridTextColumn  Header="STT" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Mã phiếu thu" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Tên khách hàng" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Ngày thu" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Tiền thu" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Tên nợ" Binding="{Binding}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <ListView  Grid.Row="2" Grid.ColumnSpan="2" Name="listViewMoneyCollection" ItemsSource="{Binding ListMoneyCollection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Border"
+                            Padding="{Binding RelativeSource={RelativeSource Self}, Path=(materialDesign:ListViewAssist.ListViewItemPadding)}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="0,0,0,1"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
+                    <Style.Triggers>
+
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+                            <Setter Property="IsSelected" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignDivider}" />
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                        <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
+                                    </Button>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+                                     Converter={StaticResource IndexConverter},ConverterParameter=1}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Mã PT" DisplayMemberBinding="{Binding MAPT}"></GridViewColumn>
+                    <GridViewColumn Header="Tên khách hàng" DisplayMemberBinding="{Binding KHACHHANG.TENKH}"></GridViewColumn>
+                    <GridViewColumn Header="Ngày thu" DisplayMemberBinding="{Binding NGAYTHU}"></GridViewColumn>
+                    <GridViewColumn Header="Tiền nợ" DisplayMemberBinding="{Binding TIENNO}"></GridViewColumn>
+                    <GridViewColumn Header="Tiền thu" DisplayMemberBinding="{Binding TIENTHU}"></GridViewColumn>
+                    <GridViewColumn Header="Tiền thừa" DisplayMemberBinding="{Binding TIENTHUA}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

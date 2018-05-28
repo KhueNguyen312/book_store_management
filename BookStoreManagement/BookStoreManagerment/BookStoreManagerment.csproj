@@ -157,6 +157,9 @@
     <Compile Include="Model\PHIEUNHAPSACH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\PHIEUTHUTIEN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\SACH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

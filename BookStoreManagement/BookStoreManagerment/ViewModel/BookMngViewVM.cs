@@ -114,8 +114,8 @@ namespace BookStoreManagerment.ViewModel
         private string _publishingHouse;
         public string PublishingHouse { get { return _publishingHouse; } set { _publishingHouse = value; OnPropertyChanged(); } }
 
-        private int _numOfBook;
-        public int NumOfBook { get { return _numOfBook; } set { _numOfBook = value; OnPropertyChanged(); } }
+        private int? _numOfBook;
+        public int? NumOfBook { get { return _numOfBook; } set { _numOfBook = value; OnPropertyChanged(); } }
 
         private byte[] _image;
         public byte[] Image { get { return _image; } set { _image = value; OnPropertyChanged(); } }
@@ -179,7 +179,13 @@ namespace BookStoreManagerment.ViewModel
                         MessageBox.Show("Không tìm thấy cuôn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
-                    Image = ByteToImageConverter.Ins.ImageToByte(Img);
+                    if (Img != null)
+                    {
+                        Image = ByteToImageConverter.Ins.ImageToByte(Img);
+                        book.HINHANH = Image;
+                    }
+                    else
+                        book.HINHANH = null;
                     book.TENSACH = BookName;
                     book.MALOAISACH = BookType;
                     book.TACGIA = Author;
@@ -187,14 +193,16 @@ namespace BookStoreManagerment.ViewModel
                     book.SOLUONGHIENTAI = NumOfBook;
                     book.GIANHAP = InputPrice;
                     book.GIABAN = BuyingPrice;
-                    book.HINHANH = Image;
                     DataProvider.Ins.DB.SaveChanges();
                     IsAdding = true;
                 }
                 else
                 {
-                    Image = ByteToImageConverter.Ins.ImageToByte(Img);
-                    var book = new SACH() { MASACH = ID, TENSACH = BookName, MALOAISACH = BookType, TACGIA = Author, MANXB = PublishingHouse, SOLUONGHIENTAI = NumOfBook, GIABAN = BuyingPrice, GIANHAP = InputPrice, HINHANH = Image };
+                    if (Img != null)
+                        Image = ByteToImageConverter.Ins.ImageToByte(Img);
+                    else
+                        Image = null;
+                    var book = new SACH() { MASACH = ID, TENSACH = BookName, MALOAISACH = BookType, TACGIA = Author, MANXB = PublishingHouse, GIABAN = BuyingPrice, GIANHAP = InputPrice, HINHANH = Image };
                     if (DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == book.MASACH).Count() > 0)
                     {
                         MessageBox.Show("Mã Sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -202,9 +210,10 @@ namespace BookStoreManagerment.ViewModel
                     else
                     {
                         DataProvider.Ins.DB.SACHes.Add(book);
+                        DataProvider.Ins.DB.SaveChanges();
                         try
                         {
-                            DataProvider.Ins.DB.SaveChanges();
+                            
                         }
                         catch (Exception)
                         {

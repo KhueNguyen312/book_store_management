@@ -34,5 +34,6 @@ namespace BookStoreManagerment.Model
         public virtual DbSet<PHIEUNHAPSACH> PHIEUNHAPSACHes { get; set; }
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
+        public virtual DbSet<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
     }
 }
