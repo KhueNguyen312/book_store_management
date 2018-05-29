@@ -7,7 +7,7 @@ by [quoctrung98](https://github.com/quoctrung98/),[kimhue98](https://github.com/
 
 
 _**Description**_
->Information management is a crucial problem for bussiness enterprises.  The brainchild of this project has been developed with regards to the utterly expectation that helps your management become easier , more rapid and more convenient.  This project will represent as our product for the end-of-semester report of  the course “Introduction to Software Engineering” as well as  deal with the management of Nguyen Van Cu’s bookstore in reality.
+>Information management is a crucial problem for bussiness enterprises. The brainchild of this project has been developed with regards to the utterly expectation that helps your management become easier , more rapid and more convenient.  This project will represent as our product for the end-of-semester report of  the course “Introduction to Software Engineering” as well as  deal with the management of Nguyen Van Cu’s bookstore in reality.
 
 _**Project details**_
 
@@ -45,11 +45,6 @@ _**Features**_
         - consignment management
         - set-up discount 
         - Debt control
--    **Warehouse management**
-        - product quantity management
-        - import warehouse data from Excel
-        - import, export management
-        - warehouse control
 -    **Importing product management**
         - ordering management
         - importing management
