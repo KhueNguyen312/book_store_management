@@ -8,16 +8,18 @@ FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\LoginW
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\MainWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\ReportWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Resources\MainResource.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\ReveneuReportWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\SettingWindow.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountDetailView.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountMngView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\BookImportView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\BookMngView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\BusinessWindow.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\CostReportView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\CustomerDueReportView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\CustomerMngView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\DataBookView.xaml;;
-FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\InventoryReportView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\MoneyCollectionView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\SellBookView.xaml;;
-FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountMngView.xaml;;
-FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountDetailView.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\CostReportWindow.xaml;;
 

@@ -24,12 +24,12 @@
     WindowStyle="None">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding InventoryReportCmd}" CommandParameter="{Binding ElementName=reportWindow}"/>
+            <i:InvokeCommandAction Command="{Binding CostReportCmd}" CommandParameter="{Binding ElementName=reportWindow}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Window.Resources>
-        <DataTemplate x:Name="inventoryReportTemplate" DataType="{x:Type vm:InventoryReportVM}" >
-            <views:InventoryReportView DataContext="{Binding}"></views:InventoryReportView>
+        <DataTemplate x:Name="CostReportTemplate" DataType="{x:Type vm:CostReportVM}" >
+            <views:CostReportView DataContext="{Binding}"></views:CostReportView>
         </DataTemplate>
         <DataTemplate x:Name="dueReportTemplate" DataType="{x:Type vm:CustomerDueReportVM}" >
             <views:CustomerDueReportView DataContext="{Binding}"></views:CustomerDueReportView>
@@ -122,12 +122,12 @@
                 <ListViewItem  Height="60">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding InventoryReportCmd }" CommandParameter="{Binding ElementName=reportWindow}"/>
+                            <i:InvokeCommandAction Command="{Binding CostReportCmd }" CommandParameter="{Binding ElementName=reportWindow}"/>
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
                     <StackPanel  Height="50" Orientation="Horizontal" Margin="-5 0">
                         <materialDesign:PackIcon Kind="ClipboardText" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Báo cáo tồn kho" FontSize="15" Margin="5" VerticalAlignment="Center"/>
+                        <TextBlock Text="Báo cáo chi phí" FontSize="15" Margin="5" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem  Height="60">
@@ -138,7 +138,7 @@
                     </i:Interaction.Triggers>
                     <StackPanel  Height="50" Orientation="Horizontal" Margin="-5 0">
                         <materialDesign:PackIcon Kind="Receipt" Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Báo cáo công nợ" FontSize="15" Margin="5" VerticalAlignment="Center"/>
+                        <TextBlock Text="Báo cáo doanh thu" FontSize="15" Margin="5" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
             </StackPanel>

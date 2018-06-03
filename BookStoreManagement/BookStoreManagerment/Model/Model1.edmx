@@ -13,7 +13,7 @@
           <Property Name="SOHD" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
-          <Property Name="THANHTIEN" Type="money" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="THANHTIEN" Type="money" Nullable="false" />
           <Property Name="GIABAN" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="CTPHIEUNHAP">
@@ -25,7 +25,7 @@
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
           <Property Name="DONGIA" Type="money" Nullable="false" />
-          <Property Name="THANHTIEN" Type="money" StoreGeneratedPattern="Computed" />
+          <Property Name="THANHTIEN" Type="money" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
@@ -45,7 +45,7 @@
           <Property Name="DIACHI" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="SODIENTHOAI" Type="char" MaxLength="11" />
           <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
-          <Property Name="TIENNO" Type="money" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="TIENNO" Type="money" Nullable="false" />
           <Property Name="DIEMTICHLUY" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAISACH">
@@ -79,9 +79,9 @@
           <Property Name="MAPT" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="MAKH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="NGAYTHU" Type="datetime" Nullable="false" />
-          <Property Name="TIENNO" Type="money"  />
+          <Property Name="TIENNO" Type="money" />
           <Property Name="TIENTHU" Type="money" />
-          <Property Name="TIENTHUA" Type="money" StoreGeneratedPattern="Computed" />
+          <Property Name="TIENTHUA" Type="money" />
         </EntityType>
         <EntityType Name="SACH">
           <Key>
@@ -92,7 +92,7 @@
           <Property Name="MALOAISACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="TACGIA" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MANXB" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="SOLUONGHIENTAI" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="SOLUONGHIENTAI" Type="int" />
           <Property Name="HINHANH" Type="image" />
           <Property Name="GIANHAP" Type="money" Nullable="false" />
           <Property Name="GIABAN" Type="money" Nullable="false" />
@@ -204,6 +204,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="USP_BAOCAOCHIPHI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Date" Type="date" Mode="In" />
+        </Function>
+        <Function Name="USP_BAOCAODOANHTHU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Date" Type="date" Mode="In" />
+        </Function>
         <EntityContainer Name="QUAN_LI_NHA_SACHModelStoreContainer">
           <EntitySet Name="CTHOADON" EntityType="Self.CTHOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CTPHIEUNHAP" EntityType="Self.CTPHIEUNHAP" Schema="dbo" store:Type="Tables" />
@@ -295,6 +301,12 @@
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIENs" />
           </AssociationSet>
+          <FunctionImport Name="USP_BAOCAODOANHTHU" ReturnType="Collection(QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result)">
+          <Parameter Name="Date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="USP_BAOCAOCHIPHI" ReturnType="Collection(QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result)">
+          <Parameter Name="Date" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="CTHOADON">
           <Key>
@@ -511,6 +523,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="USP_BAOCAODOANHTHU_Result">
+          <Property Type="String" Name="MAKH" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="TENKH" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Doanh_Thu" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="USP_BAOCAOCHIPHI_Result">
+          <Property Type="DateTime" Name="Ngày_Nhập" Nullable="true" />
+          <Property Type="Decimal" Name="Tong_Chi" Nullable="true" Precision="19" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -628,6 +649,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_BAOCAODOANHTHU" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAODOANHTHU">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result">
+                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="Doanh_Thu" ColumnName="Doanh Thu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_BAOCAOCHIPHI" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAOCHIPHI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result">
+                <ScalarProperty Name="Ngày_Nhập" ColumnName="Ngày Nhập" />
+                <ScalarProperty Name="Tong_Chi" ColumnName="Tong Chi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

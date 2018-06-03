@@ -9,4 +9,6 @@
     <viewmodel:SettingWindowVM x:Key="SettingVM"></viewmodel:SettingWindowVM>
     <viewmodel:ReportWindowVM x:Key="ReportVM"></viewmodel:ReportWindowVM>
     <viewmodel:AccountMngWindowVM x:Key="AccountMngWindowVM"></viewmodel:AccountMngWindowVM>
+    <viewmodel:ReveneuReportWindowVM x:Key="ReveneuRPVM"></viewmodel:ReveneuReportWindowVM>
+    <viewmodel:CostReportVM x:Key="CostReportWVM"></viewmodel:CostReportVM>
 </ResourceDictionary>

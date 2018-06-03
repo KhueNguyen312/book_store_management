@@ -12,6 +12,8 @@ namespace BookStoreManagerment.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class QUAN_LI_NHA_SACHEntities : DbContext
     {
@@ -35,5 +37,23 @@ namespace BookStoreManagerment.Model
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
+    
+        public virtual ObjectResult<USP_BAOCAODOANHTHU_Result> USP_BAOCAODOANHTHU(Nullable<System.DateTime> date)
+        {
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_BAOCAODOANHTHU_Result>("USP_BAOCAODOANHTHU", dateParameter);
+        }
+    
+        public virtual ObjectResult<USP_BAOCAOCHIPHI_Result> USP_BAOCAOCHIPHI(Nullable<System.DateTime> date)
+        {
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_BAOCAOCHIPHI_Result>("USP_BAOCAOCHIPHI", dateParameter);
+        }
     }
 }

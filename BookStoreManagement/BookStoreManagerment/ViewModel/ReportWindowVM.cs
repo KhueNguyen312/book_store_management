@@ -11,10 +11,10 @@ namespace BookStoreManagerment.ViewModel
 {
     public class ReportWindowVM:BaseViewModel
     {
-        public static bool doesMenuClose;
+        public static bool isMenuClosed;
         public ICommand HideMenuCmd { get; set; }
         public ICommand ShowMenuCmd { get; set; }
-        public ICommand InventoryReportCmd { get; set; }
+        public ICommand CostReportCmd { get; set; }
         public ICommand DueReportCmd { get; set; }
         #region Visibility
         private Visibility btnHideVisibility;
@@ -49,7 +49,7 @@ namespace BookStoreManagerment.ViewModel
 
         public ReportWindowVM()
         {
-            if (doesMenuClose)
+            if (isMenuClosed)
             {
                 BtnHideVisibility = Visibility.Hidden;
                 BtnShowVisibility = Visibility.Visible;
@@ -61,19 +61,19 @@ namespace BookStoreManagerment.ViewModel
             }
             HideMenuCmd = new RelayCommand<Button>((p) => { return p == null ? false : true; }, (p) =>
             {
-                doesMenuClose = true;
+                isMenuClosed = true;
                 BtnHideVisibility = Visibility.Hidden;
                 BtnShowVisibility = Visibility.Visible;
             });
             ShowMenuCmd = new RelayCommand<Button>((p) => { return p == null ? false : true; }, (p) =>
             {
-                doesMenuClose = false;
+                isMenuClosed = false;
                 BtnShowVisibility = Visibility.Hidden;
                 BtnHideVisibility = Visibility.Visible;
             });
-            InventoryReportCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
+            CostReportCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
             {
-                p.DataContext = new InventoryReportVM();
+                p.DataContext = new CostReportVM();
             });
             DueReportCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
             {

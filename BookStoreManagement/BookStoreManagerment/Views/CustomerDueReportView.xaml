@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
              mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -15,6 +17,9 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -22,24 +27,65 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <DatePicker Grid.Row="1" Margin="0 5 0 0" HorizontalAlignment="Center" x:Name="FutureDatePicker" Width="150"
+        <DatePicker Grid.Row="1" SelectedDate="{Binding SelectedDate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 5 0 0" HorizontalAlignment="Center" x:Name="FutureDatePicker" Width="150"
                                 materialDesign:HintAssist.Hint="Chọn thời gian">
-            <DatePicker.SelectedDate>
-                <Binding Path="FutureValidatingDate" UpdateSourceTrigger="PropertyChanged">
-                </Binding>
-            </DatePicker.SelectedDate>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedDateChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectedDateCmd,Mode=TwoWay}" CommandParameter="{Binding ElementName=FutureDatePicker}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </DatePicker>
-        <TextBlock Grid.Row="0" Text="Báo cáo công nợ" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-        <DataGrid Margin="5" Grid.Row="2" >
-            <DataGrid.Columns>
-                <DataGridTextColumn  Header="STT" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Khách hàng" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Nợ đầu" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Phát sinh" Binding="{Binding}"/>
-                <DataGridTextColumn Header="Nợ cuối" Binding="{Binding}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Grid.Row="3"  Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" VerticalAlignment="Center" HorizontalAlignment="Center"
+        <TextBlock Grid.Row="0" Text="Báo cáo doanh thu" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+        <ListView  Grid.Row="2"  Margin="5" Name="listView" ItemsSource="{Binding ListReveneuList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Border"
+                            Padding="{Binding RelativeSource={RelativeSource Self}, Path=(materialDesign:ListViewAssist.ListViewItemPadding)}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="0,0,0,1"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
+                    <Style.Triggers>
+
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+                            <Setter Property="IsSelected" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignDivider}" />
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" DisplayMemberBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+                                     Converter={StaticResource IndexConverter},ConverterParameter=1}" >
+                    </GridViewColumn>
+                    <GridViewColumn Header="Mã KH" DisplayMemberBinding="{Binding MAKH}"></GridViewColumn>
+                    <GridViewColumn Header="Tên Khách hàng" DisplayMemberBinding="{Binding TENKH}"></GridViewColumn>
+                    <GridViewColumn Header="Doanh thu" DisplayMemberBinding="{Binding Doanh_Thu}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Grid.Row="3" Command="{Binding PrintReportCmd}" CommandParameter="{Binding ElementName=btnPrint}" Name="btnPrint"  Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" VerticalAlignment="Center" HorizontalAlignment="Center"
                         Content="Xuất báo cáo">
         </Button>
     </Grid>

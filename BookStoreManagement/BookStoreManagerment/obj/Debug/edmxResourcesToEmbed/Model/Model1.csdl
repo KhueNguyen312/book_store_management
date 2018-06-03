@@ -43,6 +43,12 @@
       <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
       <End Role="PHIEUTHUTIEN" EntitySet="PHIEUTHUTIENs" />
     </AssociationSet>
+    <FunctionImport Name="USP_BAOCAODOANHTHU" ReturnType="Collection(QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result)">
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_BAOCAOCHIPHI" ReturnType="Collection(QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result)">
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="CTHOADON">
     <Key>
@@ -259,4 +265,13 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="USP_BAOCAODOANHTHU_Result">
+    <Property Type="String" Name="MAKH" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="TENKH" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Doanh_Thu" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="USP_BAOCAOCHIPHI_Result">
+    <Property Type="DateTime" Name="Ngày_Nhập" Nullable="true" />
+    <Property Type="Decimal" Name="Tong_Chi" Nullable="true" Precision="19" />
+  </ComplexType>
 </Schema>

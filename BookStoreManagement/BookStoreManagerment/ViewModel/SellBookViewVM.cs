@@ -228,6 +228,7 @@ namespace BookStoreManagerment.ViewModel
                 DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD).SingleOrDefault().TONGTIEN = UpdateTotalPrice();
                 DataProvider.Ins.DB.SaveChanges();
                 UpdateNumOfBook();
+                DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO = 0; // update
                 IsEnabledListView = false;
                 CurrentBill = null;
                 isSaved = true;

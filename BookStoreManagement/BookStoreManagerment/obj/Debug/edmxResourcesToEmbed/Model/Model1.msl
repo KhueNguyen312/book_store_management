@@ -112,5 +112,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_BAOCAODOANHTHU" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAODOANHTHU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="Doanh_Thu" ColumnName="Doanh Thu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_BAOCAOCHIPHI" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAOCHIPHI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result">
+          <ScalarProperty Name="Ngày_Nhập" ColumnName="Ngày Nhập" />
+          <ScalarProperty Name="Tong_Chi" ColumnName="Tong Chi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

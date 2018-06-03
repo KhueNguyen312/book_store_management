@@ -39,10 +39,10 @@
             <TextBlock Text="Số nợ tối đa: " FontSize="18" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontWeight="Bold"></TextBlock>
         </StackPanel>
         <StackPanel Margin="0 -15 15 0" Grid.Row="2" Grid.Column="1">
-            <TextBox Margin="5" materialDesign:TransitionAssist.DisableTransitions="True" />
-            <TextBox Margin="5" materialDesign:TransitionAssist.DisableTransitions="True" />
-            <TextBox Margin="5" materialDesign:TransitionAssist.DisableTransitions="True" />
-            <TextBox Margin="5" materialDesign:TransitionAssist.DisableTransitions="True" />
+            <TextBox Margin="5" FontSize="15" materialDesign:TransitionAssist.DisableTransitions="True" />
+            <TextBox Margin="5" FontSize="15" materialDesign:TransitionAssist.DisableTransitions="True" />
+            <TextBox Margin="5" FontSize="15" materialDesign:TransitionAssist.DisableTransitions="True" />
+            <TextBox Margin="5" FontSize="15" materialDesign:TransitionAssist.DisableTransitions="True" />
         </StackPanel>
         <StackPanel Margin="25" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
             <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="0 0 50 0" Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Thay đổi">

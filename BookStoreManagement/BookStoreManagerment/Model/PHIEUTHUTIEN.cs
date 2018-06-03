@@ -15,8 +15,6 @@ namespace BookStoreManagerment.Model
 
     public partial class PHIEUTHUTIEN:BaseViewModel
     {
-        public KHACHHANG khachHang { get; set; }
-
         private string _MAPT;
         public string MAPT { get { return _MAPT; } set { _MAPT = value; OnPropertyChanged(); } }
         private string _MAKH;
