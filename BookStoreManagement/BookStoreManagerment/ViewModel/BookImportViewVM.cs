@@ -97,7 +97,18 @@ namespace BookStoreManagerment.ViewModel
         public string BookName { get { return _bookName; } set { _bookName = value; OnPropertyChanged(); } }
 
         private int _numOfBook;
-        public int NumOfBook { get { return _numOfBook; } set { _numOfBook = value; OnPropertyChanged(); } }
+        public int NumOfBook { get { return _numOfBook; }
+            set { _numOfBook = value;
+                if (NumOfBook > SettingWindowVM.MAXIMUM_IMPORT)
+                {
+                    MessageBox.Show("Số lượng sách nhập không được vượt quá " + SettingWindowVM.MAXIMUM_IMPORT, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    _numOfBook = Convert.ToInt32(SettingWindowVM.MAXIMUM_IMPORT);
+                }
+                if(NumOfBook < SettingWindowVM.LIMITED_IMPORT)
+                {
+                    MessageBox.Show("Số lượng sách nhập không được ít hơn " + SettingWindowVM.MAXIMUM_IMPORT + " cuốn sách", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                OnPropertyChanged(); } }
 
         private decimal _importPrice;
         public decimal ImportPrice { get { return _importPrice; } set { _importPrice = value; OnPropertyChanged(); } }

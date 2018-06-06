@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class PHIEUTHUTIEN:BaseViewModel
+    public partial class PHIEUTHUTIEN : BaseViewModel
     {
         private string _MAPT;
         public string MAPT { get { return _MAPT; } set { _MAPT = value; OnPropertyChanged(); } }
@@ -27,6 +27,7 @@ namespace BookStoreManagerment.Model
         public Nullable<decimal> TIENTHU { get { return _TIENTHU; } set { _TIENTHU = value; OnPropertyChanged(); } }
         private Nullable<decimal> _TIENTHUA;
         public Nullable<decimal> TIENTHUA { get { return _TIENTHUA; } set { _TIENTHUA = value; OnPropertyChanged(); } }
+
         public virtual KHACHHANG KHACHHANG { get; set; }
     }
 }

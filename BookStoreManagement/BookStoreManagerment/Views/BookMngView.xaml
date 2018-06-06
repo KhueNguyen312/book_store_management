@@ -13,9 +13,8 @@
              TextElement.FontSize="13"
              TextOptions.TextFormattingMode="Ideal"
              TextOptions.TextRenderingMode="Auto"
-             Background="{DynamicResource MaterialDesignPaper}"
              FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="400" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="1000">
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
@@ -58,7 +57,7 @@
                             <Button Style="{DynamicResource MaterialDesignToolButton}">
                                 <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
                             </Button>
-                            <TextBox Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Tìm kiếm sách" 
+                            <TextBox Grid.Column="1" FontSize="15" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Tìm kiếm sách" 
                                      materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
                                      Width="400" VerticalAlignment="Center" />
                             <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
@@ -177,12 +176,14 @@
                       DisplayMemberPath="TENNXB" SelectedItem="{Binding SelectedPublishingHouseItem, Mode=TwoWay}"
                       IsEnabled="{Binding IsEnabledTextBox}" Text="{Binding DisplayPublishingHouse}"
                        Grid.Row="0" Margin="0 0 0 0" materialDesign:HintAssist.Hint="Nhà xuất bản" 
+                      IsEditable="True"
                       Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                       
             </ComboBox>
             <ComboBox ItemsSource="{Binding ListBookType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
                       DisplayMemberPath="TENLOAISACH" SelectedItem="{Binding SelectedBookTypeItem, Mode=TwoWay}"
                       Text="{Binding DisplayBookType}"
+                      IsEditable="True"
                       IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Margin="0 7 0 0" materialDesign:HintAssist.Hint="Thể loại" 
                       Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                 

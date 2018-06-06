@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class CTPHIEUNHAP:BaseViewModel
+    public partial class CTPHIEUNHAP : BaseViewModel
     {
         private int _MAPHIEUNHAP;
         public int MAPHIEUNHAP { get { return _MAPHIEUNHAP; } set { _MAPHIEUNHAP = value; OnPropertyChanged(); } }
@@ -25,6 +25,7 @@ namespace BookStoreManagerment.Model
         public decimal DONGIA { get { return _DONGIA; } set { _DONGIA = value; OnPropertyChanged(); } }
         private Nullable<decimal> _THANHTIEN;
         public Nullable<decimal> THANHTIEN { get { return _THANHTIEN; } set { _THANHTIEN = value; OnPropertyChanged(); } }
+
 
         public virtual PHIEUNHAPSACH PHIEUNHAPSACH { get; set; }
         public virtual SACH SACH { get; set; }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\App.xaml
-221791364584
+2352797340
 2-1556844510
-68861973753
+72-1512917766
 671579744965
-BookManagementWindow.xaml;CostReportWindow.xaml;CustomControlBar\MainUserControl.xaml;CustomControlBar\UserControlAlter.xaml;AccountMngWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ReportWindow.xaml;Resources\MainResource.xaml;ReveneuReportWindow.xaml;SettingWindow.xaml;Views\AccountDetailView.xaml;Views\AccountMngView.xaml;Views\BookImportView.xaml;Views\BookMngView.xaml;BusinessWindow.xaml;Views\CostReportView.xaml;Views\CustomerDueReportView.xaml;Views\CustomerMngView.xaml;Views\DataBookView.xaml;Views\MoneyCollectionView.xaml;Views\SellBookView.xaml;
+BookManagementWindow.xaml;CostReportWindow.xaml;CustomControlBar\MainUserControl.xaml;CustomControlBar\UserControlAlter.xaml;AccountMngWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ReportWindow.xaml;Resources\MainResource.xaml;ReveneuReportWindow.xaml;SettingWindow.xaml;StatisticsWindow.xaml;Views\AccountDetailView.xaml;Views\AccountMngView.xaml;Views\BookImportView.xaml;Views\BookMngView.xaml;BusinessWindow.xaml;Views\CostReportView.xaml;Views\CustomerDueReportView.xaml;Views\CustomerMngView.xaml;Views\DataBookView.xaml;Views\MoneyCollectionView.xaml;Views\SellBookView.xaml;
 
 False
 

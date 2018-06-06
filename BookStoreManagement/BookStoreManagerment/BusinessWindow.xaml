@@ -17,7 +17,6 @@
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
     DataContext="{StaticResource BusinessVM}"
     WindowStartupLocation="CenterScreen"

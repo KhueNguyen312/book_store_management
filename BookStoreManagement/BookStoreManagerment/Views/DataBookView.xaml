@@ -43,9 +43,9 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="Mã"  Binding="{Binding MANXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50"></DataGridTextColumn>
-                            <DataGridTextColumn Header="Tên NXB"  Binding="{Binding TENNXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="Địa chỉ"  Binding="{Binding DIACHI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></DataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn  Header="Mã" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="5"  Binding="{Binding MANXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50"></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn Header="Tên NXB" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="30"   Binding="{Binding TENNXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn Header="Địa chỉ" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="50"  Binding="{Binding DIACHI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -59,7 +59,7 @@
                     <TextBlock Text="Thể loại sách" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
                     <DataGrid EnableRowVirtualization="False" Grid.Row="1" ItemsSource="{Binding ListOfBookType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                               AlternationCount="{Binding Items.Count, RelativeSource={RelativeSource Self}}"
-                              SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False"  Name="DataGridType" CanUserAddRows="True" >
+                              SelectedItem="{Binding SelectedTypeBook, Mode=TwoWay}" AutoGenerateColumns="False"  Name="DataGridType" CanUserAddRows="True" >
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="RowEditEnding">
                                 <i:InvokeCommandAction Command="{Binding SaveCommand2,Mode=TwoWay}" CommandParameter="{Binding ElementName=DataGridTest}"/>
@@ -78,8 +78,8 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="Mã thể loại"  Binding="{Binding MALOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="Tên thể loại"  Binding="{Binding TENLOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></DataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn MaxLength="5" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}"  Header="Mã thể loại"  Binding="{Binding MALOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn MaxLength="30" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" Header="Tên thể loại"  Binding="{Binding TENLOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

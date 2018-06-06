@@ -16,7 +16,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-    DataContext="{StaticResource BookMngVM}"
+    DataContext="{StaticResource SettingVM}"
     WindowStartupLocation="CenterScreen"
         Title="Setting" Height="500" Width="500" ResizeMode="NoResize" Icon="Images/BookMng2.png" WindowStyle="None">
     <Grid>

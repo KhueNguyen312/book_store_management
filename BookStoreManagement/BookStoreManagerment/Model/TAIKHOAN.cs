@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class TAIKHOAN: BaseViewModel
+    public partial class TAIKHOAN : BaseViewModel
     {
         public TypeAccount TypeAcc { get; set; }
         private string _TENTK;

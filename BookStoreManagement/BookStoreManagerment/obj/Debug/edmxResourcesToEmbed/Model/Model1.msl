@@ -131,5 +131,26 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="QUYDINHs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.QUYDINH">
+        <MappingFragment StoreEntitySet="QUYDINH">
+          <ScalarProperty Name="NOTOIDA" ColumnName="NOTOIDA" />
+          <ScalarProperty Name="TONTOITHIEU" ColumnName="TONTOITHIEU" />
+          <ScalarProperty Name="NHAPTOIDA" ColumnName="NHAPTOIDA" />
+          <ScalarProperty Name="NHAPTOITHIEU" ColumnName="NHAPTOITHIEU" />
+          <ScalarProperty Name="MAQD" ColumnName="MAQD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_DOANHTHUSACHTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_DOANHTHUSACHTRONGTHANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_DOANHTHUSACHTRONGTHANG_Result">
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_SACHBANCHAYTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_SACHBANCHAYTRONGTHANG" />
   </EntityContainerMapping>
 </Mapping>

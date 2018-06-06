@@ -37,6 +37,7 @@ namespace BookStoreManagerment.Model
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
+        public virtual DbSet<QUYDINH> QUYDINHs { get; set; }
     
         public virtual ObjectResult<USP_BAOCAODOANHTHU_Result> USP_BAOCAODOANHTHU(Nullable<System.DateTime> date)
         {
@@ -54,6 +55,16 @@ namespace BookStoreManagerment.Model
                 new ObjectParameter("Date", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_BAOCAOCHIPHI_Result>("USP_BAOCAOCHIPHI", dateParameter);
+        }
+    
+        public virtual ObjectResult<USP_DOANHTHUSACHTRONGTHANG_Result> USP_DOANHTHUSACHTRONGTHANG()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_DOANHTHUSACHTRONGTHANG_Result>("USP_DOANHTHUSACHTRONGTHANG");
+        }
+    
+        public virtual ObjectResult<string> USP_SACHBANCHAYTRONGTHANG()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("USP_SACHBANCHAYTRONGTHANG");
         }
     }
 }

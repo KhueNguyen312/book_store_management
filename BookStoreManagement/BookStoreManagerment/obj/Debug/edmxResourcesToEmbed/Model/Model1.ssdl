@@ -80,6 +80,16 @@
     <Property Name="TIENTHU" Type="money" />
     <Property Name="TIENTHUA" Type="money" StoreGeneratedPattern="Computed" />
   </EntityType>
+  <EntityType Name="QUYDINH">
+    <Key>
+      <PropertyRef Name="MAQD" />
+    </Key>
+    <Property Name="MAQD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NHAPTOITHIEU" Type="int" />
+    <Property Name="NHAPTOIDA" Type="int" />
+    <Property Name="TONTOITHIEU" Type="int" />
+    <Property Name="NOTOIDA" Type="money" />
+  </EntityType>
   <EntityType Name="SACH">
     <Key>
       <PropertyRef Name="MASACH" />
@@ -207,6 +217,8 @@
   <Function Name="USP_BAOCAODOANHTHU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Date" Type="date" Mode="In" />
   </Function>
+  <Function Name="USP_DOANHTHUSACHTRONGTHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_SACHBANCHAYTRONGTHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="QUAN_LI_NHA_SACHModelStoreContainer">
     <EntitySet Name="CTHOADON" EntityType="Self.CTHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CTPHIEUNHAP" EntityType="Self.CTPHIEUNHAP" Schema="dbo" store:Type="Tables" />
@@ -216,6 +228,7 @@
     <EntitySet Name="NHAXUATBAN" EntityType="Self.NHAXUATBAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEUNHAPSACH" EntityType="Self.PHIEUNHAPSACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEUTHUTIEN" EntityType="Self.PHIEUTHUTIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUYDINH" EntityType="Self.QUYDINH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SACH" EntityType="Self.SACH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="F_K_CTHD_HD" Association="Self.F_K_CTHD_HD">

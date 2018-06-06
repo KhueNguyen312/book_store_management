@@ -68,7 +68,13 @@ namespace BookStoreManagerment.ViewModel
         private string _bookName;
         public string BookName { get { return _bookName; } set { _bookName = value; OnPropertyChanged(); } }
         private decimal _moneyReceipt;
-        public decimal MoneyReceipt { get { return _moneyReceipt; } set { _moneyReceipt = value; OnPropertyChanged(); } }
+        public decimal MoneyReceipt { get { return _moneyReceipt; } set { _moneyReceipt = value;
+                if (MoneyReceipt < TotalPrice && TotalPrice - MoneyReceipt + DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO > SettingWindowVM.MAXIMUM_CUSTOMERDUE)
+                {
+                    MessageBox.Show("Số tiền nợ của khách hàng này đã vượt quá quy định.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    _moneyReceipt = 0;
+                }
+                OnPropertyChanged(); } }
         private decimal _totalPrice;
         public decimal TotalPrice { get { return _totalPrice; } set { _totalPrice = value; OnPropertyChanged(); } }
 

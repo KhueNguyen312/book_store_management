@@ -13,8 +13,6 @@
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
-             
-     Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
@@ -48,6 +46,7 @@
             <ComboBox Grid.Row="0" Margin="0 0 0 0" IsEnabled="{Binding IsEnabledCBBox}"
                       ItemsSource="{Binding ListBook, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                       Text="{Binding BookName}"
+                      IsEditable="True"
                       DisplayMemberPath="TENSACH" SelectedItem="{Binding SelectedBook, Mode=TwoWay}"
                       materialDesign:HintAssist.Hint="Tên Sách" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
             </ComboBox>

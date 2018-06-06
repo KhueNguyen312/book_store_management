@@ -482,3 +482,5 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CostReportView.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.baml

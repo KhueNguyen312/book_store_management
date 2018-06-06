@@ -93,15 +93,9 @@
                 <ColumnDefinition />
                 <!--<ColumnDefinition Width="5*"/>-->
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonOpenMenu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                <materialDesign:PackIcon Kind="Menu" Width="40" Height="40" Foreground="Black"/>
-            </Button>
-            <Button x:Name="ButtonCloseMenu"  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="40" Height="40" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                <materialDesign:PackIcon Kind="Menu" Width="40" Height="40" Foreground="Black"/>
-            </Button>
             <dxlc:TileLayoutControl StretchContent="True" Grid.Column="1" Grid.Row="1" >
                 <dxlc:TileLayoutControl.Background>
-                    <ImageBrush ImageSource="Images/background1.jpeg"/>
+                    <ImageBrush ImageSource="Images/background1.jpg"/>
                 </dxlc:TileLayoutControl.Background>
                 <dxlc:Tile Size="Small" Header="Quản Lý Thông Tin" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
                     <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
@@ -112,7 +106,7 @@
                 <dxlc:Tile Size="Large" Header="Kinh Doanh" Command="{Binding PressBtnBusinessCommand}" CommandParameter="{Binding ElementName=mainWindow}" HorizontalHeaderAlignment="Stretch" Background="#FFD74E2A">
                     <Image Source="Images/BusinessIcon.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile Header="Tra Cứu" Size="Small"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF4F2E94" >
+                <dxlc:Tile Header="Thống kê" Size="Small" Command="{Binding PressBtnStatisticCmd}" CommandParameter="{Binding ElementName=mainWindow}"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF4F2E94" >
                     <Image Source="Images\Search.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Header="Tùy Chỉnh" Command="{Binding PressBtnSettingCommand}" CommandParameter="{Binding ElementName=mainWindow}" Size="Small" Background="#FFDA542D">
@@ -135,7 +129,7 @@
                     </dxlc:Tile.ContentTemplate>
                 </dxlc:Tile>
             </dxlc:TileLayoutControl>
-            <Image Grid.Row="0" Grid.Column="1" Source="Images/BookStoreBackground.jpg" Stretch="Fill" Panel.ZIndex="-1" >
+            <Image Grid.Row="0" Grid.Column="1" Source="Images/BookStoreBackground2.jpg" Stretch="Fill" Panel.ZIndex="-1" >
             </Image>
         </Grid>
 

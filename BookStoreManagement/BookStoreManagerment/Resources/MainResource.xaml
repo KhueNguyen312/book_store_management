@@ -11,4 +11,5 @@
     <viewmodel:AccountMngWindowVM x:Key="AccountMngWindowVM"></viewmodel:AccountMngWindowVM>
     <viewmodel:ReveneuReportWindowVM x:Key="ReveneuRPVM"></viewmodel:ReveneuReportWindowVM>
     <viewmodel:CostReportVM x:Key="CostReportWVM"></viewmodel:CostReportVM>
+    <viewmodel:StatisticsWindowVM x:Key="StatisticsVM"></viewmodel:StatisticsWindowVM>
 </ResourceDictionary>

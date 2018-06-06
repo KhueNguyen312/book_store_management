@@ -34,8 +34,14 @@ namespace BookStoreManagerment.ViewModel
         public ICommand PressBtnSettingCommand { get; set; }
         public ICommand PressBtnReportCommand { get; set; }
         public ICommand LoadedWindowCommand { get; set; }
+        public ICommand PressBtnStatisticCmd { get; set; }
         public MainViewModel()
         {
+            var tmp = DataProvider.Ins.DB.QUYDINHs.Where(x => x.MAQD == 1).SingleOrDefault();
+            SettingWindowVM.LIMITED_IMPORT = tmp.NHAPTOITHIEU;
+            SettingWindowVM.LIMITED_UNSTOCK = tmp.TONTOITHIEU;
+            SettingWindowVM.MAXIMUM_CUSTOMERDUE = tmp.NOTOIDA;
+            SettingWindowVM.MAXIMUM_IMPORT = tmp.NHAPTOIDA;
             LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
                 Isloaded = true;
@@ -65,6 +71,7 @@ namespace BookStoreManagerment.ViewModel
             PressBtnBusinessCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenBusinesstWindow(p); });
             PressBtnSettingCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenSettingWindow(p); });
             PressBtnReportCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenReportWindow(p); });
+            PressBtnStatisticCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenStatisticsWindow(p); });
 
         }
         //All commands
@@ -93,6 +100,11 @@ namespace BookStoreManagerment.ViewModel
             ReportWindow window = new ReportWindow();
             window.ShowDialog();
         }
+        public void OpenStatisticsWindow(Window w)
+        {
+            StatisticsWindow window = new StatisticsWindow();
+            window.ShowDialog();
+        }
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }
     }
 
@@ -110,7 +122,7 @@ namespace BookStoreManagerment.ViewModel
     {
         public static readonly List<AppInfo> listInfo = new List<AppInfo>
         {
-            new AppInfo {Content = "Bookstore management application by Evils group",Photo = "Images/background4.jpg" },
+            new AppInfo {Content = "Bookstore management application by Evil team",Photo = "Images/background4.jpg" },
             new AppInfo {Content = "For more infomation vist our Github",Photo = "Images/background5.jpg" },
             new AppInfo {Content = "",Photo="Images/background3.jpg" }
         };

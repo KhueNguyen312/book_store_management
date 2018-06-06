@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class HOADON:BaseViewModel
+    public partial class HOADON : BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HOADON()
@@ -34,6 +34,7 @@ namespace BookStoreManagerment.Model
         public Nullable<decimal> TIENTHUA { get { return _TIENTHUA; } set { _TIENTHUA = value; OnPropertyChanged(); } }
         private Nullable<decimal> _TIENNHAN;
         public Nullable<decimal> TIENNHAN { get { return _TIENNHAN; } set { _TIENNHAN = value; OnPropertyChanged(); } }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }

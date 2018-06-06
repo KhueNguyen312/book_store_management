@@ -13,7 +13,6 @@
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="600" d:DesignWidth="1000">
     <UserControl.Resources>
@@ -40,7 +39,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="Auto" ></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
@@ -54,6 +53,7 @@
                       IsEnabled="{Binding IsEnabledCBBox}"
                       ItemsSource="{Binding ListBook, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                       Text="{Binding BookName}"
+                      IsEditable="True"
                       DisplayMemberPath="TENSACH" SelectedItem="{Binding SelectedBook, Mode=TwoWay}">
                     
             </ComboBox>
@@ -72,6 +72,7 @@
                            IsEnabled="{Binding IsEnabledCustomerCBBox}"
                            ItemsSource="{Binding ListCustomer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                            Text="{Binding CustomerName}"
+                           IsEditable="True"
                            DisplayMemberPath="TENKH" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}">
             </ComboBox>
             <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData"  
@@ -89,7 +90,7 @@
                 <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
             </Button>
         </StackPanel>
-        <ListView  Grid.Row="1" Grid.Column="2" Name="listViewBillDetail" Grid.ColumnSpan="3" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
+        <ListView  Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Name="listViewBillDetail" Grid.ColumnSpan="3" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="SnapsToDevicePixels" Value="True" />
