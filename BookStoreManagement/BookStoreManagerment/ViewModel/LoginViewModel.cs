@@ -41,20 +41,30 @@ namespace BookStoreManagerment.ViewModel
         {
             if (window == null)
                 return;
-            var accountCount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).Count();
-            if(accountCount > 0)
+            try
             {
-                MainViewModel.LoginAccount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).SingleOrDefault();
-                IsLogin = true;
-                IsActiveSnackBar = false;
-                window.Close();
+                var accountCount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).Count();
+                if (accountCount > 0)
+                {
+                    MainViewModel.LoginAccount = DataProvider.Ins.DB.TAIKHOANs.Where(p => p.TENTK == UserName && p.MATKHAU == Password).SingleOrDefault();
+                    IsLogin = true;
+                    IsActiveSnackBar = false;
+                    window.Close();
+                }
+                else
+                {
+                    IsLogin = false;
+                    IsActiveSnackBar = true;
+
+                }
             }
-            else
+            catch (Exception)
             {
-                IsLogin = false;
-                IsActiveSnackBar = true;
-                
+
+                MessageBox.Show("Hãy kiểm tra kết nối tới CSDL", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            
+            
             
         }
     }

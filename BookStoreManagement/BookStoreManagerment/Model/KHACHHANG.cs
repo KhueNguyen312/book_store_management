@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class KHACHHANG: BaseViewModel
+    public partial class KHACHHANG:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACHHANG()
@@ -32,8 +32,8 @@ namespace BookStoreManagerment.Model
         public string SODIENTHOAI { get { return _SODIENTHOAI; } set { _SODIENTHOAI = value; OnPropertyChanged(); } }
         private string _EMAIL;
         public string EMAIL { get { return _EMAIL; } set { _EMAIL = value; OnPropertyChanged(); } }
-        private decimal _TIENNO;
-        public decimal TIENNO { get { return _TIENNO; } set { _TIENNO = value; OnPropertyChanged(); } }
+        private Nullable<decimal> _TIENNO;
+        public Nullable<decimal> TIENNO { get { return _TIENNO; } set { _TIENNO = value; OnPropertyChanged(); } }
         public int DIEMTICHLUY { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

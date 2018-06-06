@@ -13,7 +13,7 @@
           <Property Name="SOHD" Type="int" Nullable="false" />
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
-          <Property Name="THANHTIEN" Type="money" Nullable="false" />
+          <Property Name="THANHTIEN" Type="money" Nullable="false" StoreGeneratedPattern="Computed" />
           <Property Name="GIABAN" Type="money" Nullable="false" />
         </EntityType>
         <EntityType Name="CTPHIEUNHAP">
@@ -25,7 +25,7 @@
           <Property Name="MASACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="SOLUONG" Type="int" Nullable="false" />
           <Property Name="DONGIA" Type="money" Nullable="false" />
-          <Property Name="THANHTIEN" Type="money" />
+          <Property Name="THANHTIEN" Type="money" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
@@ -35,6 +35,8 @@
           <Property Name="MAKH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="NGAYHD" Type="datetime" Nullable="false" />
           <Property Name="TONGTIEN" Type="money" Nullable="false" />
+          <Property Name="TIENTHUA" Type="money" />
+          <Property Name="TIENNHAN" Type="money" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
@@ -45,7 +47,7 @@
           <Property Name="DIACHI" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="SODIENTHOAI" Type="char" MaxLength="11" />
           <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
-          <Property Name="TIENNO" Type="money" Nullable="false" />
+          <Property Name="TIENNO" Type="money" StoreGeneratedPattern="Computed" />
           <Property Name="DIEMTICHLUY" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="LOAISACH">
@@ -79,9 +81,9 @@
           <Property Name="MAPT" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="MAKH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="NGAYTHU" Type="datetime" Nullable="false" />
-          <Property Name="TIENNO" Type="money" />
-          <Property Name="TIENTHU" Type="money" />
-          <Property Name="TIENTHUA" Type="money" />
+          <Property Name="TIENNO" Type="money" StoreGeneratedPattern="Computed" />
+          <Property Name="TIENTHU" Type="money"  />
+          <Property Name="TIENTHUA" Type="money" StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="SACH">
           <Key>
@@ -92,7 +94,7 @@
           <Property Name="MALOAISACH" Type="char" MaxLength="5" Nullable="false" />
           <Property Name="TACGIA" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MANXB" Type="char" MaxLength="5" Nullable="false" />
-          <Property Name="SOLUONGHIENTAI" Type="int" />
+          <Property Name="SOLUONGHIENTAI" Type="int" StoreGeneratedPattern="Computed" />
           <Property Name="HINHANH" Type="image" />
           <Property Name="GIANHAP" Type="money" Nullable="false" />
           <Property Name="GIABAN" Type="money" Nullable="false" />
@@ -344,6 +346,8 @@
           <Property Name="TONGTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <NavigationProperty Name="CTHOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_HD" FromRole="HOADON" ToRole="CTHOADON" />
           <NavigationProperty Name="KHACHHANG" Relationship="QUAN_LI_NHA_SACHModel.F_K_HD_KH" FromRole="HOADON" ToRole="KHACHHANG" />
+          <Property Name="TIENTHUA" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TIENNHAN" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
@@ -354,7 +358,7 @@
           <Property Name="DIACHI" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="SODIENTHOAI" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
           <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="TIENNO" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TIENNO" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="DIEMTICHLUY" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_HD_KH" FromRole="KHACHHANG" ToRole="HOADON" />
           <NavigationProperty Name="PHIEUTHUTIENs" Relationship="QUAN_LI_NHA_SACHModel.FK_PTT_KH" FromRole="KHACHHANG" ToRole="PHIEUTHUTIEN" />
@@ -563,6 +567,8 @@
           <EntitySetMapping Name="HOADONs">
             <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.HOADON">
               <MappingFragment StoreEntitySet="HOADON">
+                <ScalarProperty Name="TIENNHAN" ColumnName="TIENNHAN" />
+                <ScalarProperty Name="TIENTHUA" ColumnName="TIENTHUA" />
                 <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
                 <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
                 <ScalarProperty Name="MAKH" ColumnName="MAKH" />

@@ -15,6 +15,6 @@ namespace BookStoreManagerment.Model
     {
         public string MAKH { get; set; }
         public string TENKH { get; set; }
-        public Nullable<decimal> Doanh_Thu { get; set; }
+        public decimal Doanh_Thu { get; set; }
     }
 }

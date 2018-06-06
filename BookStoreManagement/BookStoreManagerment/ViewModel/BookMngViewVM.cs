@@ -210,16 +210,17 @@ namespace BookStoreManagerment.ViewModel
                     else
                     {
                         DataProvider.Ins.DB.SACHes.Add(book);
-                        DataProvider.Ins.DB.SaveChanges();
+                        
                         try
                         {
-                            
+                            DataProvider.Ins.DB.SaveChanges();
+                            ListBook.Add(book);
                         }
                         catch (Exception)
                         {
                         }
 
-                        ListBook.Add(book);
+                        
                     }
                 }
             });
@@ -234,9 +235,18 @@ namespace BookStoreManagerment.ViewModel
             {
                 var book = DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == SelectedItem.MASACH).SingleOrDefault();
                 DataProvider.Ins.DB.SACHes.Remove(book);
-                DataProvider.Ins.DB.SaveChanges();
+                try
+                {
+                    DataProvider.Ins.DB.SaveChanges();
 
-                ListBook.Remove(SelectedItem);
+                    ListBook.Remove(SelectedItem);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Không thể xóa cuốn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                
             });
             ListBook = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
             ListPublishingHouse = new ObservableCollection<NHAXUATBAN>(DataProvider.Ins.DB.NHAXUATBANs);

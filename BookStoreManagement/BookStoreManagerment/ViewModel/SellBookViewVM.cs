@@ -67,6 +67,10 @@ namespace BookStoreManagerment.ViewModel
 
         private string _bookName;
         public string BookName { get { return _bookName; } set { _bookName = value; OnPropertyChanged(); } }
+        private decimal _moneyReceipt;
+        public decimal MoneyReceipt { get { return _moneyReceipt; } set { _moneyReceipt = value; OnPropertyChanged(); } }
+        private decimal _totalPrice;
+        public decimal TotalPrice { get { return _totalPrice; } set { _totalPrice = value; OnPropertyChanged(); } }
 
         private HOADON _selectedItem;
         public HOADON SelectedItem
@@ -205,6 +209,7 @@ namespace BookStoreManagerment.ViewModel
                         ListBillDetail.Add(book);
                     }
                 }
+                TotalPrice = UpdateTotalPrice();
                 IsEnabledListView = true;
                 IsEnabledCBBox = true;
             });
@@ -225,10 +230,17 @@ namespace BookStoreManagerment.ViewModel
                     return false;
             }, (p) =>
             {
-                DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD).SingleOrDefault().TONGTIEN = UpdateTotalPrice();
+                var target = DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD);
+                target.SingleOrDefault().TIENNHAN = MoneyReceipt;
+                target.SingleOrDefault().TONGTIEN = UpdateTotalPrice();
+                if (MoneyReceipt - TotalPrice > 0)
+                    target.SingleOrDefault().TIENTHUA = MoneyReceipt - TotalPrice;
+                else
+                    target.SingleOrDefault().TIENTHUA = 0;
                 DataProvider.Ins.DB.SaveChanges();
                 UpdateNumOfBook();
-                DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO = 0; // update
+                DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO = 0; // update temp value for property that set automatically
+                DataProvider.Ins.DB.SaveChanges();
                 IsEnabledListView = false;
                 CurrentBill = null;
                 isSaved = true;

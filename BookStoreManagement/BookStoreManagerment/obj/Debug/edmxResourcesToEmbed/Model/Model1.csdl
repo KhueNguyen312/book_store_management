@@ -86,6 +86,8 @@
     <Property Name="TONGTIEN" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <NavigationProperty Name="CTHOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTHD_HD" FromRole="HOADON" ToRole="CTHOADON" />
     <NavigationProperty Name="KHACHHANG" Relationship="QUAN_LI_NHA_SACHModel.F_K_HD_KH" FromRole="HOADON" ToRole="KHACHHANG" />
+    <Property Name="TIENTHUA" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TIENNHAN" Type="Decimal" Precision="19" Scale="4" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -96,7 +98,7 @@
     <Property Name="DIACHI" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="SODIENTHOAI" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
     <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TIENNO" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="TIENNO" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="DIEMTICHLUY" Type="Int32" Nullable="false" />
     <NavigationProperty Name="HOADONs" Relationship="QUAN_LI_NHA_SACHModel.F_K_HD_KH" FromRole="KHACHHANG" ToRole="HOADON" />
     <NavigationProperty Name="PHIEUTHUTIENs" Relationship="QUAN_LI_NHA_SACHModel.FK_PTT_KH" FromRole="KHACHHANG" ToRole="PHIEUTHUTIEN" />

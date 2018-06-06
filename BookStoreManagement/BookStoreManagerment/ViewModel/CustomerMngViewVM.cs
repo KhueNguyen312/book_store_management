@@ -68,8 +68,8 @@ namespace BookStoreManagerment.ViewModel
         private string _mail;
         public string Mail { get { return _mail; } set { _mail = value; OnPropertyChanged(); } }
 
-        private decimal _debt;
-        public decimal Debt { get { return _debt; } set { _debt = value; OnPropertyChanged(); } }
+        private decimal? _debt;
+        public decimal? Debt { get { return _debt; } set { _debt = value; OnPropertyChanged(); } }
 
         public CustomerMngViewVM()
         {
@@ -106,7 +106,16 @@ namespace BookStoreManagerment.ViewModel
                     customer.SODIENTHOAI = PhoneNumber;
                     customer.EMAIL = Mail;
                     customer.TIENNO = Debt;
-                    DataProvider.Ins.DB.SaveChanges();
+                    try
+                    {
+                        DataProvider.Ins.DB.SaveChanges();
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Trường giá trị vượt quá giới hạn cho phép", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    
                     IsAdding = true;
                 }
                 else
@@ -120,15 +129,18 @@ namespace BookStoreManagerment.ViewModel
                     else
                     {
                         DataProvider.Ins.DB.KHACHHANGs.Add(customer);
+                        
                         try
                         {
                             DataProvider.Ins.DB.SaveChanges();
+                            ListCustomer.Add(customer);
                         }
                         catch (Exception)
                         {
+                            MessageBox.Show("Trường giá trị vượt quá giới hạn cho phép", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
 
-                        ListCustomer.Add(customer);
+                        
                     }
                 }
             });
@@ -143,9 +155,18 @@ namespace BookStoreManagerment.ViewModel
             {
                 var customer = DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == SelectedItem.MAKH).SingleOrDefault();
                 DataProvider.Ins.DB.KHACHHANGs.Remove(customer);
-                DataProvider.Ins.DB.SaveChanges();
+                try
+                {
+                    DataProvider.Ins.DB.SaveChanges();
 
-                ListCustomer.Remove(SelectedItem);
+                    ListCustomer.Remove(SelectedItem);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Không thể xóa khách hàng này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                
             });
             ListCustomer = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.KHACHHANGs);
         }

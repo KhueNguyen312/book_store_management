@@ -68,6 +68,7 @@ namespace BookStoreManagerment.ViewModel
         public ObservableCollection<PHIEUTHUTIEN> ListMoneyCollection { get { return _listMoneyCollection; } set { _listMoneyCollection = value; OnPropertyChanged(); } }
         public MoneyCollectionViewVM()
         {
+            Date = DateTime.Today;
             AddCommand = new RelayCommand<Button>((p) => { return SelectedCustomer != null && Collection != null && ID !=null && Date !=null ? true : false; }, (p) =>
             {
                 var receiptNote = new PHIEUTHUTIEN() { MAPT = ID, MAKH = CustomerID, TIENNO=Debt,TIENTHU = Collection, NGAYTHU = DateTime.Now };
@@ -81,7 +82,8 @@ namespace BookStoreManagerment.ViewModel
                     DataProvider.Ins.DB.SaveChanges();
                     ListMoneyCollection.Add(receiptNote);
                     DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == SelectedCustomer.MAKH).SingleOrDefault().TIENNO = 0; // update
-                    DataProvider.Ins.DB.PHIEUTHUTIENs.Where(x => x.MAPT == ID).SingleOrDefault().TIENNO = 0; // update
+                    DataProvider.Ins.DB.SaveChanges();
+
 
                 }
             });

@@ -26,6 +26,8 @@
     <EntitySetMapping Name="HOADONs">
       <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="TIENNHAN" ColumnName="TIENNHAN" />
+          <ScalarProperty Name="TIENTHUA" ColumnName="TIENTHUA" />
           <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
           <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
           <ScalarProperty Name="MAKH" ColumnName="MAKH" />

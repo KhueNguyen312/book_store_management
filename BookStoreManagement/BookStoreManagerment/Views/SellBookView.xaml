@@ -15,7 +15,7 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="1000">
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
@@ -35,14 +35,20 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition Width="2*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition ></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Bán sách" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+        <StackPanel Margin="10 0 10 0" Grid.Column="1" Grid.Row="1">
+            <TextBox IsEnabled="False" Text="{Binding TotalPrice,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 -3 0 0"  materialDesign:HintAssist.Hint="Tổng tiền" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Text="{Binding MoneyReceipt}" materialDesign:HintAssist.Hint="Tiền nhận" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
         <StackPanel Margin="5" Grid.Column="0" Grid.Row="1">
             <ComboBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Tên Sách" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                       IsEnabled="{Binding IsEnabledCBBox}"
@@ -59,30 +65,31 @@
                     ToolTip="{Binding ButtonName}"
                     Content="{Binding ButtonName}">
             </Button>
-            <StackPanel  Margin="0 10 0 0" Orientation="Horizontal">
-                <ComboBox  Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+            
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2"  Margin="0 10 0 0" Orientation="Horizontal">
+            <ComboBox  Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                            IsEnabled="{Binding IsEnabledCustomerCBBox}"
                            ItemsSource="{Binding ListCustomer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                            Text="{Binding CustomerName}"
                            DisplayMemberPath="TENKH" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}">
-                </ComboBox>
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData"  
+            </ComboBox>
+            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData"  
                         Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddData}"
                         ToolTip="Add a new data"  Padding="0" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
                         VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                    <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
-                </Button>
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnEditData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
+                <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
+            </Button>
+            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnEditData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
                         Command="{Binding EditCommand}" CommandParameter="{Binding ElementName=btnEditData}" ToolTip="Edit data"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                    <materialDesign:PackIcon Kind="Pencil"  Foreground="Black"/>
-                </Button>
-                <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
+                <materialDesign:PackIcon Kind="Pencil"  Foreground="Black"/>
+            </Button>
+            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
                         Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSaveData}" ToolTip="Save data"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                    <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
-                </Button>
-            </StackPanel>
+                <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
+            </Button>
         </StackPanel>
-        <ListView  Grid.Row="2" Grid.Column="0" Name="listViewBillDetail" Grid.ColumnSpan="2" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
+        <ListView  Grid.Row="1" Grid.Column="2" Name="listViewBillDetail" Grid.ColumnSpan="3" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -143,7 +150,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView  Grid.Row="1" Grid.Column="1" Name="listViewBill" Grid.ColumnSpan="2" IsEnabled="{Binding _isEnabledBillListView,Mode=TwoWay}" ItemsSource="{Binding ListBill, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
+        <ListView  Grid.Row="3" Grid.Column="0" Name="listViewBill" Grid.ColumnSpan="3" IsEnabled="{Binding _isEnabledBillListView,Mode=TwoWay}" ItemsSource="{Binding ListBill, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -199,8 +206,10 @@
                     <GridViewColumn Header="Số HD" DisplayMemberBinding="{Binding SOHD}"></GridViewColumn>
                     <GridViewColumn Header="Mã KH" DisplayMemberBinding="{Binding MAKH}"></GridViewColumn>
                     <GridViewColumn Header="Tên khách hàng" DisplayMemberBinding="{Binding KHACHHANG.TENKH}"></GridViewColumn>
-                    <GridViewColumn Header="ngày lập" DisplayMemberBinding="{Binding NGAYHD}"></GridViewColumn>
+                    <GridViewColumn Header="Ngày lập" DisplayMemberBinding="{Binding NGAYHD}"></GridViewColumn>
                     <GridViewColumn Header="Tổng tiền" DisplayMemberBinding="{Binding TONGTIEN}"></GridViewColumn>
+                    <GridViewColumn Header="Tiền nhận" DisplayMemberBinding="{Binding TIENNHAN}"></GridViewColumn>
+                    <GridViewColumn Header="Tiền thừa" DisplayMemberBinding="{Binding TIENTHUA}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

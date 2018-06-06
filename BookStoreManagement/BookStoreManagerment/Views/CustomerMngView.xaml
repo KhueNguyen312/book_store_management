@@ -166,7 +166,7 @@
             </Grid.RowDefinitions>
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="0" Text="{Binding PhoneNumber,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Số điện thoại" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Text="{Binding Mail,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Email" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="2" Text="{Binding Debt,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="False" Grid.Row="2" Text="{Binding Debt,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </Grid>
     </Grid>
 </UserControl>
