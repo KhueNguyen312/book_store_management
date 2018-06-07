@@ -40,8 +40,8 @@
             <ColumnDefinition ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <materialDesign:ColorZone materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="5 -5 10 10" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Mode="PrimaryLight" Padding="5">
-            
+        <materialDesign:ColorZone Name="searchBar" materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="5 -5 10 10" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Mode="PrimaryLight" Padding="5">
+
             <DockPanel>
                 <StackPanel Orientation="Horizontal"
                             materialDesign:RippleAssist.IsCentered="True">
@@ -137,7 +137,7 @@
             </ListView.View>
         </ListView>
         <StackPanel Margin="5 0 5 0" Grid.Row="2" Grid.Column="0">
-            <dxe:ImageEdit IsEnabled="{Binding IsEnabledTextBox}" Source="{Binding Path=Img, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" HorizontalAlignment="Left" Margin="5 0 0 0" Height="150" Width="130"></dxe:ImageEdit>
+            <dxe:ImageEdit Name="imgBook" IsEnabled="{Binding IsEnabledTextBox}" Source="{Binding Path=Img, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="Fill" HorizontalAlignment="Left" Margin="5 0 0 0" Height="150" Width="130"></dxe:ImageEdit>
             <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
                 <Button Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddBook}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddBook" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new book"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
@@ -145,7 +145,7 @@
                 <Button Command="{Binding EditCommand}" CommandParameter="{Binding ElementName=btnEditBook}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnEditBook" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Edit a book"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="Pencil"  Foreground="Black"/>
                 </Button>
-                <Button IsDefault="True" Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSaveAccount}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveAccount" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Save a book"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <Button IsDefault="True" Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSave}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSave" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Save a book"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                     <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
                 </Button>
             </StackPanel>

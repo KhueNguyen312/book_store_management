@@ -114,7 +114,7 @@ namespace BookStoreManagerment.ViewModel
                 BookPrice3 = 0;
             }
 
-            ListReveneuList = new ObservableCollection<USP_BAOCAODOANHTHU_Result>(DataProvider.Ins.DB.USP_BAOCAODOANHTHU(DateTime.Today));
+            ListReveneuList = new ObservableCollection<USP_BAOCAODOANHTHU_Result>(DataProvider.Ins.DB.USP_BAOCAODOANHTHU(DateTime.Today).OrderByDescending(x => x.Doanh_Thu));
             ListReveneuBook = new ObservableCollection<USP_DOANHTHUSACHTRONGTHANG_Result>(DataProvider.Ins.DB.USP_DOANHTHUSACHTRONGTHANG());
         }
         // User can change these imgs after the next update

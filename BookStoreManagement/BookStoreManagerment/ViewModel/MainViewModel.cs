@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -35,6 +36,8 @@ namespace BookStoreManagerment.ViewModel
         public ICommand PressBtnReportCommand { get; set; }
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand PressBtnStatisticCmd { get; set; }
+        public ICommand LogOutCmd { get; set; }
+        public ICommand ExitCmd { get; set; }
         public MainViewModel()
         {
             var tmp = DataProvider.Ins.DB.QUYDINHs.Where(x => x.MAQD == 1).SingleOrDefault();
@@ -72,7 +75,8 @@ namespace BookStoreManagerment.ViewModel
             PressBtnSettingCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenSettingWindow(p); });
             PressBtnReportCommand = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenReportWindow(p); });
             PressBtnStatisticCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { OpenStatisticsWindow(p); });
-
+            LogOutCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { LogOut(p); });
+            ExitCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) => { Exit(p); });
         }
         //All commands
         public void OpenBookMngWindow(Window w)
@@ -104,6 +108,20 @@ namespace BookStoreManagerment.ViewModel
         {
             StatisticsWindow window = new StatisticsWindow();
             window.ShowDialog();
+        }
+        public void LogOut(Window w)
+        {
+            w.Hide();
+            MainWindow main = new MainWindow();
+            main.Show();
+            w.Close();
+        }
+        public void Exit(Window w)
+        {
+            if (System.Windows.MessageBox.Show("Bạn có muốn thoát chương trình", "Thông báo", MessageBoxButton.YesNo,MessageBoxImage.Information) == MessageBoxResult.Yes)
+            {
+                w.Close();
+            }
         }
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }
     }

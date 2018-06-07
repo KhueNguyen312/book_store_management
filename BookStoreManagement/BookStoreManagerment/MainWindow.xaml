@@ -50,25 +50,35 @@
                 <StackPanel.Background>
                     <ImageBrush/>
                 </StackPanel.Background>
-                <Button HorizontalAlignment="Left" x:Name="BtnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"   Padding="0" Width="70" Height="70">
+                <Button HorizontalAlignment="Left" x:Name="btnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"   Padding="0" Width="70" Height="70">
                     <Button.Background>
                         <ImageBrush ImageSource="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill"/>
                     </Button.Background>
                 </Button>
-                <TextBlock Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  FontSize="20" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Name="tbDisplayName"  Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  FontSize="20" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
 
             </StackPanel>
             <ListView>
                 <ListViewItem x:Name="positionListViewItem" Height="60">
-                    <TextBlock x:Name="positionTxtBlock"  Text="{Binding TypeAccountDisplay,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="25" Margin="10" VerticalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+                    <TextBlock x:Name="tbAccountType"  Text="{Binding TypeAccountDisplay,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="25" Margin="10" VerticalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
                 </ListViewItem>
                 <ListViewItem Height="60">
-                    <StackPanel Height="50" Orientation="Horizontal" Margin="10 0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding LogOutCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <StackPanel Name="lviLogOut" Height="50" Orientation="Horizontal" Margin="10 0">
                         <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Đăng Xuất" FontSize="25" Margin="10" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="60">
+                <ListViewItem Name="LviExit" Height="60">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding ExitCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
                     <StackPanel Height="50" Orientation="Horizontal" Margin="6 0">
                         <materialDesign:PackIcon Kind="ExitToApp" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Thoát" FontSize="25" Margin="10" VerticalAlignment="Center"/>

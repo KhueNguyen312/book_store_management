@@ -14,7 +14,7 @@
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
     <Grid>
-        <dx:DXTabControl>
+        <dx:DXTabControl Name="tabView">
             <dx:DXTabItem Header="Nhà xuất bản">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -24,10 +24,10 @@
                     <TextBlock Text="Nhà xuất bản" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
                     <DataGrid EnableRowVirtualization="False" Grid.Row="1" ItemsSource="{Binding ListNXB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                               AlternationCount="{Binding Items.Count, RelativeSource={RelativeSource Self}}"
-                              SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False"  Name="DataGridTest" CanUserAddRows="True" >
+                              SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False"  Name="dataGridPH" CanUserAddRows="True" >
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="RowEditEnding">
-                                <i:InvokeCommandAction Command="{Binding SaveCommand,Mode=TwoWay}" CommandParameter="{Binding ElementName=DataGridTest}"/>
+                                <i:InvokeCommandAction Command="{Binding SaveCommand,Mode=TwoWay}" CommandParameter="{Binding ElementName=dataGridPH}"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                         <DataGrid.Columns>

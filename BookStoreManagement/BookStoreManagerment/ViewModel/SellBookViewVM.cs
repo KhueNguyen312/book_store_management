@@ -242,11 +242,13 @@ namespace BookStoreManagerment.ViewModel
                 if (MoneyReceipt - TotalPrice > 0)
                     target.SingleOrDefault().TIENTHUA = MoneyReceipt - TotalPrice;
                 else
+                {
                     target.SingleOrDefault().TIENTHUA = 0;
+                    DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO += TotalPrice - MoneyReceipt; // update temp value for property that set automatically
+                }
                 DataProvider.Ins.DB.SaveChanges();
                 UpdateNumOfBook();
-                DataProvider.Ins.DB.KHACHHANGs.Where(x => x.MAKH == CustomerID).SingleOrDefault().TIENNO = 0; // update temp value for property that set automatically
-                DataProvider.Ins.DB.SaveChanges();
+                
                 IsEnabledListView = false;
                 CurrentBill = null;
                 isSaved = true;
@@ -257,7 +259,7 @@ namespace BookStoreManagerment.ViewModel
                 var bill = DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD).SingleOrDefault();
                 if (DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD).Count() > 0)
                 {
-                    DataProvider.Ins.DB.HOADONs.RemoveRange(DataProvider.Ins.DB.HOADONs.Where(x => x.SOHD == SelectedItem.SOHD));
+                    DataProvider.Ins.DB.CTHOADONs.RemoveRange(DataProvider.Ins.DB.CTHOADONs.Where(x => x.SOHD == SelectedItem.SOHD));
                     DataProvider.Ins.DB.SaveChanges();
                     ListBillDetail.Clear();
                 }

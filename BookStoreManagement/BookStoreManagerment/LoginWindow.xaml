@@ -66,11 +66,11 @@
                     </Grid.ColumnDefinitions>
 
                     <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
-                    <TextBox Name="usernameBox" Grid.Column="1" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="18"
+                    <TextBox Name="tbUsername" Grid.Column="1" materialDesign:HintAssist.Hint="Tên đăng nhập" FontSize="18"
                              Style="{StaticResource MaterialDesignFloatingHintTextBox}" >
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
-                                <i:InvokeCommandAction Command="{Binding UserNameChangedCommand}" CommandParameter="{Binding ElementName=usernameBox}"/>
+                                <i:InvokeCommandAction Command="{Binding UserNameChangedCommand}" CommandParameter="{Binding ElementName=tbUsername}"/>
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </TextBox>
@@ -102,12 +102,12 @@
         </materialDesign:Card>
         <materialDesign:Snackbar
                       IsActive="{Binding IsActiveSnackBar,Mode=TwoWay}"
-                      x:Name="SnackbarLoginFail" Grid.Row="1" Panel.ZIndex="1"> 
+                      x:Name="snackbarLoginFail" Grid.Row="1" Panel.ZIndex="1"> 
             <materialDesign:SnackbarMessage Content="Sai tài khoản hoặc mật khẩu. Đăng nhập không thành công"
                                                 ActionContent="OK">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="ActionClick">
-                        <i:InvokeCommandAction Command="{Binding ClickedSnackbarCommand}" CommandParameter="{Binding ElementName=SnackbarLoginFail}"/>
+                        <i:InvokeCommandAction Command="{Binding ClickedSnackbarCommand}" CommandParameter="{Binding ElementName=snackbarLoginFail}"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </materialDesign:SnackbarMessage>
