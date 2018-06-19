@@ -484,3 +484,7 @@ F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Deb
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.baml
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.g.cs
 F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.baml

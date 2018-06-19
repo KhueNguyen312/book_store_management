@@ -24,6 +24,10 @@
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN" PointX="3" PointY="12.5" Width="1.5" />
         <AssociationConnector Association="QUAN_LI_NHA_SACHModel.FK_PTT_KH" />
         <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.QUYDINH" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.CTKHUYENMAI" Width="1.5" PointX="8.25" PointY="6.75" />
+        <EntityTypeShape EntityType="QUAN_LI_NHA_SACHModel.KHUYENMAI" Width="1.5" PointX="6" PointY="10.75" />
+        <AssociationConnector Association="QUAN_LI_NHA_SACHModel.F_K_MASACH" />
+        <AssociationConnector Association="QUAN_LI_NHA_SACHModel.FK_MAKM" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

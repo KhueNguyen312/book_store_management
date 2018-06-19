@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace BookStoreManagerment.ViewModel
         public ICommand SaveCommand { get; set; }
         public ICommand EditCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
+        public ICommand SearchCmd { get; set; }
         private bool _isAdding;
         public bool IsAdding { get { return _isAdding; } set { _isAdding = value; OnPropertyChanged(); } }
 
@@ -167,6 +169,19 @@ namespace BookStoreManagerment.ViewModel
                     MessageBox.Show("Không thể xóa khách hàng này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 
+            });
+            SearchCmd = new RelayCommand<TextBox>((p) => { return true; }, (p) =>
+            {
+                if (p.Text != "")
+                {
+                    var newList = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.Database.SqlQuery<KHACHHANG>("USP_TIMKHTHEOTEN @TEN", new SqlParameter("TEN", p.Text)));
+                    ListCustomer = newList;
+                }
+                else
+                {
+                    var newList = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.KHACHHANGs);
+                    ListCustomer = newList;
+                }
             });
             ListCustomer = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.KHACHHANGs);
         }

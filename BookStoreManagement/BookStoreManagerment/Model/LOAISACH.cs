@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class LOAISACH : BaseViewModel
+    public partial class LOAISACH:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAISACH()

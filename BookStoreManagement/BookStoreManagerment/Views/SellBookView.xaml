@@ -134,9 +134,9 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteBillDetailCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                    <!--<Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteBillDetailCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
                                         <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
-                                    </Button>
+                                    </Button>-->
                                     <TextBlock VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
                                      Converter={StaticResource IndexConverter},ConverterParameter=1}"></TextBlock>
                                 </StackPanel>
@@ -195,9 +195,9 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteBillCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                    <!--<Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteBillCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
                                         <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
-                                    </Button>
+                                    </Button>-->
                                     <TextBlock VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
                                      Converter={StaticResource IndexConverter},ConverterParameter=1}"></TextBlock>
                                 </StackPanel>

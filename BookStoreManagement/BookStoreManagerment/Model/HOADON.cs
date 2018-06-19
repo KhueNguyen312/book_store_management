@@ -35,7 +35,6 @@ namespace BookStoreManagerment.Model
         private Nullable<decimal> _TIENNHAN;
         public Nullable<decimal> TIENNHAN { get { return _TIENNHAN; } set { _TIENNHAN = value; OnPropertyChanged(); } }
 
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }

@@ -52,6 +52,16 @@
     <EntitySet Name="QUYDINHs" EntityType="QUAN_LI_NHA_SACHModel.QUYDINH" />
     <FunctionImport Name="USP_DOANHTHUSACHTRONGTHANG" ReturnType="Collection(QUAN_LI_NHA_SACHModel.USP_DOANHTHUSACHTRONGTHANG_Result)" />
     <FunctionImport Name="USP_SACHBANCHAYTRONGTHANG" ReturnType="Collection(String)" />
+    <EntitySet Name="CTKHUYENMAIs" EntityType="QUAN_LI_NHA_SACHModel.CTKHUYENMAI" />
+    <EntitySet Name="KHUYENMAIs" EntityType="QUAN_LI_NHA_SACHModel.KHUYENMAI" />
+    <AssociationSet Name="F_K_MASACH" Association="QUAN_LI_NHA_SACHModel.F_K_MASACH">
+      <End Role="SACH" EntitySet="SACHes" />
+      <End Role="CTKHUYENMAI" EntitySet="CTKHUYENMAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAKM" Association="QUAN_LI_NHA_SACHModel.FK_MAKM">
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+      <End Role="CTKHUYENMAI" EntitySet="CTKHUYENMAIs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CTHOADON">
     <Key>
@@ -151,6 +161,8 @@
     <NavigationProperty Name="CTPHIEUNHAPs" Relationship="QUAN_LI_NHA_SACHModel.F_K_CTPN_SACH" FromRole="SACH" ToRole="CTPHIEUNHAP" />
     <NavigationProperty Name="LOAISACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_LAOISACH" FromRole="SACH" ToRole="LOAISACH" />
     <NavigationProperty Name="NHAXUATBAN" Relationship="QUAN_LI_NHA_SACHModel.F_K_SACH_NXB" FromRole="SACH" ToRole="NHAXUATBAN" />
+    <Property Name="GIAMGIA" Type="Int32" />
+    <NavigationProperty Name="CTKHUYENMAIs" Relationship="QUAN_LI_NHA_SACHModel.F_K_MASACH" FromRole="SACH" ToRole="CTKHUYENMAI" />
   </EntityType>
   <Association Name="F_K_CTHD_HD">
     <End Type="QUAN_LI_NHA_SACHModel.HOADON" Multiplicity="1" Role="HOADON" />
@@ -294,4 +306,51 @@
     <Property Type="String" Name="TENSACH" Nullable="false" MaxLength="50" />
     <Property Type="Decimal" Name="TONGTIEN" Nullable="true" Precision="19" />
   </ComplexType>
+  <EntityType Name="CTKHUYENMAI">
+    <Key>
+      <PropertyRef Name="MAKM" />
+      <PropertyRef Name="MASACH" />
+    </Key>
+    <Property Name="MAKM" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MASACH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="SOLUONGGIAM" Type="Int32" Nullable="false" />
+    <Property Name="GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SACH" Relationship="QUAN_LI_NHA_SACHModel.F_K_MASACH" FromRole="CTKHUYENMAI" ToRole="SACH" />
+    <NavigationProperty Name="KHUYENMAI" Relationship="QUAN_LI_NHA_SACHModel.FK_MAKM" FromRole="CTKHUYENMAI" ToRole="KHUYENMAI" />
+  </EntityType>
+  <EntityType Name="KHUYENMAI">
+    <Key>
+      <PropertyRef Name="MAKM" />
+    </Key>
+    <Property Name="MAKM" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="TENKM" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYBD" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NGAYKT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GHICHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CTKHUYENMAIs" Relationship="QUAN_LI_NHA_SACHModel.FK_MAKM" FromRole="KHUYENMAI" ToRole="CTKHUYENMAI" />
+  </EntityType>
+  <Association Name="F_K_MASACH">
+    <End Type="QUAN_LI_NHA_SACHModel.SACH" Role="SACH" Multiplicity="1" />
+    <End Type="QUAN_LI_NHA_SACHModel.CTKHUYENMAI" Role="CTKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SACH">
+        <PropertyRef Name="MASACH" />
+      </Principal>
+      <Dependent Role="CTKHUYENMAI">
+        <PropertyRef Name="MASACH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAKM">
+    <End Type="QUAN_LI_NHA_SACHModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="1" />
+    <End Type="QUAN_LI_NHA_SACHModel.CTKHUYENMAI" Role="CTKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHUYENMAI">
+        <PropertyRef Name="MAKM" />
+      </Principal>
+      <Dependent Role="CTKHUYENMAI">
+        <PropertyRef Name="MAKM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

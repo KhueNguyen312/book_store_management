@@ -45,8 +45,10 @@ namespace BookStoreManagerment.ViewModel
             SettingWindowVM.LIMITED_UNSTOCK = tmp.TONTOITHIEU;
             SettingWindowVM.MAXIMUM_CUSTOMERDUE = tmp.NOTOIDA;
             SettingWindowVM.MAXIMUM_IMPORT = tmp.NHAPTOIDA;
+            
             LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
+                UpdatePromotionData();
                 Isloaded = true;
                 p.Hide();
                 LoginWindow loginWindow = new LoginWindow();
@@ -123,6 +125,31 @@ namespace BookStoreManagerment.ViewModel
                 w.Close();
             }
         }
+        void UpdatePromotionData()
+        {
+            var listPromotionBook = DataProvider.Ins.DB.SACHes.Where(x => x.GIAMGIA > 0);
+            foreach (var item in listPromotionBook)
+            {
+                var tmp = DataProvider.Ins.DB.CTKHUYENMAIs.Where(x => x.MASACH == item.MASACH);// DS chi tiết khuyến mãi chứa sách đó
+                if (tmp != null && !checkCond(tmp))
+                {
+                    DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == item.MASACH).SingleOrDefault().GIAMGIA = 0;
+                }
+                
+            }
+            DataProvider.Ins.DB.SaveChanges();
+        }
+        bool checkCond(IQueryable<CTKHUYENMAI> tmp)
+        {
+            foreach (var item in tmp)
+            {
+                if (DataProvider.Ins.DB.KHUYENMAIs.Where(x => x.MAKM == item.MAKM && x.NGAYKT >= DateTime.Now).Count() > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         public List<AppInfo> AppInfos { get { return BookStoreManagerment.ViewModel.AppInfos.listInfo; } }
     }
 
@@ -142,7 +169,7 @@ namespace BookStoreManagerment.ViewModel
         {
             new AppInfo {Content = "Bookstore management application by Evil team",Photo = "Images/background4.jpg" },
             new AppInfo {Content = "For more infomation vist our Github",Photo = "Images/background5.jpg" },
-            new AppInfo {Content = "",Photo="Images/background3.jpg" }
+            new AppInfo {Content = "",Photo="Images/d2684aeb9b47927fb36469e4252ec552.jpg" }
         };
     }
     #endregion

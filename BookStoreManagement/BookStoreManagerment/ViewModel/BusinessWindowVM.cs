@@ -17,6 +17,7 @@ namespace BookStoreManagerment.ViewModel
         public ICommand BookInputCmd { get; set; }
         public ICommand SellBookCmd { get; set; }
         public ICommand MoneyCollectionCmd { get; set; }
+        public ICommand PromotionCmd { get; set; }
         private Visibility _btnHideVisibility;
         public Visibility BtnHideVisibility
         {
@@ -80,6 +81,10 @@ namespace BookStoreManagerment.ViewModel
             MoneyCollectionCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
             {
                 p.DataContext = new MoneyCollectionViewVM();
+            });
+            PromotionCmd = new RelayCommand<Window>((p) => { return p == null ? false : true; }, (p) =>
+            {
+                p.DataContext = new PromotionVM();
             });
         }
     }

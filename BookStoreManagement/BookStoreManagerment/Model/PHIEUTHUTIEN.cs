@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class PHIEUTHUTIEN : BaseViewModel
+    public partial class PHIEUTHUTIEN:BaseViewModel
     {
         private string _MAPT;
         public string MAPT { get { return _MAPT; } set { _MAPT = value; OnPropertyChanged(); } }

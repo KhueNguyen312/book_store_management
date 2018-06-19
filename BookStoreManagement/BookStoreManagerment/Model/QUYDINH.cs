@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class QUYDINH : BaseViewModel
+    public partial class QUYDINH:BaseViewModel
     {
         private int _MAQD;
         public int MAQD { get { return _MAQD; } set { _MAQD = value; OnPropertyChanged(); } }

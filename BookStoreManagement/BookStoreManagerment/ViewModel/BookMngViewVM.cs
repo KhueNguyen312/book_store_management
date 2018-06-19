@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ namespace BookStoreManagerment.ViewModel
         public ICommand SaveCommand { get; set; }
         public ICommand EditCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
+        public ICommand SearchCmd { get; set; }
 
         private bool _isAdding;
         public bool IsAdding { get { return _isAdding; } set { _isAdding = value; OnPropertyChanged(); } }
@@ -153,6 +155,7 @@ namespace BookStoreManagerment.ViewModel
             
             IsEnabledListView = true;
             IsAdding = true;
+            
             AddCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {
                 IsEnabledListView = false;
@@ -247,6 +250,19 @@ namespace BookStoreManagerment.ViewModel
                     MessageBox.Show("Không thể xóa cuốn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 
+            });
+            SearchCmd = new RelayCommand<TextBox>((p) => { return true; }, (p) => 
+            {
+                if (p.Text != "")
+                {
+                    var newList = new ObservableCollection<SACH>(DataProvider.Ins.DB.Database.SqlQuery<SACH>("USP_TIMSACHTHEOTEN @TEN", new SqlParameter("TEN", p.Text)));
+                    ListBook = newList;
+                }
+                else
+                {
+                    var newList = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
+                    ListBook = newList;
+                }
             });
             ListBook = new ObservableCollection<SACH>(DataProvider.Ins.DB.SACHes);
             ListPublishingHouse = new ObservableCollection<NHAXUATBAN>(DataProvider.Ins.DB.NHAXUATBANs);

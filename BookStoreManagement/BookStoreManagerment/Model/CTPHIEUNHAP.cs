@@ -26,7 +26,6 @@ namespace BookStoreManagerment.Model
         private Nullable<decimal> _THANHTIEN;
         public Nullable<decimal> THANHTIEN { get { return _THANHTIEN; } set { _THANHTIEN = value; OnPropertyChanged(); } }
 
-
         public virtual PHIEUNHAPSACH PHIEUNHAPSACH { get; set; }
         public virtual SACH SACH { get; set; }
     }

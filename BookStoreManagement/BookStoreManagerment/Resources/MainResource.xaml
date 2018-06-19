@@ -12,4 +12,5 @@
     <viewmodel:ReveneuReportWindowVM x:Key="ReveneuRPVM"></viewmodel:ReveneuReportWindowVM>
     <viewmodel:CostReportVM x:Key="CostReportWVM"></viewmodel:CostReportVM>
     <viewmodel:StatisticsWindowVM x:Key="StatisticsVM"></viewmodel:StatisticsWindowVM>
+    <viewmodel:PromotionDetailWindowVM x:Key="PromotionDetailVM"></viewmodel:PromotionDetailWindowVM>
 </ResourceDictionary>

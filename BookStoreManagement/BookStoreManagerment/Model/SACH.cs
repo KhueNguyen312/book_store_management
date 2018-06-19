@@ -13,17 +13,19 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class SACH : BaseViewModel
+    public partial class SACH:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SACH()
         {
             this.CTHOADONs = new HashSet<CTHOADON>();
             this.CTPHIEUNHAPs = new HashSet<CTPHIEUNHAP>();
+            this.CTKHUYENMAIs = new HashSet<CTKHUYENMAI>();
         }
 
         public NHAXUATBAN NXB { get; set; }
         public LOAISACH LoaiSach { get; set; }
+        
 
         private string _MASACH;
         public string MASACH { get { return _MASACH; } set { _MASACH = value; OnPropertyChanged(); } }
@@ -53,11 +55,16 @@ namespace BookStoreManagerment.Model
         public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
 
         public string NOIDUNG { get; set; }
+        private Nullable<int> _GIAMGIA;
+        public Nullable<int> GIAMGIA { get { return _GIAMGIA; } set { _GIAMGIA = value; OnPropertyChanged(); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTPHIEUNHAP> CTPHIEUNHAPs { get; set; }
         public virtual LOAISACH LOAISACH { get; set; }
         public virtual NHAXUATBAN NHAXUATBAN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTKHUYENMAI> CTKHUYENMAIs { get; set; }
     }
 }

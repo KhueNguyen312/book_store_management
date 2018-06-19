@@ -1,6 +1,7 @@
 ﻿
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\App.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\BookManagementWindow.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\CostReportWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\CustomControlBar\MainUserControl.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\CustomControlBar\UserControlAlter.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\AccountMngWindow.xaml;;
@@ -10,6 +11,7 @@ FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Report
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Resources\MainResource.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\ReveneuReportWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\SettingWindow.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\StatisticsWindow.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountDetailView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\AccountMngView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\BookImportView.xaml;;
@@ -21,6 +23,6 @@ FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\DataBookView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\MoneyCollectionView.xaml;;
 FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\SellBookView.xaml;;
-FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\CostReportWindow.xaml;;
-FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\StatisticsWindow.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\Views\PromotionView.xaml;;
+FF:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\PromotionDetailWindow.xaml;;
 

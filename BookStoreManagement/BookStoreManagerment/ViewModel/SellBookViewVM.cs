@@ -126,7 +126,11 @@ namespace BookStoreManagerment.ViewModel
                 if (_selectedBook != null)
                 {
                     BookID = SelectedBook.MASACH;
-                    BuyingPrice = DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == SelectedBook.MASACH).SingleOrDefault().GIABAN;
+                    var book = DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == SelectedBook.MASACH).SingleOrDefault();
+                    if (book.GIAMGIA == 0)
+                        BuyingPrice = book.GIABAN;
+                    else
+                        BuyingPrice = (book.GIABAN * book.GIAMGIA??0)/100;
                 }
             }
         }
@@ -230,7 +234,7 @@ namespace BookStoreManagerment.ViewModel
             });
             SaveCommand = new RelayCommand<Button>((p) =>
             {
-                if (IsEnabledListView)
+                if (IsEnabledListView && TotalPrice <= MoneyReceipt)
                     return true;
                 else
                     return false;

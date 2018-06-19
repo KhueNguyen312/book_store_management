@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
              mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -60,11 +61,14 @@
                                 <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
                             </Button>
                             <TextBox Grid.Column="1" Margin="8 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Tìm kiếm khách hàng" 
-                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
-                                     Width="400" VerticalAlignment="Center" />
-                            <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
-                                <materialDesign:PackIcon Kind="Microphone" Opacity=".56" Margin="8 0 0 0" />
-                            </Button>
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0" Name="txbSearch"
+                                     Width="400" VerticalAlignment="Center">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="TextChanged">
+                                        <i:InvokeCommandAction Command="{Binding SearchCmd}" CommandParameter="{Binding ElementName=txbSearch}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </TextBox>
                         </Grid>
                     </materialDesign:ColorZone>
                     <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
@@ -132,7 +136,7 @@
                     <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding DIACHI}"></GridViewColumn>
                     <GridViewColumn Header="Số điện thoại" DisplayMemberBinding="{Binding SODIENTHOAI}"></GridViewColumn>
                     <GridViewColumn Header="Email" DisplayMemberBinding="{Binding EMAIL}"></GridViewColumn>
-                    <GridViewColumn Header="Tiền nợ" DisplayMemberBinding="{Binding TIENNO}"></GridViewColumn>
+                    <!--<GridViewColumn Header="Tiền nợ" DisplayMemberBinding="{Binding TIENNO}"></GridViewColumn>-->
                 </GridView>
             </ListView.View>
         </ListView>
@@ -165,7 +169,7 @@
             </Grid.RowDefinitions>
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="0" Text="{Binding PhoneNumber,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Số điện thoại" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Text="{Binding Mail,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Email" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox IsEnabled="False" Grid.Row="2" Text="{Binding Debt,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Visibility="Hidden" IsEnabled="False" Grid.Row="2" Text="{Binding Debt,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </Grid>
     </Grid>
 </UserControl>

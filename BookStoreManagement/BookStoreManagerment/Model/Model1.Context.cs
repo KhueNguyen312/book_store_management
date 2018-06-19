@@ -38,6 +38,8 @@ namespace BookStoreManagerment.Model
         public virtual DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public virtual DbSet<PHIEUTHUTIEN> PHIEUTHUTIENs { get; set; }
         public virtual DbSet<QUYDINH> QUYDINHs { get; set; }
+        public virtual DbSet<CTKHUYENMAI> CTKHUYENMAIs { get; set; }
+        public virtual DbSet<KHUYENMAI> KHUYENMAIs { get; set; }
     
         public virtual ObjectResult<USP_BAOCAODOANHTHU_Result> USP_BAOCAODOANHTHU(Nullable<System.DateTime> date)
         {

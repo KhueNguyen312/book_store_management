@@ -175,6 +175,9 @@
     <Compile Include="Model\CTHOADON.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\CTKHUYENMAI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\CTPHIEUNHAP.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -183,6 +186,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\KHACHHANG.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KHUYENMAI.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\LOAISACH.cs">
@@ -231,6 +237,9 @@
     <Compile Include="Model\USP_DOANHTHUSACHTRONGTHANG_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PromotionDetailWindow.xaml.cs">
+      <DependentUpon>PromotionDetailWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReportWindow.xaml.cs">
       <DependentUpon>ReportWindow.xaml</DependentUpon>
     </Compile>
@@ -268,6 +277,8 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MoneyCollectionViewVM.cs" />
+    <Compile Include="ViewModel\PromotionDetailWindowVM.cs" />
+    <Compile Include="ViewModel\PromotionVM.cs" />
     <Compile Include="ViewModel\ReportWindowVM.cs" />
     <Compile Include="ViewModel\ReveneuReportWindowVM.cs" />
     <Compile Include="ViewModel\SellBookViewVM.cs" />
@@ -303,6 +314,9 @@
     </Compile>
     <Compile Include="Views\MoneyCollectionView.xaml.cs">
       <DependentUpon>MoneyCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PromotionView.xaml.cs">
+      <DependentUpon>PromotionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SellBookView.xaml.cs">
       <DependentUpon>SellBookView.xaml</DependentUpon>
@@ -343,6 +357,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PromotionDetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ReportWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -400,6 +418,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MoneyCollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PromotionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -563,6 +585,8 @@
     <Resource Include="Images\Between-the-pages-of-a-book-is-a-lovely-place-to-be-Anonymous-540x542.jpg" />
     <Resource Include="Images\d2684aeb9b47927fb36469e4252ec552.jpg" />
     <Resource Include="Images\BookStoreBackGround2.jpg" />
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\background1.png" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

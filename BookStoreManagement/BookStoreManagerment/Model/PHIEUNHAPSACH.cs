@@ -14,7 +14,7 @@ namespace BookStoreManagerment.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using ViewModel;
 
-    public partial class PHIEUNHAPSACH : BaseViewModel
+    public partial class PHIEUNHAPSACH:BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHIEUNHAPSACH()

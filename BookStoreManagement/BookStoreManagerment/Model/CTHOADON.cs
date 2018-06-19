@@ -13,7 +13,7 @@ namespace BookStoreManagerment.Model
     using System.Collections.Generic;
     using ViewModel;
 
-    public partial class CTHOADON:BaseViewModel
+    public partial class CTHOADON : BaseViewModel
     {
         private int _SOHD;
         public int SOHD { get { return _SOHD; } set { _SOHD = value; OnPropertyChanged(); } }
@@ -25,7 +25,6 @@ namespace BookStoreManagerment.Model
         public decimal THANHTIEN { get { return _THANHTIEN; } set { _THANHTIEN = value; OnPropertyChanged(); } }
         private decimal _GIABAN;
         public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
-
 
         public virtual HOADON HOADON { get; set; }
         public virtual SACH SACH { get; set; }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace BookStoreManagerment.ViewModel
         public ICommand DeleteCommand { get; set; }
         public ICommand PasswordChangedCommand { get; set; }
         public ICommand Password2ChangedCommand { get; set; }
+        public ICommand SearchCmd { get; set; }
         public bool IsAdding { get; set; }
         
         private bool _isEnabledUserNameTextBox;
@@ -175,6 +177,19 @@ namespace BookStoreManagerment.ViewModel
                 DataProvider.Ins.DB.SaveChanges();
 
                 ListAccount.Remove(SelectedAccount);
+            });
+            SearchCmd = new RelayCommand<TextBox>((p) => { return true; }, (p) =>
+            {
+                if (p.Text != "")
+                {
+                    var newList = new ObservableCollection<TAIKHOAN>(DataProvider.Ins.DB.Database.SqlQuery<TAIKHOAN>("USP_TIMTKTHEOTEN @TEN", new SqlParameter("TEN", p.Text)));
+                    ListAccount = newList;
+                }
+                else
+                {
+                    var newList = new ObservableCollection<TAIKHOAN>(DataProvider.Ins.DB.TAIKHOANs);
+                    ListAccount = newList;
+                }
             });
             PasswordChangedCommand = new RelayCommand<PasswordBox>((p) => { return true; }, (p) => { Password = p.Password;});
             Password2ChangedCommand = new RelayCommand<PasswordBox>((p) => { return true; }, (p) => { Password2 = p.Password; });

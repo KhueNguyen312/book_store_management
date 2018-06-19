@@ -29,64 +29,65 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.25*"></RowDefinition>
+            <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <uc:MainUserControl Tag="{Binding Title, ElementName=mainWindow}"></uc:MainUserControl>
         </Grid>
-        <StackPanel Grid.Row="1" x:Name="GridMenu" Width="250" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
-            <StackPanel.Background>
-                <ImageBrush ImageSource="Images/AcountInfoBackground.jpg" Stretch="UniformToFill"/>
-            </StackPanel.Background>
-            <StackPanel Height="100" Orientation="Horizontal"  VerticalAlignment="Top">
-                <StackPanel.Background>
-                    <ImageBrush/>
-                </StackPanel.Background>
-                <Button HorizontalAlignment="Left" x:Name="btnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"   Padding="0" Width="70" Height="70">
-                    <Button.Background>
-                        <ImageBrush ImageSource="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill"/>
-                    </Button.Background>
-                </Button>
-                <TextBlock Name="tbDisplayName"  Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  FontSize="20" Margin="10" VerticalAlignment="Center" FontWeight="Bold"/>
-
-            </StackPanel>
-            <ListView>
-                <ListViewItem x:Name="positionListViewItem" Height="60">
-                    <TextBlock x:Name="tbAccountType"  Text="{Binding TypeAccountDisplay,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="25" Margin="10" VerticalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-                </ListViewItem>
-                <ListViewItem Height="60">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding LogOutCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                    <StackPanel Name="lviLogOut" Height="50" Orientation="Horizontal" Margin="10 0">
-                        <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Đăng Xuất" FontSize="25" Margin="10" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem Name="LviExit" Height="60">
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
-                            <i:InvokeCommandAction Command="{Binding ExitCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
-                    <StackPanel Height="50" Orientation="Horizontal" Margin="6 0">
-                        <materialDesign:PackIcon Kind="ExitToApp" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Thoát" FontSize="25" Margin="10" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
-            </ListView>
+        <StackPanel Width="Auto" Grid.Row="1" Grid.Column="0">
+            <TextBlock  Margin="25 25 5 5" Text="BOOKSTORE MANAGEMENT" FontFamily="Helvetica Neue"  FontSize="30" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDEBEBEB"/>
+            <TextBlock  Margin="-10 5 5 5" Text="BY EVIL TEAM" FontFamily="Helvetica Neue" HorizontalAlignment="Center"   FontSize="20" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDEBEBEB"/>
         </StackPanel>
-        <Grid Grid.Row="1" x:Name="GridMain" Margin="250 0 0 0" RenderTransformOrigin="0.5,0.5">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right"  VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Margin="5 25 5 5" Name="tbDisplayName"  Text="{Binding DisplayName,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  FontSize="25" VerticalAlignment="Center" FontWeight="Bold" Foreground="#DDEBEBEB"/>
+                <TextBlock Margin="5 3 5 5" x:Name="tbAccountType"  Text="{Binding TypeAccountDisplay,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" FontSize="15" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Right" Foreground="#DDEBEBEB"/>
+            </StackPanel>
+            <Button HorizontalAlignment="Left" x:Name="btnAvatar" Margin="10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"   Padding="0" Width="70" Height="70">
+                <Button.Background>
+                    <ImageBrush ImageSource="{Binding Path=Img,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+            <Separator/>
+            <materialDesign:PopupBox
+            PlacementMode="BottomAndAlignCentres"
+            ToolTipService.Placement="Right"
+            ToolTip="Lựa chọn khác">
+                <materialDesign:PopupBox.ToggleContent>
+                    <materialDesign:PackIcon  Kind="Settings" Height="70" Width="70" Foreground="#DDEBEBEB"></materialDesign:PackIcon>
+                </materialDesign:PopupBox.ToggleContent>
+                <ListView>
+                    <ListViewItem Height="60">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding LogOutCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel Name="lviLogOut" Height="50" Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Đăng Xuất" FontSize="25" Margin="10" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Name="LviExit" Height="60">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding ExitCmd}" CommandParameter="{Binding ElementName=mainWindow}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel Height="50" Orientation="Horizontal" Margin="6 0">
+                            <materialDesign:PackIcon Kind="ExitToApp" Width="50" Height="50" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Thoát" FontSize="25" Margin="10" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </materialDesign:PopupBox>
+        </StackPanel>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2"  x:Name="GridMain" Margin="0 0 0 0" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -95,37 +96,26 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="3*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <!--<ColumnDefinition Width="5*"/>-->
-            </Grid.ColumnDefinitions>
-            <dxlc:TileLayoutControl StretchContent="True" Grid.Column="1" Grid.Row="1" >
-                <dxlc:TileLayoutControl.Background>
-                    <ImageBrush ImageSource="Images/background1.jpg"/>
-                </dxlc:TileLayoutControl.Background>
+            <dxlc:TileLayoutControl Margin="0 0 0 0" StretchContent="True" Grid.Row="1" >
                 <dxlc:Tile Size="Small" Header="Quản Lý Thông Tin" Background="#FF2776ED" Command="{Binding PressBtnBookMngCommand}" CommandParameter="{Binding ElementName=mainWindow}">
-                    <Image Source="Images/BookMng2.png" Stretch="Fill" OpacityMask="Black"/>
+                    <Image Source="Images/BookMng2.png" Width="80"  OpacityMask="White"/>
                 </dxlc:Tile>
                 <dxlc:Tile Size="Small" Header="Quản Lý Tài Khoản" Command="{Binding PressBtnAccountCommand}" CommandParameter="{Binding ElementName=mainWindow}"  Background="#FF633EBD">
-                    <Image Source="Images/EmployeeIcon.png"/>
+                    <Image Stretch="Uniform" Width="80"  Source="Images/EmployeeIcon.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Size="Large" Header="Kinh Doanh" Command="{Binding PressBtnBusinessCommand}" CommandParameter="{Binding ElementName=mainWindow}" HorizontalHeaderAlignment="Stretch" Background="#FFD74E2A">
-                    <Image Source="Images/BusinessIcon.png"/>
+                    <Image Width="80" Source="Images/BusinessIcon.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Header="Thống kê" Size="Small" Command="{Binding PressBtnStatisticCmd}" CommandParameter="{Binding ElementName=mainWindow}"  dxlc:FlowLayoutControl.IsFlowBreak="True" VerticalHeaderAlignment="Bottom" HorizontalHeaderAlignment="Stretch" Background="#FF4F2E94" >
-                    <Image Source="Images\Search.png"/>
+                    <Image Width="80" Source="Images\Search.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Header="Tùy Chỉnh" Command="{Binding PressBtnSettingCommand}" CommandParameter="{Binding ElementName=mainWindow}" Size="Small" Background="#FFDA542D">
-                    <Image Source="Images\Other.png"/>
+                    <Image Width="80" Source="Images\Other.png"/>
                 </dxlc:Tile>
                 <dxlc:Tile Size="Large" Header="Báo cáo" Command="{Binding PressBtnReportCommand}" CommandParameter="{Binding ElementName=mainWindow}" Background="#FF009656">
-                    <Image Source="Images\Report.png"/>
+                    <Image Width="80" Source="Images\Report.png"/>
                 </dxlc:Tile>
-                <dxlc:Tile x:Name="InfoTile" Size="ExtraLarge"   ContentSource="{Binding AppInfos}" Width="250" dxlc:FlowLayoutControl.IsFlowBreak="True" ContentChangeInterval="00:00:05" AnimateContentChange="True" >
+                <dxlc:Tile x:Name="InfoTile" Size="ExtraLarge"   ContentSource="{Binding AppInfos}" dxlc:FlowLayoutControl.IsFlowBreak="True" ContentChangeInterval="00:00:05" AnimateContentChange="True" >
                     <dxlc:Tile.Background>
                         <ImageBrush ImageSource="Images/AcountInfoBackground.jpg"/>
                     </dxlc:Tile.Background>
@@ -139,12 +129,13 @@
                     </dxlc:Tile.ContentTemplate>
                 </dxlc:Tile>
             </dxlc:TileLayoutControl>
-            <Image Grid.Row="0" Grid.Column="1" Source="Images/BookStoreBackground2.jpg" Stretch="Fill" Panel.ZIndex="-1" >
-            </Image>
+            
         </Grid>
+        <Image Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Source="Images/background1.png" Stretch="Fill" Panel.ZIndex="-1" >
+        </Image>
 
-        <StatusBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFECDFE4">
+        <!--<StatusBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Background="#FFECDFE4">
             <TextBlock Name="TextBlockStatus" Width="100" Background="#FFECDFE4" />
-        </StatusBar>
+        </StatusBar>-->
     </Grid>
 </Window>

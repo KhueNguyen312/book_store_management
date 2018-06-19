@@ -37,6 +37,9 @@
         <DataTemplate x:Name="collectionMoney" DataType="{x:Type vm:MoneyCollectionViewVM}" >
             <views:MoneyCollectionView DataContext="{Binding}"></views:MoneyCollectionView>
         </DataTemplate>
+        <DataTemplate x:Name="Promotion" DataType="{x:Type vm:PromotionVM}" >
+            <views:PromotionView DataContext="{Binding}"></views:PromotionView>
+        </DataTemplate>
         <Storyboard x:Key="HideMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
                 <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
@@ -145,7 +148,18 @@
                         <TextBlock Text="Bán sách" FontSize="15" Margin="5" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="60">
+                <ListViewItem  Height="60">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                            <i:InvokeCommandAction Command="{Binding PromotionCmd}" CommandParameter="{Binding ElementName=businessWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <StackPanel  Height="50" Orientation="Horizontal" Margin="-5 0">
+                        <materialDesign:PackIcon Kind="CashMultiple"  Width="40" Height="40" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Khuyến mãi" FontSize="15" Margin="5" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Visibility="Hidden" Height="60">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
                             <i:InvokeCommandAction Command="{Binding MoneyCollectionCmd}" CommandParameter="{Binding ElementName=businessWindow}"/>
