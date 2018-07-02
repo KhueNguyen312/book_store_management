@@ -74,7 +74,10 @@ namespace BookStoreManagerment.ViewModel
                 var receiptNote = new PHIEUTHUTIEN() { MAPT = ID, MAKH = CustomerID, TIENNO=Debt,TIENTHU = Collection, NGAYTHU = DateTime.Now };
                 if (DataProvider.Ins.DB.PHIEUTHUTIENs.Where(x=>x.MAPT == receiptNote.MAPT).Count()>0)
                 {
-                    MessageBox.Show("Mã phiếu thu bị trùng", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Mã phiếu thu bị trùng";
+                    mess2.ShowDialog();
+                    //MessageBox.Show("Mã phiếu thu bị trùng", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {    

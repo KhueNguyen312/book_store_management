@@ -11,21 +11,15 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class CTHOADON : BaseViewModel
+    
+    public partial class CTHOADON
     {
-        private int _SOHD;
-        public int SOHD { get { return _SOHD; } set { _SOHD = value; OnPropertyChanged(); } }
-        private string _MASACH;
-        public string MASACH { get { return _MASACH; } set { _MASACH = value; OnPropertyChanged(); } }
-        private int _SOLUONG;
-        public int SOLUONG { get { return _SOLUONG; } set { _SOLUONG = value; OnPropertyChanged(); } }
-        private decimal _THANHTIEN;
-        public decimal THANHTIEN { get { return _THANHTIEN; } set { _THANHTIEN = value; OnPropertyChanged(); } }
-        private decimal _GIABAN;
-        public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
-
+        public int SOHD { get; set; }
+        public string MASACH { get; set; }
+        public int SOLUONG { get; set; }
+        public decimal THANHTIEN { get; set; }
+        public decimal GIABAN { get; set; }
+    
         public virtual HOADON HOADON { get; set; }
         public virtual SACH SACH { get; set; }
     }

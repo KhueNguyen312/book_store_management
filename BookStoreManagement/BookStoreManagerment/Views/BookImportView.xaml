@@ -14,11 +14,11 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="600">
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.Resources>
             <Style TargetType="DataGrid">
                 <Setter Property="Margin" Value="10"></Setter>
@@ -123,7 +123,6 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Mã sách" DisplayMemberBinding="{Binding MASACH}"></GridViewColumn>
-                    <GridViewColumn Header="Tên sách" DisplayMemberBinding="{Binding SACH.TENSACH}"></GridViewColumn>
                     <GridViewColumn Header="Số lượng" DisplayMemberBinding="{Binding SOLUONG}"></GridViewColumn>
                     <GridViewColumn Header="Đơn giá" DisplayMemberBinding="{Binding DONGIA}"></GridViewColumn>
                     <GridViewColumn Header="Thành tiền" DisplayMemberBinding="{Binding THANHTIEN}"></GridViewColumn>

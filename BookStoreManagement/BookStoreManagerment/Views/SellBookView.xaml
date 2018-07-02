@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookStoreManagerment.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
@@ -18,7 +19,7 @@
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.Resources>
             <Style TargetType="DataGrid">
                 <Setter Property="Margin" Value="10"></Setter>
@@ -44,53 +45,64 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Bán sách" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
-        <StackPanel Margin="10 0 10 0" Grid.Column="1" Grid.Row="1">
-            <TextBox IsEnabled="False" Text="{Binding TotalPrice,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 -3 0 0"  materialDesign:HintAssist.Hint="Tổng tiền" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox Text="{Binding MoneyReceipt}" materialDesign:HintAssist.Hint="Tiền nhận" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        <StackPanel Margin="10 5 10 0" Grid.Column="1" Grid.Row="1">
+
+            <TextBox IsEnabled="{Binding EnteredCusID}" Text="{Binding BookID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Mã sách" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction Command="{Binding BookIDChangedCommand}" CommandParameter="{Binding ElementName=tbUsername}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+
+            <TextBox IsEnabled="{Binding EnteredCusID}" Text="{Binding NumOfBook}" materialDesign:HintAssist.Hint="Số lượng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                     >
+               
+            </TextBox>
+            <TextBox IsEnabled="{Binding EnteredCusID}" Text="{Binding BuyingPrice}" materialDesign:HintAssist.Hint="Đơn giá" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="False" Text="{Binding Change,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 0"  materialDesign:HintAssist.Hint="Tiền thừa" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+
+
+
         </StackPanel>
         <StackPanel Margin="5" Grid.Column="0" Grid.Row="1">
-            <ComboBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Tên Sách" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                      IsEnabled="{Binding IsEnabledCBBox}"
-                      ItemsSource="{Binding ListBook, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                      Text="{Binding BookName}"
-                      IsEditable="True"
-                      DisplayMemberPath="TENSACH" SelectedItem="{Binding SelectedBook, Mode=TwoWay}">
-                    
-            </ComboBox>
 
-            <TextBox Text="{Binding NumOfBook}" materialDesign:HintAssist.Hint="Số lượng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <TextBox Text="{Binding BuyingPrice}" materialDesign:HintAssist.Hint="Đơn giá" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            <Button Name="btnAddBook" materialDesign:ShadowAssist.ShadowDepth="Depth3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
+            <TextBox IsEnabled="{Binding IsEnabledCustomerCBBox}" Text="{Binding CustomerID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Mã khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction Command="{Binding CustomerIDChangedCommand}" CommandParameter="{Binding ElementName=tbUsername}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+            <TextBox  IsEnabled="False" Text="{Binding CustomerName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 0"  materialDesign:HintAssist.Hint="Tên khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+            <TextBox IsEnabled="{Binding EnteredCusID}" Text="{Binding MoneyReceipt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Tiền nhận" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction Command="{Binding ReceiptChangedCommand}" CommandParameter="{Binding ElementName=tbUsername}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBox>
+            
+            <TextBox IsEnabled="False" Text="{Binding TotalPrice,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 0"  materialDesign:HintAssist.Hint="Tổng tiền" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+            <!--<Button Name="btnAddBook" materialDesign:ShadowAssist.ShadowDepth="Depth3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 20 0 0" Style="{StaticResource MaterialDesignRaisedLightButton}"
                     Command="{Binding AddBookCmd}" CommandParameter="{Binding ElementName=btnAddBook}"
                     ToolTip="{Binding ButtonName}"
                     Content="{Binding ButtonName}">
-            </Button>
+            </Button>-->
             
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2"  Margin="0 10 0 0" Orientation="Horizontal">
-            <ComboBox  Margin="0 0 0 0" materialDesign:HintAssist.Hint="Chọn khách hàng" Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                           IsEnabled="{Binding IsEnabledCustomerCBBox}"
-                           ItemsSource="{Binding ListCustomer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                           Text="{Binding CustomerName}"
-                           IsEditable="True"
-                           DisplayMemberPath="TENKH" SelectedItem="{Binding SelectedCustomer, Mode=TwoWay}">
-            </ComboBox>
-            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddData"  
-                        Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddData}"
-                        ToolTip="Add a new data"  Padding="0" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
-                        VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
-            </Button>
-            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnEditData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
-                        Command="{Binding EditCommand}" CommandParameter="{Binding ElementName=btnEditData}" ToolTip="Edit data"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
-                <materialDesign:PackIcon Kind="Pencil"  Foreground="Black"/>
-            </Button>
-            <Button materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
+            
+            
+            <Button IsEnabled="{Binding SaveButtonEnable}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveData" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" 
                         Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSaveData}" ToolTip="Save data"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
                 <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
             </Button>
         </StackPanel>
-        <ListView  Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Name="listViewBillDetail" Grid.ColumnSpan="3" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
+        <ListView Height="270" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Name="listViewBillDetail" Grid.ColumnSpan="3" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" ItemsSource="{Binding ListBillDetail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedBillDetail,Mode=TwoWay}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -214,5 +226,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <materialDesign:Snackbar Grid.Row="0" Grid.ColumnSpan="3"
+                       IsActive="{Binding IsActiveSnackBar,Mode=TwoWay}"
+                      x:Name="snackbarLoginFail"  >
+            <materialDesign:SnackbarMessage Content="Lưu hóa đơn thành công"
+                                                ActionContent="OK" >
+            
+            <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="ActionClick">
+                        <i:InvokeCommandAction Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=snackbarLoginFail}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </materialDesign:SnackbarMessage>
+        </materialDesign:Snackbar>
     </Grid>
 </UserControl>

@@ -62,8 +62,11 @@ namespace BookStoreManagerment.ViewModel
                     TAIKHOAN account = DataProvider.Ins.DB.TAIKHOANs.Where(x => x.TENTK == AccountName).SingleOrDefault();
                     if (account == null)
                     {
-                        MessageBox.Show("Không tìm thấy tài khoản này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
+                        MessageBoxWindow mess1 = new MessageBoxWindow();
+                        mess1.Tag = "Không tìm thấy tài khoản này";
+                        mess1.ShowDialog();
+                        //MessageBox.Show("Không tìm thấy tài khoản này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        //return;
                     }
                     if (Img != null)
                     {
@@ -79,19 +82,28 @@ namespace BookStoreManagerment.ViewModel
                         if (Password == (account.MATKHAU).Trim())
                             if (NewPassword != NewPassword2)
                             {
-                                MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBoxWindow mess2 = new MessageBoxWindow();
+                            mess2.Tag = "Nhập lại mật khẩu không khớp với mật khẩu đã nhập!";
+                            mess2.ShowDialog();
+                            //MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                             }
                             else
                                 account.MATKHAU = NewPassword;
                         else
                         {
-                            MessageBox.Show("Mật khẩu không đúng", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Mật khẩu không đúng";
+                        mess2.ShowDialog();
+                        //MessageBox.Show("Mật khẩu không đúng", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                             return;
                         }
                     }
                     DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBoxWindow mess = new MessageBoxWindow();
+                mess.Tag = "Cập nhật thành công";
+                mess.ShowDialog();
+                //MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
             });
         }
     }

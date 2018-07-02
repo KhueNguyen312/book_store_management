@@ -132,8 +132,8 @@
                     <GridViewColumn Header="Mã sách" DisplayMemberBinding="{Binding MASACH}"></GridViewColumn>
                     <GridViewColumn Header="Tên sách" DisplayMemberBinding="{Binding TENSACH}"></GridViewColumn>
                     <GridViewColumn Header="Tác giả" DisplayMemberBinding="{Binding TACGIA}"></GridViewColumn>
-                    <GridViewColumn Header="Thể loại" DisplayMemberBinding="{Binding LOAISACH.TENLOAISACH}"></GridViewColumn>
-                    <GridViewColumn Header="NXB" DisplayMemberBinding="{Binding NHAXUATBAN.TENNXB}"></GridViewColumn>
+                    <GridViewColumn Header="Thể loại" DisplayMemberBinding="{Binding MALOAISACH}"></GridViewColumn>
+                    <GridViewColumn Header="NXB" DisplayMemberBinding="{Binding MANXB}"></GridViewColumn>
                     <GridViewColumn Header="Số lượng" DisplayMemberBinding="{Binding SOLUONGHIENTAI}"></GridViewColumn>
                     <GridViewColumn Header="Giá nhập" DisplayMemberBinding="{Binding GIANHAP}"></GridViewColumn>
                     <GridViewColumn Header="Giá bán" DisplayMemberBinding="{Binding GIABAN}"></GridViewColumn>

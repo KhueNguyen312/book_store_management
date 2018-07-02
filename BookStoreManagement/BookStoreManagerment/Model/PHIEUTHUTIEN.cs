@@ -11,23 +11,16 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class PHIEUTHUTIEN:BaseViewModel
+    
+    public partial class PHIEUTHUTIEN
     {
-        private string _MAPT;
-        public string MAPT { get { return _MAPT; } set { _MAPT = value; OnPropertyChanged(); } }
-        private string _MAKH;
-        public string MAKH { get { return _MAKH; } set { _MAKH = value; OnPropertyChanged(); } }
-        private System.DateTime _NGAYTHU;
-        public System.DateTime NGAYTHU { get { return _NGAYTHU; } set { _NGAYTHU = value; OnPropertyChanged(); } }
-        private Nullable<decimal> _TIENNO;
-        public Nullable<decimal> TIENNO { get { return _TIENNO; } set { _TIENNO = value; OnPropertyChanged(); } }
-        private Nullable<decimal> _TIENTHU;
-        public Nullable<decimal> TIENTHU { get { return _TIENTHU; } set { _TIENTHU = value; OnPropertyChanged(); } }
-        private Nullable<decimal> _TIENTHUA;
-        public Nullable<decimal> TIENTHUA { get { return _TIENTHUA; } set { _TIENTHUA = value; OnPropertyChanged(); } }
-
+        public string MAPT { get; set; }
+        public string MAKH { get; set; }
+        public System.DateTime NGAYTHU { get; set; }
+        public Nullable<decimal> TIENNO { get; set; }
+        public Nullable<decimal> TIENTHU { get; set; }
+        public Nullable<decimal> TIENTHUA { get; set; }
+    
         public virtual KHACHHANG KHACHHANG { get; set; }
     }
 }

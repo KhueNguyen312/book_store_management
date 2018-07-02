@@ -11,24 +11,13 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class TAIKHOAN:BaseViewModel
+    
+    public partial class TAIKHOAN
     {
-        public TypeAccount TypeAcc { get; set; }
-        private string _TENTK;
-        public string TENTK { get { return _TENTK; } set { _TENTK = value; OnPropertyChanged(); } }
-
-        private string _MATKHAU;
-        public string MATKHAU { get { return _MATKHAU; } set { _MATKHAU = value; OnPropertyChanged(); } }
-
-        private string _TENHIENTHI;
-        public string TENHIENTHI { get { return _TENHIENTHI; } set { _TENHIENTHI = value; OnPropertyChanged(); } }
-
-        private byte[] _HINHANH;
-        public byte[] HINHANH { get { return _HINHANH; } set { _HINHANH = value; OnPropertyChanged(); } }
-
-        private int _LOAITK;
-        public int LOAITK { get { return _LOAITK; } set { _LOAITK = value; OnPropertyChanged(); TypeAcc = new TypeAccount(_LOAITK); } }
+        public string TENTK { get; set; }
+        public string MATKHAU { get; set; }
+        public string TENHIENTHI { get; set; }
+        public byte[] HINHANH { get; set; }
+        public int LOAITK { get; set; }
     }
 }

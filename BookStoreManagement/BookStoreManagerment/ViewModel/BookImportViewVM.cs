@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,12 +102,20 @@ namespace BookStoreManagerment.ViewModel
             set { _numOfBook = value;
                 if (NumOfBook > SettingWindowVM.MAXIMUM_IMPORT)
                 {
-                    MessageBox.Show("Số lượng sách nhập không được vượt quá " + SettingWindowVM.MAXIMUM_IMPORT, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Nhập lại mật khẩu không khớp với mật khẩu đã nhập!";
+                    mess2.ShowDialog();
+
+                   // MessageBox.Show("Số lượng sách nhập không được vượt quá " + SettingWindowVM.MAXIMUM_IMPORT, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                     _numOfBook = Convert.ToInt32(SettingWindowVM.MAXIMUM_IMPORT);
                 }
                 if(NumOfBook < SettingWindowVM.LIMITED_IMPORT)
                 {
-                    MessageBox.Show("Số lượng sách nhập không được ít hơn " + SettingWindowVM.MAXIMUM_IMPORT + " cuốn sách", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Nhập lại mật khẩu không khớp với mật khẩu đã nhập!";
+                    mess2.ShowDialog();
+
+                    //MessageBox.Show("Số lượng sách nhập không được ít hơn " + SettingWindowVM.MAXIMUM_IMPORT + " cuốn sách", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 OnPropertyChanged(); } }
 
@@ -142,6 +151,7 @@ namespace BookStoreManagerment.ViewModel
                 DataProvider.Ins.DB.SaveChanges();
 
                 ListReceiptNote.Add(receiptNote);
+                
             });
             AddBookCmd = new RelayCommand<Button>((p) => 
             {
@@ -156,7 +166,11 @@ namespace BookStoreManagerment.ViewModel
                     var book = DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MASACH == SelectedReceiptNoteDetail.MASACH && x.MAPHIEUNHAP == SelectedReceiptNoteDetail.MAPHIEUNHAP).SingleOrDefault();
                     if (book == null)
                     {
-                        MessageBox.Show("Không tìm thấy cuôn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Không tìm thấy cuôn sách này";
+                        mess2.ShowDialog();
+
+                       // MessageBox.Show("Không tìm thấy cuôn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     book.SOLUONG = NumOfBook;
@@ -167,16 +181,22 @@ namespace BookStoreManagerment.ViewModel
                 }
                 else
                 {
-                    var book = new CTPHIEUNHAP() { MAPHIEUNHAP = SelectedItem.MAPHIEUNHAP, MASACH = SelectedBook.MASACH, SOLUONG = NumOfBook, DONGIA = ImportPrice };
+                    var book = new CTPHIEUNHAP() { MAPHIEUNHAP = SelectedItem.MAPHIEUNHAP, MASACH = SelectedBook.MASACH, SOLUONG = NumOfBook, DONGIA = ImportPrice , THANHTIEN = 0};
                     if (DataProvider.Ins.DB.CTPHIEUNHAPs.Where(x => x.MASACH == book.MASACH && x.MAPHIEUNHAP == book.MAPHIEUNHAP).Count() > 0)
                     {
-                        MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Đã thêm sách này";
+                        mess2.ShowDialog();
+
+                       // MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     else
                     {
                         DataProvider.Ins.DB.CTPHIEUNHAPs.Add(book);
                         DataProvider.Ins.DB.SaveChanges();
                         ListReceiptNoteDetail.Add(book);
+
+                        ListReceiptNoteDetail = new ObservableCollection<CTPHIEUNHAP>(DataProvider.Ins.DB.Database.SqlQuery<CTPHIEUNHAP>("SELECT * FROM CTPHIEUNHAP WHERE MAPHIEUNHAP = (SELECT MAX(MAPHIEUNHAP) FROM PHIEUNHAPSACH)"));
                     }
                 }
                 IsEnabledListView = true;
@@ -205,7 +225,8 @@ namespace BookStoreManagerment.ViewModel
                 IsEnabledListView = false;
                 Current = null;
                 isSaved = true;
-                
+                ListReceiptNote = new ObservableCollection<PHIEUNHAPSACH>(DataProvider.Ins.DB.Database.SqlQuery<PHIEUNHAPSACH>("SELECT * FROM PHIEUNHAPSACH WHERE MAPHIEUNHAP = (SELECT MAX(MAPHIEUNHAP) FROM PHIEUNHAPSACH)"));
+
             });
             DeleteReceiptNoteCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {

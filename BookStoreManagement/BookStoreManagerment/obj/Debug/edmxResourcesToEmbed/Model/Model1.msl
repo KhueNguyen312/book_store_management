@@ -1,6 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="QUAN_LI_NHA_SACHModelStoreContainer" CdmEntityContainer="QUAN_LI_NHA_SACHEntities">
+    <FunctionImportMapping FunctionImportName="USP_BAOCAODOANHTHU" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAODOANHTHU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="Doanh_Thu" ColumnName="Doanh Thu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_BAOCAOCHIPHI" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAOCHIPHI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result">
+          <ScalarProperty Name="Ngày_Nhập" ColumnName="Ngày Nhập" />
+          <ScalarProperty Name="Tong_Chi" ColumnName="Tong Chi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_DOANHTHUSACHTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_DOANHTHUSACHTRONGTHANG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_DOANHTHUSACHTRONGTHANG_Result">
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_SACHBANCHAYTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_SACHBANCHAYTRONGTHANG" />
+    <FunctionImportMapping FunctionImportName="USP_TIMKHTHEOTEN" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_TIMKHTHEOTEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_TIMKHTHEOTEN_Result">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SODIENTHOAI" ColumnName="SODIENTHOAI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TIENNO" ColumnName="TIENNO" />
+          <ScalarProperty Name="DIEMTICHLUY" ColumnName="DIEMTICHLUY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_TIMSACHTHEOTEN" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_TIMSACHTHEOTEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_TIMSACHTHEOTEN_Result">
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
+          <ScalarProperty Name="MALOAISACH" ColumnName="MALOAISACH" />
+          <ScalarProperty Name="TACGIA" ColumnName="TACGIA" />
+          <ScalarProperty Name="MANXB" ColumnName="MANXB" />
+          <ScalarProperty Name="SOLUONGHIENTAI" ColumnName="SOLUONGHIENTAI" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="GIANHAP" ColumnName="GIANHAP" />
+          <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="GIAMGIA" ColumnName="GIAMGIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_TIMTKTHEOTEN" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_TIMTKTHEOTEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_TIMTKTHEOTEN_Result">
+          <ScalarProperty Name="TENTK" ColumnName="TENTK" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="TENHIENTHI" ColumnName="TENHIENTHI" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="LOAITK" ColumnName="LOAITK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="CTHOADONs">
       <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.CTHOADON">
         <MappingFragment StoreEntitySet="CTHOADON">
@@ -9,6 +77,16 @@
           <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
           <ScalarProperty Name="MASACH" ColumnName="MASACH" />
           <ScalarProperty Name="SOHD" ColumnName="SOHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTKHUYENMAIs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.CTKHUYENMAI">
+        <MappingFragment StoreEntitySet="CTKHUYENMAI">
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="SOLUONGGIAM" ColumnName="SOLUONGGIAM" />
+          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
+          <ScalarProperty Name="MAKM" ColumnName="MAKM" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,6 +126,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="KHUYENMAIs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.KHUYENMAI">
+        <MappingFragment StoreEntitySet="KHUYENMAI">
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="NGAYKT" ColumnName="NGAYKT" />
+          <ScalarProperty Name="NGAYBD" ColumnName="NGAYBD" />
+          <ScalarProperty Name="TENKM" ColumnName="TENKM" />
+          <ScalarProperty Name="MAKM" ColumnName="MAKM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="LOAISACHes">
       <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.LOAISACH">
         <MappingFragment StoreEntitySet="LOAISACH">
@@ -72,6 +161,29 @@
           <ScalarProperty Name="NGAYNHAP" ColumnName="NGAYNHAP" />
           <ScalarProperty Name="TONGCHI" ColumnName="TONGCHI" />
           <ScalarProperty Name="MAPHIEUNHAP" ColumnName="MAPHIEUNHAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUTHUTIENs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN">
+        <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
+          <ScalarProperty Name="TIENTHUA" ColumnName="TIENTHUA" />
+          <ScalarProperty Name="TIENTHU" ColumnName="TIENTHU" />
+          <ScalarProperty Name="TIENNO" ColumnName="TIENNO" />
+          <ScalarProperty Name="NGAYTHU" ColumnName="NGAYTHU" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="MAPT" ColumnName="MAPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUYDINHs">
+      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.QUYDINH">
+        <MappingFragment StoreEntitySet="QUYDINH">
+          <ScalarProperty Name="NOTOIDA" ColumnName="NOTOIDA" />
+          <ScalarProperty Name="TONTOITHIEU" ColumnName="TONTOITHIEU" />
+          <ScalarProperty Name="NHAPTOIDA" ColumnName="NHAPTOIDA" />
+          <ScalarProperty Name="NHAPTOITHIEU" ColumnName="NHAPTOITHIEU" />
+          <ScalarProperty Name="MAQD" ColumnName="MAQD" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -103,76 +215,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHIEUTHUTIENs">
-      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.PHIEUTHUTIEN">
-        <MappingFragment StoreEntitySet="PHIEUTHUTIEN">
-          <ScalarProperty Name="TIENTHUA" ColumnName="TIENTHUA" />
-          <ScalarProperty Name="TIENTHU" ColumnName="TIENTHU" />
-          <ScalarProperty Name="TIENNO" ColumnName="TIENNO" />
-          <ScalarProperty Name="NGAYTHU" ColumnName="NGAYTHU" />
-          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
-          <ScalarProperty Name="MAPT" ColumnName="MAPT" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="USP_BAOCAODOANHTHU" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAODOANHTHU">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAODOANHTHU_Result">
-          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
-          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-          <ScalarProperty Name="Doanh_Thu" ColumnName="Doanh Thu" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="USP_BAOCAOCHIPHI" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_BAOCAOCHIPHI">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_BAOCAOCHIPHI_Result">
-          <ScalarProperty Name="Ngày_Nhập" ColumnName="Ngày Nhập" />
-          <ScalarProperty Name="Tong_Chi" ColumnName="Tong Chi" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <EntitySetMapping Name="QUYDINHs">
-      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.QUYDINH">
-        <MappingFragment StoreEntitySet="QUYDINH">
-          <ScalarProperty Name="NOTOIDA" ColumnName="NOTOIDA" />
-          <ScalarProperty Name="TONTOITHIEU" ColumnName="TONTOITHIEU" />
-          <ScalarProperty Name="NHAPTOIDA" ColumnName="NHAPTOIDA" />
-          <ScalarProperty Name="NHAPTOITHIEU" ColumnName="NHAPTOITHIEU" />
-          <ScalarProperty Name="MAQD" ColumnName="MAQD" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="USP_DOANHTHUSACHTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_DOANHTHUSACHTRONGTHANG">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="QUAN_LI_NHA_SACHModel.USP_DOANHTHUSACHTRONGTHANG_Result">
-          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
-          <ScalarProperty Name="TENSACH" ColumnName="TENSACH" />
-          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="USP_SACHBANCHAYTRONGTHANG" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_SACHBANCHAYTRONGTHANG" />
-    <EntitySetMapping Name="CTKHUYENMAIs">
-      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.CTKHUYENMAI">
-        <MappingFragment StoreEntitySet="CTKHUYENMAI">
-          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
-          <ScalarProperty Name="SOLUONGGIAM" ColumnName="SOLUONGGIAM" />
-          <ScalarProperty Name="MASACH" ColumnName="MASACH" />
-          <ScalarProperty Name="MAKM" ColumnName="MAKM" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="KHUYENMAIs">
-      <EntityTypeMapping TypeName="QUAN_LI_NHA_SACHModel.KHUYENMAI">
-        <MappingFragment StoreEntitySet="KHUYENMAI">
-          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
-          <ScalarProperty Name="NGAYKT" ColumnName="NGAYKT" />
-          <ScalarProperty Name="NGAYBD" ColumnName="NGAYBD" />
-          <ScalarProperty Name="TENKM" ColumnName="TENKM" />
-          <ScalarProperty Name="MAKM" ColumnName="MAKM" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="MASACHTIEPTHEO" FunctionName="QUAN_LI_NHA_SACHModel.Store.MASACHTIEPTHEO" />
+    <FunctionImportMapping FunctionImportName="USP_THEMSACH" FunctionName="QUAN_LI_NHA_SACHModel.Store.USP_THEMSACH" />
   </EntityContainerMapping>
 </Mapping>

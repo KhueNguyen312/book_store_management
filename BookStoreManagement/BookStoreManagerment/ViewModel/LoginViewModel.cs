@@ -18,9 +18,10 @@ namespace BookStoreManagerment.ViewModel
         public ICommand UserNameChangedCommand { get; set; }
         public ICommand ClickedSnackbarCommand { get; set; }
         public bool IsLogin { get; set; }
-        private bool _isActiveSnackBar;
+        
         private string _userName;
         private string _password;
+        private bool _isActiveSnackBar;
         public bool IsActiveSnackBar { get { return _isActiveSnackBar; } set { _isActiveSnackBar = value; OnPropertyChanged(); } }
         public string UserName { get { return _userName; } set { _userName = value;OnPropertyChanged(); } }
         public string Password { get { return _password; } set { _password = value; OnPropertyChanged(); } }
@@ -54,14 +55,20 @@ namespace BookStoreManagerment.ViewModel
                 else
                 {
                     IsLogin = false;
+                   
                     IsActiveSnackBar = true;
+
 
                 }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Hãy kiểm tra kết nối tới CSDL", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBoxWindow mess2 = new MessageBoxWindow();
+                mess2.Tag = "Hãy kiểm tra kết nối tới CSDL";
+                mess2.ShowDialog();
+
+               // MessageBox.Show("Hãy kiểm tra kết nối tới CSDL", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
             

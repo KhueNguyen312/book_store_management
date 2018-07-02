@@ -30,7 +30,7 @@
                             <Setter Property="Width" Value="35"></Setter>
                         </Style>
                     </StackPanel.Resources>
-                    <Button Command="{Binding BackPreviousWindownCommand}" 
+                    <Button IsCancel="True" Command="{Binding BackPreviousWindownCommand}" 
                             CommandParameter="{Binding ElementName=ControlBarAlter}"
                         ToolTip="Go Back" ToolBar.OverflowMode="AsNeeded" Opacity="0.5" >
                         <materialDesign:PackIcon HorizontalAlignment="Center" Height="15" Width="25" VerticalAlignment="Center" Kind="ArrowCollapseLeft" />

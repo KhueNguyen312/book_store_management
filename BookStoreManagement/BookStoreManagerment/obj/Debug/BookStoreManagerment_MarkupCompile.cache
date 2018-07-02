@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\
 BookStoreManagerment
 none
 false
 DEBUG;TRACE
-F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\App.xaml
-251457672391
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\App.xaml
+26-1038761211
 2-1556844510
-78-550488180
-671579744965
-BookManagementWindow.xaml;CostReportWindow.xaml;CustomControlBar\MainUserControl.xaml;CustomControlBar\UserControlAlter.xaml;AccountMngWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PromotionDetailWindow.xaml;ReportWindow.xaml;Resources\MainResource.xaml;ReveneuReportWindow.xaml;SettingWindow.xaml;StatisticsWindow.xaml;Views\AccountDetailView.xaml;Views\AccountMngView.xaml;Views\BookImportView.xaml;Views\BookMngView.xaml;BusinessWindow.xaml;Views\CostReportView.xaml;Views\CustomerDueReportView.xaml;Views\CustomerMngView.xaml;Views\DataBookView.xaml;Views\MoneyCollectionView.xaml;Views\PromotionView.xaml;Views\SellBookView.xaml;
+82-1499980069
+70-443943464
+BookManagementWindow.xaml;CostReportWindow.xaml;CustomControlBar\MainUserControl.xaml;CustomControlBar\UserControlAlter.xaml;AccountMngWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MessageBoxWindow.xaml;PromotionDetailWindow.xaml;ReportWindow.xaml;Resources\MainResource.xaml;ReveneuReportWindow.xaml;SettingWindow.xaml;StatisticsWindow.xaml;Views\AccountDetailView.xaml;Views\AccountMngView.xaml;Views\BookImportView.xaml;Views\BookMngView.xaml;BusinessWindow.xaml;Views\CostReportView.xaml;Views\CustomerDueReportView.xaml;Views\CustomerMngView.xaml;Views\DataBookView.xaml;Views\MoneyCollectionView.xaml;Views\PromotionView.xaml;Views\SellBookView.xaml;
 
 False
 

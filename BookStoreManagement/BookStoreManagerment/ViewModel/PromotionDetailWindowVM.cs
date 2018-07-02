@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,13 +70,27 @@ namespace BookStoreManagerment.ViewModel
                 var book = new CTKHUYENMAI() { MAKM = maKM, MASACH = ID, SOLUONGGIAM = PromotionPercent };
                 if (DataProvider.Ins.DB.CTKHUYENMAIs.Where(x => x.MASACH == book.MASACH && x.MAKM == book.MAKM).Count() > 0)
                 {
-                    System.Windows.MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Đã thêm sách này";
+                    mess2.ShowDialog();
+
+                    //System.Windows.MessageBox.Show("Đã thêm sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                 {
-                    DataProvider.Ins.DB.CTKHUYENMAIs.Add(book);
-                    ListPromotionDetail.Add(book);
-                    DataProvider.Ins.DB.SaveChanges();
+                    
+
+                    //DataProvider.Ins.DB.SaveChanges();
+
+                    var PID = DataProvider.Ins.DB.Database.SqlQuery<string>("SELECT MAX(MAKM) FROM KHUYENMAI").First();
+
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand("THEM_CTKM_SACH @MAKM, @TENKM, @PHANTRAM",
+                            new SqlParameter("@MAKM", PID),
+                            new SqlParameter("@TENKM", ID),
+                            new SqlParameter("@PHANTRAM", PromotionPercent));
+
+                    ListPromotionDetail = new ObservableCollection<CTKHUYENMAI>(DataProvider.Ins.DB.Database.SqlQuery<CTKHUYENMAI>("SELECT * FROM CTKHUYENMAI WHERE MAKM = @ID", new SqlParameter("@ID", PID)));
+
                 }
             });
             AddGroupCmd = new RelayCommand<Button>((p) => { return true; }, (p) =>
@@ -102,6 +117,7 @@ namespace BookStoreManagerment.ViewModel
             SaveCmd = new RelayCommand<Window>((p) => { return true; }, (p) =>
             {
                 UpdateBook(maKM);
+                
                 p.Close();
             });
             ListPromotionDetail = new ObservableCollection<CTKHUYENMAI>(DataProvider.Ins.DB.CTKHUYENMAIs.Where(x=>x.MAKM == maKM));
@@ -110,7 +126,8 @@ namespace BookStoreManagerment.ViewModel
         }
         public PromotionDetailWindowVM()
         {
-
+            
+            ListBookType = new ObservableCollection<LOAISACH>(DataProvider.Ins.DB.LOAISACHes);
         }
         void UpdateBook(string maKM)
         {

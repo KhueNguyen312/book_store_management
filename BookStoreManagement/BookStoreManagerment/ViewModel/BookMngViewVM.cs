@@ -158,6 +158,7 @@ namespace BookStoreManagerment.ViewModel
             
             AddCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {
+                ID = DataProvider.Ins.DB.Database.SqlQuery<string>("MASACHTIEPTHEO").First();
                 IsEnabledListView = false;
                 IsEnabledTextBox = true;
                 IsEnabledIDTextBox = true;
@@ -165,66 +166,89 @@ namespace BookStoreManagerment.ViewModel
             });
             SaveCommand = new RelayCommand<Button>((p) =>
             {
-                if (!IsEnabledListView)
+                if (!string.IsNullOrEmpty(ID) &&
+                !string.IsNullOrEmpty(BookName) &&
+                !string.IsNullOrEmpty(Author) &&
+                !string.IsNullOrEmpty(BookType) &&
+                !string.IsNullOrEmpty(ID))
                     return true;
                 else
                     return false;
             }, (p) =>
             {
-                IsEnabledListView = true;
-                IsEnabledTextBox = false;
-                IsEnabledIDTextBox = false;
-                if (!IsAdding)
+            IsEnabledListView = true;
+            IsEnabledTextBox = false;
+            IsEnabledIDTextBox = false;
+            if (!IsAdding)
+            {
+                var book = DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == SelectedItem.MASACH).SingleOrDefault();
+                if (book == null)
                 {
-                    var book = DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == SelectedItem.MASACH).SingleOrDefault();
-                    if (book == null)
-                    {
-                        MessageBox.Show("Không tìm thấy cuôn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
-                    }
-                    if (Img != null)
-                    {
-                        Image = ByteToImageConverter.Ins.ImageToByte(Img);
-                        book.HINHANH = Image;
-                    }
-                    else
-                        book.HINHANH = null;
-                    book.TENSACH = BookName;
-                    book.MALOAISACH = BookType;
-                    book.TACGIA = Author;
-                    book.MANXB = PublishingHouse;
-                    book.SOLUONGHIENTAI = NumOfBook;
-                    book.GIANHAP = InputPrice;
-                    book.GIABAN = BuyingPrice;
-                    DataProvider.Ins.DB.SaveChanges();
-                    IsAdding = true;
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Không tìm thấy cuôn sách này";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Không tìm thấy cuôn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (Img != null)
+                {
+                    Image = ByteToImageConverter.Ins.ImageToByte(Img);
+                    book.HINHANH = Image;
                 }
                 else
-                {
-                    if (Img != null)
-                        Image = ByteToImageConverter.Ins.ImageToByte(Img);
-                    else
-                        Image = null;
-                    var book = new SACH() { MASACH = ID, TENSACH = BookName, MALOAISACH = BookType, TACGIA = Author, MANXB = PublishingHouse, GIABAN = BuyingPrice, GIANHAP = InputPrice, HINHANH = Image };
-                    if (DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == book.MASACH).Count() > 0)
-                    {
-                        MessageBox.Show("Mã Sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else
-                    {
-                        DataProvider.Ins.DB.SACHes.Add(book);
-                        
-                        try
-                        {
-                            DataProvider.Ins.DB.SaveChanges();
-                            ListBook.Add(book);
-                        }
-                        catch (Exception)
-                        {
-                        }
+                    book.HINHANH = null;
+                book.TENSACH = BookName;
+                book.MALOAISACH = BookType;
+                book.TACGIA = Author;
+                book.MANXB = PublishingHouse;
+                book.SOLUONGHIENTAI = NumOfBook;
+                book.GIANHAP = InputPrice;
+                book.GIABAN = BuyingPrice;
+                DataProvider.Ins.DB.SaveChanges();
+                IsAdding = true;
 
-                        
+                ListBook = new ObservableCollection<SACH>(DataProvider.Ins.DB.Database.SqlQuery<SACH>("GET_SACH").OrderByDescending(x => x.MASACH == ID));
+            }
+            else
+            {
+
+
+                if (Img != null)
+                {
+                    Image = ByteToImageConverter.Ins.ImageToByte(Img);
+                    DataProvider.Ins.DB.Database.ExecuteSqlCommand("USP_THEMSACH @MASACH, @TENSACH, @MALOAISACH, @TACGIA, @MANXB, @GIABAN, @GIANHAP, @HINHANH",
+                    new SqlParameter("@MASACH", ID),
+                    new SqlParameter("@TENSACH", BookName),
+                    new SqlParameter("@MALOAISACH", BookType),
+                    new SqlParameter("@TACGIA", Author),
+                    new SqlParameter("@MANXB", PublishingHouse),
+                    new SqlParameter("@GIABAN", BuyingPrice),
+                    new SqlParameter("@GIANHAP", InputPrice),
+                    new SqlParameter("@HINHANH", Image)
+                    );
+
+                    ListBook = new ObservableCollection<SACH>(DataProvider.Ins.DB.Database.SqlQuery<SACH>("GET_SACH").OrderByDescending(x=>x.MASACH == ID));
+                }
+                else{
+
+                        MessageBoxWindow window = new MessageBoxWindow();
+                        window.Tag = "Bạn chưa thêm hình ảnh";
+                        window.ShowDialog();
+
                     }
+                    
+                    //var book = new SACH() { MASACH = ID, TENSACH = BookName, MALOAISACH = BookType, TACGIA = Author, MANXB = PublishingHouse, GIABAN = BuyingPrice, GIANHAP = InputPrice, HINHANH = Image };
+                    //if (DataProvider.Ins.DB.SACHes.Where(x => x.MASACH == BookID.ToString()).Count() > 0)
+                    //{
+                    //    MessageBox.Show("Mã Sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    //}
+                    //else
+                    //{
+
+                    
+
+                    //}
                 }
             });
             EditCommand = new RelayCommand<Button>((p) => { return true; }, (p) =>
@@ -246,8 +270,11 @@ namespace BookStoreManagerment.ViewModel
                 }
                 catch (Exception)
                 {
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Không thể xóa cuốn sách này";
+                    mess2.ShowDialog();
 
-                    MessageBox.Show("Không thể xóa cuốn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    //MessageBox.Show("Không thể xóa cuốn sách này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 
             });

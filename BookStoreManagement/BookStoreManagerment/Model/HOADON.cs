@@ -11,30 +11,22 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class HOADON : BaseViewModel
+    
+    public partial class HOADON
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HOADON()
         {
             this.CTHOADONs = new HashSet<CTHOADON>();
         }
-
-        private int _SOHD;
-        public int SOHD { get { return _SOHD; } set { _SOHD = value; OnPropertyChanged(); } }
-        private string _MAKH;
-        public string MAKH { get { return _MAKH; } set { _MAKH = value; OnPropertyChanged(); } }
-        private System.DateTime _NGAYHD;
-        public System.DateTime NGAYHD { get { return _NGAYHD; } set { _NGAYHD = value; OnPropertyChanged(); } }
-        private decimal _TONGTIEN;
-        public decimal TONGTIEN { get { return _TONGTIEN; } set { _TONGTIEN = value; OnPropertyChanged(); } }
-
-        private Nullable<decimal> _TIENTHUA;
-        public Nullable<decimal> TIENTHUA { get { return _TIENTHUA; } set { _TIENTHUA = value; OnPropertyChanged(); } }
-        private Nullable<decimal> _TIENNHAN;
-        public Nullable<decimal> TIENNHAN { get { return _TIENNHAN; } set { _TIENNHAN = value; OnPropertyChanged(); } }
-
+    
+        public int SOHD { get; set; }
+        public string MAKH { get; set; }
+        public System.DateTime NGAYHD { get; set; }
+        public decimal TONGTIEN { get; set; }
+        public Nullable<decimal> TIENTHUA { get; set; }
+        public Nullable<decimal> TIENNHAN { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }

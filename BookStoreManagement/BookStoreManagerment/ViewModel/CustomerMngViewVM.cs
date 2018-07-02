@@ -83,6 +83,8 @@ namespace BookStoreManagerment.ViewModel
                 IsEnabledTextBox = true;
                 IsEnabledIDTextBox = true;
 
+                ID = DataProvider.Ins.DB.Database.SqlQuery<string>("MAKHTIEPTHEO").First();
+
             });
             SaveCommand = new RelayCommand<Button>((p) => 
             {
@@ -111,6 +113,7 @@ namespace BookStoreManagerment.ViewModel
                     try
                     {
                         DataProvider.Ins.DB.SaveChanges();
+                        ListCustomer = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.Database.SqlQuery<KHACHHANG>("GET_KH").OrderByDescending(x => x.MAKH == ID));
                     }
                     catch (Exception)
                     {
@@ -136,6 +139,8 @@ namespace BookStoreManagerment.ViewModel
                         {
                             DataProvider.Ins.DB.SaveChanges();
                             ListCustomer.Add(customer);
+                            ListCustomer = new ObservableCollection<KHACHHANG>(DataProvider.Ins.DB.Database.SqlQuery<KHACHHANG>("GET_KH").OrderByDescending(x => x.MAKH == ID));
+
                         }
                         catch (Exception)
                         {

@@ -11,16 +11,12 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class CTKHUYENMAI:BaseViewModel
+    
+    public partial class CTKHUYENMAI
     {
-        private string _MAKM;
-        public string MAKM { get { return _MAKM; } set { _MAKM = value; OnPropertyChanged(); } }
-        private string _MASACH;
-        public string MASACH { get { return _MASACH; } set { _MASACH = value; OnPropertyChanged(); } }
-        private int _SOLUONGGIAM;
-        public int SOLUONGGIAM { get { return _SOLUONGGIAM; } set { _SOLUONGGIAM = value; OnPropertyChanged(); } }
+        public string MAKM { get; set; }
+        public string MASACH { get; set; }
+        public int SOLUONGGIAM { get; set; }
         public string GHICHU { get; set; }
     
         public virtual SACH SACH { get; set; }

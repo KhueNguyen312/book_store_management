@@ -115,7 +115,11 @@ namespace BookStoreManagerment.ViewModel
                     var account = DataProvider.Ins.DB.TAIKHOANs.Where(x => x.TENTK == SelectedAccount.TENTK).SingleOrDefault();
                     if (account == null)
                     {
-                        MessageBox.Show("Không tìm thấy tài khoản này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Không tìm thấy tài khoản này";
+                        mess2.ShowDialog();
+
+                       // MessageBox.Show("Không tìm thấy tài khoản này", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     if (Img != null)
@@ -133,7 +137,11 @@ namespace BookStoreManagerment.ViewModel
                     {
                         if (Password != Password2)
                         {
-                            MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBoxWindow mess2 = new MessageBoxWindow();
+                            mess2.Tag = "Nhập lại mật khẩu không khớp với mật khẩu đã nhập!";
+                            mess2.ShowDialog();
+
+                           // MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         else
                             account.MATKHAU = Password;
@@ -153,13 +161,21 @@ namespace BookStoreManagerment.ViewModel
                     var account = new TAIKHOAN() { TENTK = AccountName, TENHIENTHI = DisplayName, HINHANH = Image, LOAITK = TypeAccount.IDType, MATKHAU = Password };
                     if (DataProvider.Ins.DB.TAIKHOANs.Where(x => x.TENTK == account.TENTK).Count() > 0)
                     {
-                        MessageBox.Show("Tài khoản đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Tài khoản đã tồn tại!";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Tài khoản đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     else
                     {
                         if (Password != Password2)
                         {
-                            MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBoxWindow mess2 = new MessageBoxWindow();
+                            mess2.Tag = "Nhập lại mật khẩu không khớp với mật khẩu đã nhập!";
+                            mess2.ShowDialog();
+
+                            //MessageBox.Show("Nhập lại mật khẩu không khớp với mật khẩu đã nhập!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                         else
                         {

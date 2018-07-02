@@ -30,6 +30,7 @@ using DevExpress.Xpf.LayoutControl;
 using DevExpress.Xpf.Office.UI;
 using DevExpress.Xpf.Ribbon;
 using DevExpress.Xpf.RichEdit;
+using DevExpress.Xpf.RichEdit.Menu;
 using DevExpress.Xpf.RichEdit.UI;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.Menu;

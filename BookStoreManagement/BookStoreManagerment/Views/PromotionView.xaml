@@ -13,7 +13,7 @@
     <UserControl.Resources>
         <vm:IndexConverter x:Key="IndexConverter"/>
     </UserControl.Resources>
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.Resources>
             <Style TargetType="DataGrid">
                 <Setter Property="Margin" Value="10"></Setter>

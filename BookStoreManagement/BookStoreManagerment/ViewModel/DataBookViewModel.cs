@@ -83,13 +83,21 @@ namespace BookStoreManagerment.ViewModel
                         publishingHouse.TENNXB = SelectedItem.TENNXB;
                         publishingHouse.DIACHI = SelectedItem.DIACHI;
                         DataProvider.Ins.DB.SaveChanges();
-                        MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Sửa thành công";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                         
                     }
                     catch (Exception)
                     {
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Có lỗi xảy ra vui lòng KT lại";
+                        mess2.ShowDialog();
 
-                        MessageBox.Show("Có lỗi xảy ra vui lòng KT lại", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        //MessageBox.Show("Có lỗi xảy ra vui lòng KT lại", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                     
                 }
@@ -98,7 +106,11 @@ namespace BookStoreManagerment.ViewModel
                     var PublishingHouse = new NHAXUATBAN() { MANXB = SelectedItem.MANXB, TENNXB = SelectedItem.TENNXB, DIACHI = SelectedItem.DIACHI };
                     if (DataProvider.Ins.DB.NHAXUATBANs.Where(x => x.MANXB == PublishingHouse.MANXB).Count() > 0)
                     {
-                        MessageBox.Show("Mã NXB đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Mã NXB đã tồn tại!";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Mã NXB đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         SelectedItem.MANXB = "";
                         SelectedItem.TENNXB = "";
                         SelectedItem.DIACHI = "";
@@ -113,7 +125,11 @@ namespace BookStoreManagerment.ViewModel
                         }
                         catch (Exception)
                         {
-                            MessageBox.Show("Hãy điền đầy đủ thông tin", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBoxWindow mess2 = new MessageBoxWindow();
+                            mess2.Tag = "Mã Thể loại sách đã tồn tại!";
+                            mess2.ShowDialog();
+
+                            // MessageBox.Show("Mã Thể loại sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
 
                     }
@@ -132,7 +148,11 @@ namespace BookStoreManagerment.ViewModel
                     var bookType = currentItem.SingleOrDefault();
                     if (DataProvider.Ins.DB.LOAISACHes.Where(x => x.MALOAISACH == bookType.MALOAISACH).Count() > 0)
                     {
-                        MessageBox.Show("Mã Thể loại sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Mã Thể loại sách đã tồn tại!";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Mã Thể loại sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     bookType.TENLOAISACH = SelectedTypeBook.TENLOAISACH;
@@ -144,7 +164,11 @@ namespace BookStoreManagerment.ViewModel
                     var bookType = new LOAISACH() { MALOAISACH = SelectedTypeBook.MALOAISACH, TENLOAISACH = SelectedTypeBook.TENLOAISACH };
                     if (DataProvider.Ins.DB.LOAISACHes.Where(x => x.MALOAISACH == bookType.MALOAISACH).Count() > 0)
                     {
-                        MessageBox.Show("Mã Thể loại sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBoxWindow mess2 = new MessageBoxWindow();
+                        mess2.Tag = "Mã Thể loại sách đã tồn tại!";
+                        mess2.ShowDialog();
+
+                        //MessageBox.Show("Mã Thể loại sách đã tồn tại!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         SelectedTypeBook.TENLOAISACH = "";
                     }
                     else
@@ -157,7 +181,10 @@ namespace BookStoreManagerment.ViewModel
                         }
                         catch (Exception)
                         {
-                            MessageBox.Show("Hãy điền đầy đủ thông tin", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBoxWindow mess2 = new MessageBoxWindow();
+                            mess2.Tag = "Hãy điền đầy đủ thông tin";
+                            mess2.ShowDialog();
+                            //MessageBox.Show("Hãy điền đầy đủ thông tin", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
 
                     }
@@ -173,7 +200,11 @@ namespace BookStoreManagerment.ViewModel
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Không thể xóa giá trị này.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Không thể xóa giá trị này.";
+                    mess2.ShowDialog();
+
+                   // MessageBox.Show("Không thể xóa giá trị này.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 ListNXB.Remove(SelectedItem);
             });
@@ -187,7 +218,11 @@ namespace BookStoreManagerment.ViewModel
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Không thể xóa giá trị này.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Không thể xóa giá trị này.";
+                    mess2.ShowDialog();
+
+                    //MessageBox.Show("Không thể xóa giá trị này.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 ListOfBookType.Remove(SelectedTypeBook);
             });

@@ -11,60 +11,36 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class SACH:BaseViewModel
+    
+    public partial class SACH
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SACH()
         {
             this.CTHOADONs = new HashSet<CTHOADON>();
-            this.CTPHIEUNHAPs = new HashSet<CTPHIEUNHAP>();
             this.CTKHUYENMAIs = new HashSet<CTKHUYENMAI>();
+            this.CTPHIEUNHAPs = new HashSet<CTPHIEUNHAP>();
         }
-
-        public NHAXUATBAN NXB { get; set; }
-        public LOAISACH LoaiSach { get; set; }
-        
-
-        private string _MASACH;
-        public string MASACH { get { return _MASACH; } set { _MASACH = value; OnPropertyChanged(); } }
-
-        private string _TENSACH;
-        public string TENSACH { get { return _TENSACH; } set { _TENSACH = value; OnPropertyChanged(); } }
-
-        private string _MALOAISACH;
-        public string MALOAISACH { get { return _MALOAISACH; } set { _MALOAISACH = value; OnPropertyChanged(); } }
-
-        private string _TACGIA;
-        public string TACGIA { get { return _TACGIA; } set { _TACGIA = value; OnPropertyChanged(); } }
-
-        private string _MANXB;
-        public string MANXB { get { return _MANXB; } set { _MANXB = value; OnPropertyChanged(); } }
-
-        private Nullable<int> _SOLUONGHIENTAI;
-        public Nullable<int> SOLUONGHIENTAI { get { return _SOLUONGHIENTAI; } set { _SOLUONGHIENTAI = value; OnPropertyChanged(); } }
-
-        private byte[] _HINHANH;
-        public byte[] HINHANH { get { return _HINHANH; } set { _HINHANH = value; OnPropertyChanged(); } }
-
-        private decimal _GIANHAP;
-        public decimal GIANHAP { get { return _GIANHAP; } set { _GIANHAP = value; OnPropertyChanged(); } }
-
-        private decimal _GIABAN;
-        public decimal GIABAN { get { return _GIABAN; } set { _GIABAN = value; OnPropertyChanged(); } }
-
+    
+        public string MASACH { get; set; }
+        public string TENSACH { get; set; }
+        public string MALOAISACH { get; set; }
+        public string TACGIA { get; set; }
+        public string MANXB { get; set; }
+        public Nullable<int> SOLUONGHIENTAI { get; set; }
+        public byte[] HINHANH { get; set; }
+        public decimal GIANHAP { get; set; }
+        public decimal GIABAN { get; set; }
         public string NOIDUNG { get; set; }
-        private Nullable<int> _GIAMGIA;
-        public Nullable<int> GIAMGIA { get { return _GIAMGIA; } set { _GIAMGIA = value; OnPropertyChanged(); } }
-
+        public Nullable<int> GIAMGIA { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTHOADON> CTHOADONs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTKHUYENMAI> CTKHUYENMAIs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTPHIEUNHAP> CTPHIEUNHAPs { get; set; }
         public virtual LOAISACH LOAISACH { get; set; }
         public virtual NHAXUATBAN NHAXUATBAN { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTKHUYENMAI> CTKHUYENMAIs { get; set; }
     }
 }

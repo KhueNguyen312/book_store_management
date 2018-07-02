@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,30 +64,55 @@ namespace BookStoreManagerment.ViewModel
         public ObservableCollection<SACH> ListBook { get { return _listBook; } set { _listBook = value; OnPropertyChanged(); } }
         public PromotionVM()
         {
+
+            
+            ID = DataProvider.Ins.DB.Database.SqlQuery<string>("MAKMTIEPTHEO").First();
+
+            ListPromotion = new ObservableCollection<KHUYENMAI>(DataProvider.Ins.DB.Database.SqlQuery<KHUYENMAI>("SELECT * FROM KHUYENMAI"));
+            ListPromotionDetail = new ObservableCollection<CTKHUYENMAI>(DataProvider.Ins.DB.Database.SqlQuery<CTKHUYENMAI>("SELECT * FROM CTKHUYENMAI WHERE MAKM = @ID", new SqlParameter("@ID", ID)));
+
             StartDate = EndDate = DateTime.Now;
             AddCmd = new RelayCommand<Button>((p) => { return true; }, (p) =>
             {
                 if (StartDate < EndDate)
                 {
-                    var promotionProgram = new KHUYENMAI() { MAKM = ID, TENKM = Name, NGAYBD = StartDate, NGAYKT = EndDate };
-                    if (DataProvider.Ins.DB.KHUYENMAIs.Where(x => x.MAKM == promotionProgram.MAKM).Count() > 0)
+                    
+
+                    try
                     {
-                        System.Windows.MessageBox.Show("Khuyến mãi này đã tồn tại", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    else
-                    {
-                        DataProvider.Ins.DB.KHUYENMAIs.Add(promotionProgram);
-                        DataProvider.Ins.DB.SaveChanges();
-                        ListPromotion.Add(promotionProgram);
+
+
+                        DataProvider.Ins.DB.Database.ExecuteSqlCommand("THEM_KM @MAKM, @TENKM, @NGAYBD, @NGAYKT",
+                            new SqlParameter("@MAKM", ID),
+                            new SqlParameter("@TENKM", Name),
+                            new SqlParameter("@NGAYBD", StartDate),
+                            new SqlParameter("@NGAYKT", EndDate));
+
+                        ListPromotion = new ObservableCollection<KHUYENMAI>(DataProvider.Ins.DB.Database.SqlQuery<KHUYENMAI>("SELECT * FROM KHUYENMAI WHERE MAKM = @ID", new SqlParameter("@ID", ID)));
+
                         PromotionDetailWindow window = new PromotionDetailWindow();
                         window.DataContext = new PromotionDetailWindowVM(ID);
                         window.ShowDialog();
+
+
                     }
+                    catch
+                    {
+                        MessageBoxWindow mess1 = new MessageBoxWindow();
+                        mess1.Tag = "Không được trùng mã KM";
+                        mess1.ShowDialog();
+                    }
+                    
                 }
                 else
-                    System.Windows.MessageBox.Show("Ngày bắt đầu phải nhỏ hơn ngày kết thúc", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                {
+                    MessageBoxWindow mess2 = new MessageBoxWindow();
+                    mess2.Tag = "Ngày bắt đầu phải nhỏ hơn ngày kết thúc";
+                    mess2.ShowDialog();
+                   // System.Windows.MessageBox.Show("Ngày bắt đầu phải nhỏ hơn ngày kết thúc", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             });
-            ListPromotion = new ObservableCollection<KHUYENMAI>(DataProvider.Ins.DB.KHUYENMAIs);
+            
         }
     }
 }

@@ -157,7 +157,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBox IsEnabled="{Binding IsEnabledIDTextBox}" Grid.Row="0" Text="{Binding ID,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Mã khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="False" Grid.Row="0" Text="{Binding ID,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Mã khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Text="{Binding NameOfCustomer,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
             <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="2" Text="{Binding Address,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Địa chỉ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
         </Grid>

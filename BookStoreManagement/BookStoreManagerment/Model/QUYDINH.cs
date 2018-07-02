@@ -11,19 +11,13 @@ namespace BookStoreManagerment.Model
 {
     using System;
     using System.Collections.Generic;
-    using ViewModel;
-
-    public partial class QUYDINH:BaseViewModel
+    
+    public partial class QUYDINH
     {
-        private int _MAQD;
-        public int MAQD { get { return _MAQD; } set { _MAQD = value; OnPropertyChanged(); } }
-        private Nullable<int> _NHAPTOITHIEU;
-        public Nullable<int> NHAPTOITHIEU { get { return _NHAPTOITHIEU; } set { _NHAPTOITHIEU = value; OnPropertyChanged(); } }
-        private Nullable<int> _NHAPTOIDA;
-        public Nullable<int> NHAPTOIDA { get { return _NHAPTOIDA; } set { _NHAPTOIDA = value; OnPropertyChanged(); } }
-        private Nullable<int> _TONTOITHIEU;
-        public Nullable<int> TONTOITHIEU { get { return _TONTOITHIEU; } set { _TONTOITHIEU = value; OnPropertyChanged(); } }
-        private Nullable<decimal> _NOTOIDA;
-        public Nullable<decimal> NOTOIDA { get { return _NOTOIDA; } set { _NOTOIDA = value; OnPropertyChanged(); } }
+        public int MAQD { get; set; }
+        public Nullable<int> NHAPTOITHIEU { get; set; }
+        public Nullable<int> NHAPTOIDA { get; set; }
+        public Nullable<int> TONTOITHIEU { get; set; }
+        public Nullable<decimal> NOTOIDA { get; set; }
     }
 }
