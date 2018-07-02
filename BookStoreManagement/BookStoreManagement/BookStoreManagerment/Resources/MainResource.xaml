@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodel="clr-namespace:BookStoreManagerment.ViewModel"
+                    xmlns:local="clr-namespace:BookStoreManagerment.Resources">
+    <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+    <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
+    <viewmodel:BookManagementWindowViewModel x:Key="BookMngVM"></viewmodel:BookManagementWindowViewModel>
+    <viewmodel:BusinessWindowVM x:Key="BusinessVM"></viewmodel:BusinessWindowVM>
+    <viewmodel:SettingWindowVM x:Key="SettingVM"></viewmodel:SettingWindowVM>
+    <viewmodel:ReportWindowVM x:Key="ReportVM"></viewmodel:ReportWindowVM>
+    <viewmodel:AccountMngWindowVM x:Key="AccountMngWindowVM"></viewmodel:AccountMngWindowVM>
+    <viewmodel:ReveneuReportWindowVM x:Key="ReveneuRPVM"></viewmodel:ReveneuReportWindowVM>
+    <viewmodel:CostReportVM x:Key="CostReportWVM"></viewmodel:CostReportVM>
+    <viewmodel:StatisticsWindowVM x:Key="StatisticsVM"></viewmodel:StatisticsWindowVM>
+    <viewmodel:PromotionDetailWindowVM x:Key="PromotionDetailVM"></viewmodel:PromotionDetailWindowVM>
+</ResourceDictionary>

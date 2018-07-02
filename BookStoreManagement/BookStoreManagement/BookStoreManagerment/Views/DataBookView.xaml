@@ -1,0 +1,89 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BookStoreManagerment.Views"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
+            xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="BookStoreManagerment.Views.DataBookView"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <dx:DXTabControl Name="tabView">
+            <dx:DXTabItem Header="Nhà xuất bản">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Nhà xuất bản" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+                    <DataGrid EnableRowVirtualization="False" Grid.Row="1" ItemsSource="{Binding ListNXB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                              AlternationCount="{Binding Items.Count, RelativeSource={RelativeSource Self}}"
+                              SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False"  Name="dataGridPH" CanUserAddRows="True" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="RowEditEnding">
+                                <i:InvokeCommandAction Command="{Binding SaveCommand,Mode=TwoWay}" CommandParameter="{Binding ElementName=dataGridPH}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="STT">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteCommand,RelativeSource={RelativeSource AncestorType=DataGrid}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                                <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
+                                            </Button>
+                                            <TextBlock VerticalAlignment="Center" Text="{Binding AlternationIndex, RelativeSource={RelativeSource AncestorType=DataGridRow}}"></TextBlock>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <materialDesign:MaterialDataGridTextColumn  Header="Mã" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="5"  Binding="{Binding MANXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50"></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn Header="Tên NXB" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="30"   Binding="{Binding TENNXB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn Header="Địa chỉ" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" MaxLength="50"  Binding="{Binding DIACHI,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="Thể Loại">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Thể loại sách" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+                    <DataGrid EnableRowVirtualization="False" Grid.Row="1" ItemsSource="{Binding ListOfBookType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                              AlternationCount="{Binding Items.Count, RelativeSource={RelativeSource Self}}"
+                              SelectedItem="{Binding SelectedTypeBook, Mode=TwoWay}" AutoGenerateColumns="False"  Name="DataGridType" CanUserAddRows="True" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="RowEditEnding">
+                                <i:InvokeCommandAction Command="{Binding SaveCommand2,Mode=TwoWay}" CommandParameter="{Binding ElementName=DataGridTest}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="STT">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button VerticalAlignment="Center" Height="20" Width="20" Command="{Binding DataContext.DeleteCommand2,RelativeSource={RelativeSource AncestorType=DataGrid}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDelete" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete an item"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                                <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
+                                            </Button>
+                                            <TextBlock VerticalAlignment="Center" Text="{Binding AlternationIndex, RelativeSource={RelativeSource AncestorType=DataGridRow}}"></TextBlock>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <materialDesign:MaterialDataGridTextColumn MaxLength="5" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}"  Header="Mã thể loại"  Binding="{Binding MALOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                            <materialDesign:MaterialDataGridTextColumn MaxLength="30" EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}" Header="Tên thể loại"  Binding="{Binding TENLOAISACH,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></materialDesign:MaterialDataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </dx:DXTabItem>
+        </dx:DXTabControl>
+    </Grid>
+</UserControl>

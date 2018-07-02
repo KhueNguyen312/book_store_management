@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="BookStoreManagerment.Views.CustomerMngView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BookStoreManagerment.Views"
+             mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:vm="clr-namespace:BookStoreManagerment.ViewModel"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:IndexConverter x:Key="IndexConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+            </Style>
+            <Style TargetType="materialDesign:PackIcon">
+                <Setter Property="Width" Value="30"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <materialDesign:ColorZone materialDesign:ShadowAssist.ShadowDepth="Depth3" Margin="5 -5 10 10" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Mode="PrimaryLight" Padding="5">
+
+            <DockPanel>
+                <StackPanel Orientation="Horizontal"
+                            materialDesign:RippleAssist.IsCentered="True">
+                    <materialDesign:ColorZone Mode="Standard" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1"
+                                   Margin="1 0 0 0"
+                                   materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                            </Button>
+                            <TextBox Grid.Column="1" Margin="8 0 0 0" FontSize="15" materialDesign:HintAssist.Hint="Tìm kiếm khách hàng" 
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0" Name="txbSearch"
+                                     Width="400" VerticalAlignment="Center">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="TextChanged">
+                                        <i:InvokeCommandAction Command="{Binding SearchCmd}" CommandParameter="{Binding ElementName=txbSearch}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </TextBox>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <materialDesign:PackIcon Height="20" Width="20" Kind="Send" />
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <TextBlock  Grid.Row="0" Grid.ColumnSpan="2" Text="Quản lí khách hàng" FontSize="20" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FF5F27AD" FontWeight="Bold"/>
+        <ListView Name="listView" IsEnabled="{Binding IsEnabledListView,Mode=TwoWay}" Grid.Row="4" Grid.ColumnSpan="3" ItemsSource="{Binding ListCustomer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Border"
+                            Padding="{Binding RelativeSource={RelativeSource Self}, Path=(materialDesign:ListViewAssist.ListViewItemPadding)}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="0,0,0,1"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                    <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=OneWay, RelativeSource={RelativeSource Self}}" />
+                    <Style.Triggers>
+                        
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}" />
+                            <Setter Property="IsSelected" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource MaterialDesignDivider}" />
+                        </Trigger>
+                       
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button VerticalAlignment="Center" Height="20" Width="20" Tag="{Binding MAKH }" Command="{Binding DataContext.DeleteCommand,RelativeSource={RelativeSource AncestorType=ListView}}"  materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnDeleteCustomer" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete a customer"  Padding="0" HorizontalAlignment="Left" Margin="0 0 5 0" >
+                                        <materialDesign:PackIcon Height="18" Width="18" Kind="Delete"  Foreground="Black"/>
+                                    </Button>
+                                    <TextBlock VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}} , 
+                                     Converter={StaticResource IndexConverter},ConverterParameter=1}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Mã" DisplayMemberBinding="{Binding MAKH}"></GridViewColumn>
+                    <GridViewColumn Header="Tên khách hàng" DisplayMemberBinding="{Binding TENKH}"></GridViewColumn>
+                    <GridViewColumn Header="Địa chỉ" DisplayMemberBinding="{Binding DIACHI}"></GridViewColumn>
+                    <GridViewColumn Header="Số điện thoại" DisplayMemberBinding="{Binding SODIENTHOAI}"></GridViewColumn>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding EMAIL}"></GridViewColumn>
+                    <!--<GridViewColumn Header="Tiền nợ" DisplayMemberBinding="{Binding TIENNO}"></GridViewColumn>-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Margin="0 10 0 0" Grid.Row="3" Orientation="Horizontal"  HorizontalAlignment="Left">
+            <Button Command="{Binding AddCommand}" CommandParameter="{Binding ElementName=btnAddCustomer}" IsEnabled="{Binding IsAdding}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnAddCustomer" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Add a new customer"  Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <materialDesign:PackIcon Kind="Plus"  Foreground="Black"/>
+            </Button>
+            <Button Command="{Binding EditCommand}" CommandParameter="{Binding ElementName=btnEditCustomer}" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnEditCustomer" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Edit a customer"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <materialDesign:PackIcon Kind="Pencil" Foreground="Black"/>
+            </Button>
+            <Button Command="{Binding SaveCommand}" CommandParameter="{Binding ElementName=btnSaveCustomer}" IsDefault="True" materialDesign:ShadowAssist.ShadowDepth="Depth3" Panel.ZIndex="1" x:Name="btnSaveCustomer" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Save a customer"  Padding="0"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" >
+                <materialDesign:PackIcon Kind="ContentSave"  Foreground="Black"/>
+            </Button>
+        </StackPanel>
+        <Grid Margin="12 0 15 0" Grid.Row="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox IsEnabled="False" Grid.Row="0" Text="{Binding ID,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Mã khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Text="{Binding NameOfCustomer,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tên khách hàng" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="2" Text="{Binding Address,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Địa chỉ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </Grid>
+        <Grid Margin="12 0 15 0" Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="0" Text="{Binding PhoneNumber,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Số điện thoại" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox IsEnabled="{Binding IsEnabledTextBox}" Grid.Row="1" Text="{Binding Mail,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Email" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox Visibility="Hidden" IsEnabled="False" Grid.Row="2" Text="{Binding Debt,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" materialDesign:HintAssist.Hint="Tiền nợ" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </Grid>
+    </Grid>
+</UserControl>

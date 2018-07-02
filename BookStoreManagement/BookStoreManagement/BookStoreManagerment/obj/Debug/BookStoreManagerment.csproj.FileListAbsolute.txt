@@ -1,0 +1,758 @@
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe.config
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\BookStoreManagerment.pdb
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Images.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\MaterialDesignColors.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.CodeParser.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\MainWindow.g.cs
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\App.g.cs
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.cache
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.lref
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\App.baml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\MainWindow.baml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.g.resources
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.Properties.Resources.resources
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.GenerateResource.Cache
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe.licenses
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.pdb
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\obj\Debug\BookStoreManagerment.csprojResolveAssemblyReference.cache
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.xml
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Manager Project\BookStoreManagerment\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe.config
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.pdb
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csprojResolveAssemblyReference.cache
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\App.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.cache
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.lref
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.pdb
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Images.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignColors.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.CodeParser.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\App.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.g.resources
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.Properties.Resources.resources
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.GenerateResource.Cache
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe.licenses
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Resources\MainResource.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.dll
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.xml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.g.cs
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.baml
+F:\Book Store Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.baml
+F:\Github\project_introduction_to_SE\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe.config
+F:\Github\project_introduction_to_SE\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe
+F:\Github\project_introduction_to_SE\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.pdb
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe.config
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.pdb
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.pdb
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Images.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignColors.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.CodeParser.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Data.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Data.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Data.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Data.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Printing.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Printing.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Printing.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Printing.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.RichEdit.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Core.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Docking.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Grid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Ribbon.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.RichEdit.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Office.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Printing.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csprojResolveAssemblyReference.cache
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\DataBookView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\App.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.cache
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.lref
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\App.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Resources\MainResource.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\DataBookView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.g.resources
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.Properties.Resources.resources
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.GenerateResource.Cache
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe.licenses
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookMngView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookMngView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerMngView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerMngView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\AccountMngWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\AccountMngWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\MoneyCollectionView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\MoneyCollectionView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\SettingWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\SettingWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\ReportWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\ReportWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerDueReportView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerDueReportView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_Content.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.Shared.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Charts.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.DataAccess.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Diagram.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.PivotGrid.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Sparkline.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Controls.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DataAccess.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Diagram.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PivotGrid.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraCharts.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraGauges.v17.1.Core.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraReports.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\log4net.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.Web.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpo.v17.1.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\FlashControlV71.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\stdole.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ShockwaveFlashObjects.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.DataAccess.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Diagram.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.PivotGrid.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Sparkline.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Controls.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Diagram.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PivotGrid.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraCharts.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraGauges.v17.1.Core.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraReports.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\log4net.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpo.v17.1.xml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.DataAccess.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.DataAccess.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.DataAccess.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.DataAccess.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Diagram.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Diagram.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Diagram.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Diagram.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.PivotGrid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.PivotGrid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.PivotGrid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.PivotGrid.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Sparkline.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Sparkline.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Sparkline.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Sparkline.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Controls.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Controls.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Controls.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Controls.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.PropertyGrid.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraCharts.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraCharts.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraCharts.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraCharts.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraGauges.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraGauges.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraGauges.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraGauges.v17.1.Core.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraReports.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraReports.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraReports.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraReports.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpo.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpo.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\ReveneuReportWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\ReveneuReportWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CostReportView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CostReportView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.baml
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.g.cs
+F:\BookStore Management Project\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csprojResolveAssemblyReference.cache
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\AccountMngWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\ReportWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\ReveneuReportWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\SettingWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookMngView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CostReportView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerDueReportView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerMngView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\DataBookView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\MoneyCollectionView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\App.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_Content.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.cache
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment_MarkupCompile.lref
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.pdb
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe.config
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.exe
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\BookStoreManagerment.pdb
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.Shared.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Charts.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.CodeParser.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.DataAccess.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Diagram.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Images.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.PivotGrid.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.2.Export.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.CodeView.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Controls.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DataAccess.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Diagram.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.ExpressionEditor.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PivotGrid.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraCharts.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraGauges.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraReports.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\log4net.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignColors.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.Web.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpo.v17.2.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.2.Core.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\FlashControlV71.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\stdole.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ShockwaveFlashObjects.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Data.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.DataAccess.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Diagram.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Office.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.PivotGrid.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Printing.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.RichEdit.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.TreeMap.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Controls.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Core.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Diagram.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Docking.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Grid.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Layout.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.LayoutControl.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PivotGrid.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Printing.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.PropertyGrid.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.ReportDesigner.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.Ribbon.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.RichEdit.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.TreeMap.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraCharts.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraGauges.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.XtraReports.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\log4net.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\System.Windows.Interactivity.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpo.v17.2.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Pdf.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\DevExpress.Xpf.DocumentViewer.v17.2.Core.xml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Data.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Data.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Data.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Data.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.DataAccess.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.DataAccess.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.DataAccess.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.DataAccess.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Diagram.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Diagram.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Diagram.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Diagram.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Office.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Office.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Office.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Office.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.PivotGrid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.PivotGrid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.PivotGrid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.PivotGrid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Printing.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Printing.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Printing.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Printing.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.RichEdit.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.RichEdit.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.RichEdit.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.RichEdit.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Sparkline.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Controls.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Controls.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Controls.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Controls.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Core.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Core.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Core.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Core.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Docking.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Docking.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Docking.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Docking.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Grid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Grid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Grid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Grid.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.LayoutControl.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.LayoutControl.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.LayoutControl.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.LayoutControl.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Printing.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Printing.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Printing.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Printing.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.PropertyGrid.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.PropertyGrid.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.PropertyGrid.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.PropertyGrid.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.ReportDesigner.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.ReportDesigner.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.ReportDesigner.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.ReportDesigner.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.Ribbon.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.Ribbon.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.Ribbon.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.Ribbon.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.RichEdit.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.RichEdit.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.RichEdit.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.RichEdit.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraCharts.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraCharts.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraCharts.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraCharts.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraGauges.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraGauges.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraGauges.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraGauges.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.XtraReports.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.XtraReports.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.XtraReports.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.XtraReports.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpo.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpo.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpo.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpo.v17.2.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\de\DevExpress.Xpf.DocumentViewer.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\es\DevExpress.Xpf.DocumentViewer.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ja\DevExpress.Xpf.DocumentViewer.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\bin\Debug\ru\DevExpress.Xpf.DocumentViewer.v17.2.Core.resources.dll
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\App.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookManagementWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CostReportWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\MainUserControl.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\CustomControlBar\UserControlAlter.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\AccountMngWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\LoginWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\MainWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\PromotionDetailWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\ReportWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Resources\MainResource.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\ReveneuReportWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\SettingWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\StatisticsWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountDetailView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\AccountMngView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookImportView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\BookMngView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BusinessWindow.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CostReportView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerDueReportView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\CustomerMngView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\DataBookView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\MoneyCollectionView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\PromotionView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\Views\SellBookView.baml
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.g.resources
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.Properties.Resources.resources
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.GenerateResource.cache
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.exe.licenses
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.CoreCompileInputs.cache
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\BookStoreManagerment.csproj.CopyComplete
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\MessageBoxWindow.g.cs
+D:\Documents\UIT\Học kì 2 - năm 2\Đồ án\CNPM\book_store_management\BookStoreManagement\BookStoreManagerment\obj\Debug\MessageBoxWindow.baml
