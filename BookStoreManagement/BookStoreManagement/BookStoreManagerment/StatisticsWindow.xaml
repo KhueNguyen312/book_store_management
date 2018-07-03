@@ -1,0 +1,190 @@
+﻿<Window x:Class="BookStoreManagerment.StatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreManagerment"
+        xmlns:uc="clr-namespace:BookStoreManagerment.CustomControlBar"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+        mc:Ignorable="d"
+        DataContext="{StaticResource StatisticsVM}"
+        Name="statisticWindow"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        WindowStartupLocation="CenterScreen"
+        Title="Statistics Window" Height="600" Width="1024" ResizeMode="NoResize" Icon="Images/BookMng2.png"  WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="4">
+            <uc:UserControlAlter Tag="{Binding Title, ElementName=statisticWindow}"></uc:UserControlAlter>
+        </Grid>
+        <StackPanel Margin="20 10 20 0" Grid.Row="1" Grid.Column="0">
+            <Grid>
+                <Rectangle Height="30" Fill="#607799">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="1" Color="#FFE8E8E8" Direction="305"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <TextBlock FontWeight="Bold" Margin="10 3 0 0" Text="SÁCH BÁN CHẠY TRONG THÁNG" Foreground="White" VerticalAlignment="Center" />
+            </Grid>
+            <Grid>
+                <Rectangle Fill="White" Height="500" Margin="0 10 0 0">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="1" Color="#FFE8E8E8" Direction="305"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <StackPanel Margin="0 10 0 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <dxe:ImageEdit Stretch="Fill" Grid.Column="1" Source="{Binding Path=Img1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" ShowBorder="False" Width="100" Height="150" Margin="10 10 0 10"/>
+                        <StackPanel Margin="10" Grid.Column="0">
+                            <TextBlock TextWrapping="Wrap" Foreground="#FFFFCC00" Text="{Binding BookName1}" FontWeight="Bold" FontSize="13" Margin="10 10 0 0" />
+                            <TextBlock Margin="10 10 0 0" Text="{Binding BookPrice1}" Foreground="#DDFF0000"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <dxe:ImageEdit Stretch="Fill" Grid.Column="1" Source="{Binding Path=Img2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" ShowBorder="False" Width="100" Height="150" Margin="10 10 0 10"/>
+                        <StackPanel Margin="10" Grid.Column="0">
+                            <TextBlock TextWrapping="Wrap" Foreground="#FFFFCC00" Text="{Binding BookName2}" FontWeight="Bold" FontSize="13" Margin="10 10 0 0" />
+                            <TextBlock Margin="10 10 0 0" Text="{Binding BookPrice2}" Foreground="#DDFF0000"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <dxe:ImageEdit Stretch="Fill" Grid.Column="1" Source="{Binding Path=Img3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" ShowBorder="False" Width="100" Height="150" Margin="10 10 0 10"/>
+                        <StackPanel Margin="10" Grid.Column="0">
+                            <TextBlock TextWrapping="Wrap" Foreground="#FFFFCC00" Text="{Binding BookName3}" FontWeight="Bold" FontSize="13" Margin="10 10 0 0" />
+                            <TextBlock Margin="10 10 0 0" Text="{Binding BookPrice3}" Foreground="#DDFF0000"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid  Grid.Row="1" Grid.RowSpan="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"  Margin="0 10 5 0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Rectangle Height="30" Fill="#607799">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="1" Color="#FFE8E8E8" Direction="305"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBlock FontWeight="Bold" Margin="10 3 0 0" Text="THÔNG TIN QUẢNG CÁO" Foreground="White" VerticalAlignment="Center" />
+                </Grid>
+                <Grid Margin="0 10 0 0" Grid.Row="1" >
+                    <Rectangle  Height="200" Fill="White">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="1" Color="#FFE0E0E0" Direction="305"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Image materialDesign:ShadowAssist.ShadowDepth="Depth3" Stretch="Fill" Source="{Binding Uri}"/>
+                </Grid>
+            </Grid>
+
+            <Grid  Margin="0 10 5 0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0 10 0 0" >
+                    <Rectangle Height="30" Fill="#607799">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="1" Color="#FFE8E8E8" Direction="305"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBlock FontWeight="Bold" Margin="10 3 0 0" Text="KHÁCH HÀNG NỔI BẬT TRONG THÁNG" Foreground="White" VerticalAlignment="Center" />
+                </Grid>
+
+                <Grid Grid.Row="1" >
+                    <Rectangle Margin="5"  Fill="White">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="1" Color="#FFE0E0E0" Direction="305"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <ListView  Margin="5" ItemsSource="{Binding ListReveneuList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="Auto"
+                                                DisplayMemberBinding="{Binding MAKH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                                                Header="MÃ KH" />
+                                <GridViewColumn
+                                                DisplayMemberBinding="{Binding TENKH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                Header="TÊN KH" />
+                                <GridViewColumn Width="Auto"
+                                                DisplayMemberBinding="{Binding Doanh_Thu, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                Header="DOANH THU" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Margin=" 10 0 0 5" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Margin="0 10 10 0" Grid.Row="0">
+                <Rectangle Height="30" Fill="#607799">
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="1" Color="#FFE8E8E8" Direction="305"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <TextBlock FontWeight="Bold" Margin="10 3 0 0" Text="DOANH THU SÁCH TRONG THÁNG" Foreground="White" VerticalAlignment="Center" />
+            </Grid>
+            <Rectangle Margin="0 10 10 5" Grid.Row="1" Fill="White">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="1" Color="#FFE0E0E0" Direction="305"/>
+                </Rectangle.Effect>
+            </Rectangle>
+
+            <ListView Margin="5 0 5 0" ItemsSource="{Binding ListReveneuBook, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Grid.Row="1">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn 
+                        DisplayMemberBinding="{Binding TENSACH, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                        Header="TÊN SÁCH" />
+                        <GridViewColumn
+                        DisplayMemberBinding="{Binding TONGTIEN, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                        Header="DOANH THU" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </Grid>
+    </Grid>
+</Window>
