@@ -2,7 +2,7 @@
 
 ---
 # Bookstore Management Application
-by [quoctrung98](https://github.com/quoctrung98/),[kimhue98](https://github.com/kimhue98) and [SyaoranClone](https://github.com/SyaoranClone/) with the help from masters [Hoan Ng. Cong](https://www.facebook.com/hoan.nguyen.khan)
+by [quoctrung98](https://github.com/quoctrung98/),[kimhue98](https://github.com/kimhue98) and [KhueNguyen](https://github.com/KhueNguyen312) with the help from masters [Hoan Ng. Cong](https://www.facebook.com/hoan.nguyen.khan)
 
 
 
